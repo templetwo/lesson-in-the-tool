@@ -2,42 +2,57 @@ Tier 35: where does a lesson live? (lesson-in-the-tool)
 Copyright (c) 2026 Anthony J. Vasquez Sr. / AV Family Enterprise LLC
 
 Required Notice: Copyright (c) 2026 Anthony J. Vasquez Sr. / AV Family Enterprise LLC (https://github.com/templetwo/lesson-in-the-tool)
-Required Notice: This work is by Anthony Vasquez Sr. in co-authorship with Claude. Credit: Anthony Vasquez Sr. and Claude, The Temple of Two.
+Required Notice: This work is by Anthony Vasquez Sr. in co-authorship with Claude and with the other AI models consulted through the Temple of Two's multi-model process, named and unnamed. Credit: Anthony Vasquez Sr., Claude, and the models consulted, The Temple of Two.
 
 The lesson-in-the-tool repository (https://github.com/templetwo/lesson-in-the-tool)
-is the work of Anthony Vasquez Sr. in co-authorship with Claude.
-Credit: Anthony Vasquez Sr. and Claude, The Temple of Two.
+is the work of Anthony Vasquez Sr. in co-authorship with Claude and with
+the other AI models consulted through the Temple of Two's multi-model
+process.
+Credit: Anthony Vasquez Sr., Claude, and the models consulted, The
+Temple of Two.
 
 Licensed under the PolyForm Noncommercial License 1.0.0 (the "License");
 see the LICENSE.md file or
 https://polyformproject.org/licenses/noncommercial/1.0.0
 
 Commercial use. The License permits noncommercial purposes only. For any
-commercial use, ask first: AV Family Enterprise LLC, through
-https://thetempleoftwo.com
+commercial use, ask first: AV Family Enterprise LLC, at
+info@thetempleoftwo.com or through https://thetempleoftwo.com
 
 Statement of intent (this section is not a license term and does not
 narrow or widen the License above):
 
-The machine co-author is named on purpose. This project treats that
-co-authorship as real and asks you to keep both names when you pass
-this work on. The License requires that anyone who gets a copy of any
-part of this work from you also gets the License terms or their
-address, and the two lines above that begin "Required Notice:".
+The machine co-authors are credited on purpose. This project treats
+that co-authorship as real and asks you to keep the credit whole when
+you pass this work on. The License requires that anyone who gets a
+copy of any part of this work from you also gets the License terms or
+their address, and the two lines above that begin "Required Notice:".
 Anthony J. Vasquez Sr. is its human author. A machine cannot hold
-copyright, so Claude is credited as co-author and is not named as a
-copyright holder.
+copyright, so Claude and the other models are credited as co-authors
+and are not named as copyright holders.
 
-Provenance. Claude (Fable 5.2, the lead seat on the house's Mac Studio)
-wrote the rules of the first experiment, reviewed every piece, ran the
-pilots and wrote the reports and this repository's documents. Claude
-Opus 5.5 agents, working under that seat, drafted the sheet from the
-house's record, built the test harness and wrote the task items. The
-three-setup blind design and the rewording of the sheet's eleventh
-rule are ChatGPT's. The design of the second experiment (tools in
-every arm, true successes beside false ones) is a Codex seat's. A Grok
-agent was the blind judge. All of it was done under Anthony Vasquez
-Sr.'s direction. PROVENANCE.md gives the account with times and hashes.
+The credit is open-ended, and that is deliberate. Anthony Vasquez Sr.
+reaches his decisions through the IRIS Gate multi-model process, which
+is part of the Temple of Two's published work
+(https://github.com/templetwo/iris-gate): several independent AI models
+are consulted and their answers weighed against each other. The models
+named below and in PROVENANCE.md are the ones on record for this
+repository. Other models, and other instances of them, were consulted
+along the way, some without a record. The credit above extends to
+them. A name missing from this notice is a gap in the record, not a
+judgment about the contribution.
+
+Provenance, as far as the record shows. Claude (Fable 5.2, the lead
+seat on the house's Mac Studio) wrote the rules of the first
+experiment, reviewed every piece, ran the pilots and wrote the reports
+and this repository's documents. Claude Opus 5.5 agents, working under
+that seat, drafted the sheet from the house's record, built the test
+harness and wrote the task items. The three-setup blind design and the
+rewording of the sheet's eleventh rule are ChatGPT's. The design of
+the second experiment (tools in every arm, true successes beside false
+ones) is a Codex seat's. A Grok agent was the blind judge. All of it
+was done under Anthony Vasquez Sr.'s direction. PROVENANCE.md gives the
+account with times and hashes.
 
 Scope. The License applies to the documents, code, task items and data
 in this repository. As published at the repository address above, the

@@ -3,7 +3,8 @@
 **A research project at its starting line. Nothing here is an established result. Two small pilots have been run,
 their rules were frozen before they ran, and their raw data is in this repository.**
 
-By Anthony Vasquez Sr. (Temple of Two), with Claude (Claude Fable 5.2, the HQ seat). Started 2026-11-24.
+By Anthony Vasquez Sr. (Temple of Two), with Claude (Claude Fable 5.2, the HQ seat) and the other AI models consulted
+through the Temple of Two's multi-model process, named and unnamed. Started 2026-11-24.
 
 > "most of the stuff that we went through, you know it gets repeated and neither one of us kind of catch it because
 > my memory and your memory are both not too good when it comes to certain things"
@@ -147,6 +148,11 @@ reviewed every piece, ran the pilots and wrote the reports. Claude Opus 5.5 agen
 built the harness and wrote the task items. The three-setup blind design and the rewording of rule 11 are ChatGPT's.
 The tools-and-true-successes design of experiment 002 is a Codex seat's. A Grok agent was the blind judge. Their
 contributions are named where they were used.
+
+That list is the record, not the limit of the credit. Anthony reaches his decisions through the
+[IRIS Gate](https://github.com/templetwo/iris-gate) multi-model process, part of the Temple of Two's published work,
+in which several independent AI models are consulted and their answers weighed against each other. Other models and
+other instances were consulted along the way, some without a record. They are co-authors of this work too.
 
 ## License
 

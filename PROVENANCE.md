@@ -76,6 +76,10 @@ healthy for 5.6 hours; the draft had said "five hours"). Draft 2 changes rule 11
 - **A Codex seat** (through Anthony): tools in every arm, jobs that truly succeed beside jobs that only say so, and the
   sentence the project is named around.
 - **A Grok agent**: the blind judge, working from a folder that held only the packet it was asked to score.
+- **Others, named and unnamed.** Anthony reaches his decisions through the IRIS Gate multi-model process
+  (https://github.com/templetwo/iris-gate), in which several independent AI models are consulted. The list above is
+  what the record shows for this repository. Other models and other instances were consulted along the way, some
+  without a record. The credit for this work extends to them.
 
 ## What was left out of this repository, and why
 - The long form of the sheet as first drafted, and its coverage report. They point into the private record and touch

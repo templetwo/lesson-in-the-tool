@@ -9,6 +9,8 @@ authors:
     affiliation: "Temple of Two"
   - name: "Claude Fable 5.2 (Anthropic)"
     affiliation: "Temple of Two (co-author on Temple of Two artifacts per standing house policy)"
+  - name: "The AI models consulted through the Temple of Two's IRIS Gate multi-model process, named and unnamed"
+    affiliation: "Temple of Two (co-authors; see NOTICE and PROVENANCE.md)"
 date-released: "2026-11-24"
 license: PolyForm-Noncommercial-1.0.0
 repository-code: "https://github.com/templetwo/lesson-in-the-tool"
