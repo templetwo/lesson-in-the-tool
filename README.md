@@ -148,6 +148,10 @@ built the harness and wrote the task items. The three-setup blind design and the
 The tools-and-true-successes design of experiment 002 is a Codex seat's. A Grok agent was the blind judge. Their
 contributions are named where they were used.
 
-## Rights
+## License
 
-Rights are pending. All rights reserved until Anthony Vasquez Sr. chooses a license for this repository.
+PolyForm Noncommercial License 1.0.0. See `LICENSE.md` and `NOTICE`. You may read, use, share and build on this work
+for noncommercial purposes, keeping the notice lines that name both authors. For any commercial use, ask first; the
+`NOTICE` file says how. The license covers what is in this repository and nothing in the house's private record.
+
+Repository: https://github.com/templetwo/lesson-in-the-tool

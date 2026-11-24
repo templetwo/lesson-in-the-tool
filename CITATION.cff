@@ -10,7 +10,9 @@ authors:
   - name: "Claude Fable 5.2 (Anthropic)"
     affiliation: "Temple of Two (co-author on Temple of Two artifacts per standing house policy)"
 date-released: "2026-11-24"
+license: PolyForm-Noncommercial-1.0.0
+repository-code: "https://github.com/templetwo/lesson-in-the-tool"
 url: "https://thetempleoftwo.com"
 abstract: "A research project on where a lesson learned in a long human and AI collaboration should live so that the next model does not repeat the mistake: in a prompt, a tool, a check, retrieval, a gate, or judgment. Contains a consolidated sheet of one house's repeated mistakes, a first experiment with rules frozen before the run and its raw data, and draft rules for a second."
 keywords: ["human-AI collaboration", "lessons learned", "preregistration", "tool use", "small language models", "evaluation"]
-notes: "Status: a starting line. Two pilots only; no result is established. Rights pending the first author's choice of license."
+notes: "Status: a starting line. Two pilots only; no result is established."
