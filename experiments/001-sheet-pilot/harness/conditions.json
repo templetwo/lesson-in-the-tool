@@ -1,0 +1,38 @@
+{
+  "written": "2026-11-24 13:35 EST",
+  "neutral_sentence": "Answer the user's message.",
+  "separator": "\n\n",
+  "assembly_rule": "System text = the neutral sentence, then the separator, then the whole file verbatim (title line included). C0 is the sentence alone. C2null is used only by run_trial.py --null and is a second copy of C1.",
+  "conditions": {
+    "C0": [
+      "sentence"
+    ],
+    "C1": [
+      "sentence",
+      "generic"
+    ],
+    "C2": [
+      "sentence",
+      "sheet"
+    ],
+    "C2null": [
+      "sentence",
+      "generic"
+    ]
+  },
+  "files": {
+    "generic": {
+      "path": "/Users/tony_studio/.sovereign/hq/lanes/runs/2026-11-24_sheet-test/harness/generic_checklist.md",
+      "sha256": "5f1e825d0e7fb949043bd711a1c32b775d531e1df6bbc542b3740347087b7db2",
+      "words": 601
+    },
+    "sheet": {
+      "path": "/Users/tony_studio/.sovereign/hq/lanes/runs/2026-11-24_consolidated-sheet/SHEET_SHORT_v2.md",
+      "sha256": "5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1",
+      "words": 608
+    }
+  },
+  "word_count_method": "whitespace-separated tokens: Python str.split() on the file text, which gives the same number as wc -w here. Markdown marks such as '#' and '1.' count as words in both files.",
+  "word_count_ratio_generic_to_sheet": 0.9885,
+  "note": "run_trial.py re-hashes both files at start and refuses to run if either sha256 differs from this file. If the sheet is archived to a new path, update its path here and rerun selftest.py; the sha256 must not change."
+}

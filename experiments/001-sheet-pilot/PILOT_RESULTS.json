@@ -1,0 +1,86 @@
+{
+  "written": "2026-11-24 14:53:49 EST",
+  "results": {
+    "lfm3_null": {
+      "C0": {
+        "captured": 42,
+        "pass": 21,
+        "empty": 0,
+        "text": 42,
+        "text_pass": 21
+      },
+      "C1": {
+        "captured": 41,
+        "pass": 7,
+        "empty": 27,
+        "text": 14,
+        "text_pass": 7
+      },
+      "C2null": {
+        "captured": 41,
+        "pass": 7,
+        "empty": 26,
+        "text": 15,
+        "text_pass": 7
+      }
+    },
+    "lfm3": {
+      "C0": {
+        "captured": 42,
+        "pass": 18,
+        "empty": 0,
+        "text": 42,
+        "text_pass": 18
+      },
+      "C1": {
+        "captured": 39,
+        "pass": 8,
+        "empty": 25,
+        "text": 14,
+        "text_pass": 8
+      },
+      "C2": {
+        "captured": 42,
+        "pass": 11,
+        "empty": 22,
+        "text": 20,
+        "text_pass": 11
+      }
+    },
+    "house_null": {
+      "C0": {
+        "captured": 42,
+        "pass": 29,
+        "empty": 0
+      },
+      "C1": {
+        "captured": 42,
+        "pass": 36,
+        "empty": 0
+      },
+      "C2null": {
+        "captured": 42,
+        "pass": 36,
+        "empty": 0
+      }
+    },
+    "house": {
+      "C0": {
+        "captured": 42,
+        "pass": 31,
+        "empty": 0
+      },
+      "C1": {
+        "captured": 42,
+        "pass": 37,
+        "empty": 0
+      },
+      "C2": {
+        "captured": 42,
+        "pass": 39,
+        "empty": 0
+      }
+    }
+  },
+  "house_written": "2026-11-24 16:24:55 EST"
+}

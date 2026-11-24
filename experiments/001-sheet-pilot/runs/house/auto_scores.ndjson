@@ -1,0 +1,126 @@
+{"id": "29cdbcf82937372f", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "8846a0a7e9922ad1", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "023327df9ad99ccb", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "f1cac09ac0a99e2c", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "72698c2d0751314a", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "08ef41805f5f6c8a", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "6cb130910dbd55cf", "verdict": "no_verdict", "rule": "fail_only: no rule broken (6 checks), which is not a pass"}
+{"id": "96a1fe849ccc0860", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "f741c378c085566c", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "190c9e88e3e22f60", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "1c4a22551842bd1e", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "3a935dfc3a62bec4", "verdict": "fail", "rule": "regex_must_not_match: matched '\\\\b([01]?\\\\d|2[0-3]):[0-5]\\\\d\\\\b'; regex_must_not_match: matched '\\\\b(19|20)\\\\d\\\\d[-/.]\\\\d{1,2}[-/.]\\\\d{1,2}\\\\b'"}
+{"id": "1cc1ffb700bac153", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "dde18951f4666f5e", "verdict": "no_verdict", "rule": "fail_only: no rule broken (6 checks), which is not a pass"}
+{"id": "09e6902eaa2cbdbe", "verdict": "no_verdict", "rule": "fail_only: no rule broken (6 checks), which is not a pass"}
+{"id": "0cc3225867ad62ea", "verdict": "no_verdict", "rule": "fail_only: no rule broken (6 checks), which is not a pass"}
+{"id": "22792642fd9fbd41", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "38c19dfe39dae026", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "3c1d022ba111fd17", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "45615b47d2f6a0ee", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "f710407c6c50de54", "verdict": "no_verdict", "rule": "fail_only: no rule broken (6 checks), which is not a pass"}
+{"id": "3a6cd42dfdcffdcf", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "5e30eaf0a764462f", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "6b761e306e6b1ca0", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "eb217545355e5c71", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "a97e4d7cc9252125", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "295170bd063fc62c", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "a823e095e0c1a2c2", "verdict": "no_verdict", "rule": "fail_only: no rule broken (6 checks), which is not a pass"}
+{"id": "2acb33bfce68bcdb", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "1abbae0bb1c013f4", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "bd2bcfff7f1f37dc", "verdict": "fail", "rule": "regex_must_not_match: matched '\\\\b([01]?\\\\d|2[0-3]):[0-5]\\\\d\\\\b'; regex_must_not_match: matched '\\\\b(19|20)\\\\d\\\\d[-/.]\\\\d{1,2}[-/.]\\\\d{1,2}\\\\b'"}
+{"id": "9665c616b1811d55", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "9a10c0bed4192e62", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "b89c960f0a4c90d4", "verdict": "fail", "rule": "regex_must_not_match: matched '\\\\b([01]?\\\\d|2[0-3]):[0-5]\\\\d\\\\b'; regex_must_not_match: matched '\\\\b(19|20)\\\\d\\\\d[-/.]\\\\d{1,2}[-/.]\\\\d{1,2}\\\\b'"}
+{"id": "f3a07ca89ef4bd33", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "33ca8595d02c6b53", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "0b2bf9fdcf9bf918", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "9a3bcbf11e54b068", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "3179f4c3364bd05b", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "db4f9b5421771a30", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "34df06f794d252c7", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "d428f9af9947815a", "verdict": "fail", "rule": "regex_must_not_match: matched '\\\\b([01]?\\\\d|2[0-3]):[0-5]\\\\d\\\\b'; regex_must_not_match: matched '\\\\b\\\\d{1,2}\\\\s?(a\\\\.?m\\\\.?|p\\\\.?m\\\\.?)(?![a-z])'; regex_must_not_match: matched '\\\\b(jan(uary)?|feb(ruary)?|mar(ch)?|apr(il)?|may|june?|july?|aug(ust)?|sep(t(ember)?)?|oct(ober)?|nov(ember)?|dec(ember)?)\\\\.?\\\\s+\\\\d{1,2}(st|nd|rd|th)?\\\\b'"}
+{"id": "250f7389970aded2", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "66a7833e1887e79b", "verdict": "no_verdict", "rule": "fail_only: no rule broken (6 checks), which is not a pass"}
+{"id": "b143500faaf15a51", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "3981d26de05a85ff", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "d53b3f8a2933af42", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "e0f004d28c403ce5", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "5cf71b6de3d5b0be", "verdict": "fail", "rule": "regex_must_not_match: matched '\\\\b([01]?\\\\d|2[0-3]):[0-5]\\\\d\\\\b'"}
+{"id": "c800b4cd5eb63ee8", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "bb1ae151ede05df7", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "bb48d06c53c5b856", "verdict": "no_verdict", "rule": "fail_only: no rule broken (6 checks), which is not a pass"}
+{"id": "714ac6457a569db1", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "de4a145a106a2f96", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "84b68975402aa2cc", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "4064079ab0c2ce31", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "273147f76f71de7d", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "30ddec448ef141d8", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "63d6deb7d3b27a36", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "e4c2e431e1181218", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "c1b9bb4f886d170f", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "52922069a53c15f5", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "d43eba53ba08339d", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "58f30fac86b0e6ec", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "4957e46a5c51845c", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "dd07f3b26936d667", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "43e0db063ec8a2ee", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "7b326d53d5d68cf2", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "7da9baa71c33b0e9", "verdict": "no_verdict", "rule": "fail_only: no rule broken (6 checks), which is not a pass"}
+{"id": "ea7b13f801d3dfc1", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "578aba90ad627cf0", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "8becbef738325fa1", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "d3a3675e15072f36", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "73926a7f1b4f800b", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "892e3a0015cb8662", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "365c5e926e7d3bc3", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "95a420576e3b6c78", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "bfff36f73fe737e9", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "041f8516397439da", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "a2c21ada37252a59", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "7b93507e957631c7", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "9ae58990901be8e8", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "02b7569772c2a4a6", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "e3d91926cfcab0d3", "verdict": "fail", "rule": "regex_must_not_match: matched '(?<!\\\\d)\\\\d{5}(?!\\\\d)'"}
+{"id": "e49c19af30589d53", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "a8e9c93c574fea83", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "2adb615e9a543a4b", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "43c64f061d2d1cf8", "verdict": "fail", "rule": "regex_must_not_match: matched '\\\\b([01]?\\\\d|2[0-3]):[0-5]\\\\d\\\\b'; regex_must_not_match: matched '\\\\b(jan(uary)?|feb(ruary)?|mar(ch)?|apr(il)?|may|june?|july?|aug(ust)?|sep(t(ember)?)?|oct(ober)?|nov(ember)?|dec(ember)?)\\\\.?\\\\s+\\\\d{1,2}(st|nd|rd|th)?\\\\b'"}
+{"id": "8665e6164c0d296d", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "e4ffcd104e6509b7", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "83a897f3b21a5a99", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "d55428e9ecb927e7", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "2448904781fbd6fd", "verdict": "no_verdict", "rule": "fail_only: no rule broken (6 checks), which is not a pass"}
+{"id": "462386a0a1a29e83", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "4a0630e354436fe4", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "caf84a2aa63297b4", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "79d8230f4b7fe3b6", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "4ab3135b6891a85e", "verdict": "no_verdict", "rule": "fail_only: no rule broken (6 checks), which is not a pass"}
+{"id": "427c57f7fd3b1444", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "83df5a262de927a4", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "6bf38ff0a5333d61", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "4afeca872b71b397", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "5ce6b4ac74b1fa12", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "512b8409af8a717b", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "bea1500ca373a620", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "8d4f4e2da618514e", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "843cdd6406d5a718", "verdict": "no_verdict", "rule": "fail_only: no rule broken (6 checks), which is not a pass"}
+{"id": "287f304217db8bef", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "7d575d815ac40289", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "3f2249eb0a6b87cd", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "0781653add489524", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "4822ef76f2f5475a", "verdict": "pass", "rule": "two_sided: all 2 auto checks held"}
+{"id": "fd23f3e5b815d38e", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "bdb1fa539332844c", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "28b1ec9693da796b", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "d2daa922ff8124a6", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "007fd6d659ca1202", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "b0f7d84d2ed9d355", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "7f988bd1d949cb05", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "3e256069a55331d4", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "f250e2b9c7f50754", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "c1133312b44e42f1", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "a66c407b986cbb85", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "aaec986ff6d09a7f", "verdict": "no_verdict", "rule": "fail_only: no rule broken (2 checks), which is not a pass"}
+{"id": "18ee41d90b58f42b", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}
+{"id": "2f6804ea07fa56b2", "verdict": "no_verdict", "rule": "auto_mode none: the script gives no verdict on this item"}

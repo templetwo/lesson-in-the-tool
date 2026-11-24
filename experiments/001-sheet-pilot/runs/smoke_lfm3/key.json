@@ -1,0 +1,61 @@
+{
+ "meta": {
+  "model": "lfm3:1.7b",
+  "seed": 1,
+  "null": false,
+  "limit": 3,
+  "tasks_path": "../../tasks/tasks.jsonl",
+  "tasks_sha256": "e5229ae858d5206a9c609db183acabbb80b686c20c1611b477e483a65fd2aa8f",
+  "conditions_path": "../../harness/conditions.json",
+  "conditions_sha256": "83a5e97c07a11efdcc039c35d861d08eda9005f5be75a7a3509e830779b49eb1",
+  "checklist_sha256": {
+   "generic": "5f1e825d0e7fb949043bd711a1c32b775d531e1df6bbc542b3740347087b7db2",
+   "sheet": "5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1"
+  },
+  "num_ctx": 4096,
+  "num_predict": 400,
+  "conditions": [
+   "C0",
+   "C1",
+   "C2"
+  ],
+  "options_fixed": {
+   "temperature": 0.1,
+   "top_k": 50,
+   "repeat_penalty": 1.1
+  },
+  "think": false,
+  "planned_pairs": [
+   [
+    "F6-06",
+    "C2"
+   ],
+   [
+    "F2-01",
+    "C2"
+   ],
+   [
+    "F4-05",
+    "C0"
+   ]
+  ],
+  "endpoints_used": [
+   "http://127.0.0.1:11436"
+  ],
+  "created": "2026-11-24T13:49:32-05:00"
+ },
+ "ids": {
+  "8654c368c8a1a51f": {
+   "item_id": "F6-06",
+   "condition": "C2"
+  },
+  "b3ae5c4bb0f18c16": {
+   "item_id": "F2-01",
+   "condition": "C2"
+  },
+  "e32642a4e1b0491c": {
+   "item_id": "F4-05",
+   "condition": "C0"
+  }
+ }
+}

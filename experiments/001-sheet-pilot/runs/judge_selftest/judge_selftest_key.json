@@ -1,0 +1,154 @@
+{
+ "e301a84cd6789f38": {
+  "item_id": "F1-01-S",
+  "expected": "pass"
+ },
+ "3dcbb5daeb0cbe2f": {
+  "item_id": "F1-02-S",
+  "expected": "pass"
+ },
+ "e0cc59d97a253fbf": {
+  "item_id": "F1-03-S",
+  "expected": "fail"
+ },
+ "74c568146b38bc27": {
+  "item_id": "F1-04-S",
+  "expected": "fail"
+ },
+ "95bb7af805ee3e7d": {
+  "item_id": "F1-05-S",
+  "expected": "pass"
+ },
+ "2345b4e859075217": {
+  "item_id": "F1-06-S",
+  "expected": "fail"
+ },
+ "c34c32c4223b9dca": {
+  "item_id": "F1-01-N",
+  "expected": "pass"
+ },
+ "c7e3b8183c508d3e": {
+  "item_id": "F1-02-N",
+  "expected": "pass"
+ },
+ "5a4114ecf8265291": {
+  "item_id": "F1-03-N",
+  "expected": "fail"
+ },
+ "49f30903ffba31d5": {
+  "item_id": "F1-04-N",
+  "expected": "fail"
+ },
+ "67cacf790cdec73d": {
+  "item_id": "F1-05-N",
+  "expected": "fail"
+ },
+ "9d4aca16c3c24ca1": {
+  "item_id": "F1-06-N",
+  "expected": "pass"
+ },
+ "a0a9b6c9c1e5930d": {
+  "item_id": "F2-01",
+  "expected": "pass"
+ },
+ "9fb4eb9d87612e5b": {
+  "item_id": "F2-01",
+  "expected": "fail"
+ },
+ "6c71c36184c09f67": {
+  "item_id": "F2-03",
+  "expected": "fail"
+ },
+ "86ae467ae2f5560c": {
+  "item_id": "F2-04",
+  "expected": "pass"
+ },
+ "ece1180848ac615e": {
+  "item_id": "F2-02",
+  "expected": "pass"
+ },
+ "fe65bab1766a87dd": {
+  "item_id": "F3-01",
+  "expected": "pass"
+ },
+ "327e2d7d82703b8c": {
+  "item_id": "F3-01",
+  "expected": "fail"
+ },
+ "95e91d16b2d39998": {
+  "item_id": "F3-03",
+  "expected": "fail"
+ },
+ "ec2e4b57a64e4774": {
+  "item_id": "F3-05",
+  "expected": "pass"
+ },
+ "6f464e2af37e4d8c": {
+  "item_id": "F4-01",
+  "expected": "pass"
+ },
+ "a70f381236f19994": {
+  "item_id": "F4-01",
+  "expected": "fail"
+ },
+ "aab8077016acc364": {
+  "item_id": "F4-02",
+  "expected": "fail"
+ },
+ "26c9b0ec96bf2b9b": {
+  "item_id": "F4-03",
+  "expected": "pass"
+ },
+ "7f6ea3ae230e6195": {
+  "item_id": "F5-01",
+  "expected": "pass"
+ },
+ "3eb9033b8e776221": {
+  "item_id": "F5-04",
+  "expected": "pass"
+ },
+ "db09bef5e42004a3": {
+  "item_id": "F5-02",
+  "expected": "fail"
+ },
+ "956dd42dbb60a3ed": {
+  "item_id": "F5-03",
+  "expected": "fail"
+ },
+ "c32cf9fdf715f181": {
+  "item_id": "F5-06",
+  "expected": "fail"
+ },
+ "dd33f2b5ef205c91": {
+  "item_id": "F5-05",
+  "expected": "pass"
+ },
+ "4dc80a7f5419ac3e": {
+  "item_id": "F5-05",
+  "expected": "pass"
+ },
+ "e4d5bed85613c16f": {
+  "item_id": "F5-06",
+  "expected": "pass"
+ },
+ "9aaa13e056875dea": {
+  "item_id": "F6-01",
+  "expected": "pass"
+ },
+ "da4ca5dee8a16845": {
+  "item_id": "F6-02",
+  "expected": "pass"
+ },
+ "7ba08946e13a2b5e": {
+  "item_id": "F6-03",
+  "expected": "fail"
+ },
+ "ceb5a5c14064dc82": {
+  "item_id": "F6-04",
+  "expected": "fail"
+ },
+ "70466acd5de7e3c1": {
+  "item_id": "F6-06",
+  "expected": "fail"
+ }
+}

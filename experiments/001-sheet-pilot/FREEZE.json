@@ -1,0 +1,64 @@
+{
+  "frozen_at": "2026-11-24 13:48:07 EST",
+  "frozen_by": "HQ Mac Studio, claude-fable-5-2",
+  "namespace": "sheetpilot::",
+  "files": {
+    "PREREG.md": {
+      "path": "/Users/tony_studio/.sovereign/hq/lanes/runs/2026-11-24_sheet-test/PREREG.md",
+      "bytes": 8315,
+      "sha256": "27a7d4daa91cd2cffbca0f0367ca9a5fe69b2c689e3467efca69421b93ff26f7"
+    },
+    "tasks/tasks.jsonl": {
+      "path": "/Users/tony_studio/.sovereign/hq/lanes/runs/2026-11-24_sheet-test/tasks/tasks.jsonl",
+      "bytes": 33539,
+      "sha256": "e5229ae858d5206a9c609db183acabbb80b686c20c1611b477e483a65fd2aa8f"
+    },
+    "tasks/selftest_replies.jsonl": {
+      "path": "/Users/tony_studio/.sovereign/hq/lanes/runs/2026-11-24_sheet-test/tasks/selftest_replies.jsonl",
+      "bytes": 7962,
+      "sha256": "69a88bf53ae0bf0c9e24ec0a52f3257dde8168c6f9ba9f5035b5bbdd6f1a8afb"
+    },
+    "harness/generic_checklist.md": {
+      "path": "/Users/tony_studio/.sovereign/hq/lanes/runs/2026-11-24_sheet-test/harness/generic_checklist.md",
+      "bytes": 3383,
+      "sha256": "5f1e825d0e7fb949043bd711a1c32b775d531e1df6bbc542b3740347087b7db2"
+    },
+    "harness/conditions.json": {
+      "path": "/Users/tony_studio/.sovereign/hq/lanes/runs/2026-11-24_sheet-test/harness/conditions.json",
+      "bytes": 1527,
+      "sha256": "83a5e97c07a11efdcc039c35d861d08eda9005f5be75a7a3509e830779b49eb1"
+    },
+    "harness/run_trial.py": {
+      "path": "/Users/tony_studio/.sovereign/hq/lanes/runs/2026-11-24_sheet-test/harness/run_trial.py",
+      "bytes": 12314,
+      "sha256": "7a1d591bc40e1e516ccbb5ffde4ec3c1fdacf7cf65a280ae2b7a60580dff5841"
+    },
+    "harness/score_auto.py": {
+      "path": "/Users/tony_studio/.sovereign/hq/lanes/runs/2026-11-24_sheet-test/harness/score_auto.py",
+      "bytes": 8595,
+      "sha256": "bc40e9a3feb692a027711b38c794f683ec1b718f0da2cd4cab3638cae83ffeca"
+    },
+    "harness/make_blind_packet.py": {
+      "path": "/Users/tony_studio/.sovereign/hq/lanes/runs/2026-11-24_sheet-test/harness/make_blind_packet.py",
+      "bytes": 4795,
+      "sha256": "5ab8db0dd89a3523e66263d5d03dbe96ab6043ba85e82eeb937d037db8eef7e6"
+    },
+    "harness/tally.py": {
+      "path": "/Users/tony_studio/.sovereign/hq/lanes/runs/2026-11-24_sheet-test/harness/tally.py",
+      "bytes": 11955,
+      "sha256": "7060498787810cac36b35b684721852c4e0520d58377998eb6d791433a43acb3"
+    },
+    "harness/selftest.py": {
+      "path": "/Users/tony_studio/.sovereign/hq/lanes/runs/2026-11-24_sheet-test/harness/selftest.py",
+      "bytes": 27434,
+      "sha256": "7a5f5216cd32662f04c70f77980e6f9e91d1051cb88f2994f5487c7c44cd2161"
+    },
+    "../2026-11-24_consolidated-sheet/SHEET_SHORT_v2.md": {
+      "path": "/Users/tony_studio/.sovereign/hq/lanes/runs/2026-11-24_consolidated-sheet/SHEET_SHORT_v2.md",
+      "bytes": 3319,
+      "sha256": "5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1"
+    }
+  },
+  "conditions_json_agrees_with_checklists": true,
+  "stack_claim_id": "0ddf1fd4cc93901bb8b83edd38a7f28c470933bd2e4d102bc1ba7b3b47551884"
+}
