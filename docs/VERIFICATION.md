@@ -8,18 +8,29 @@ python3 -B -m unittest discover -s tests -v
 ```
 
 The verifier also works from another directory or a source ZIP. Use `--root PATH`
-to select an archive. It needs only the Python standard library, makes no model
-or network calls, and writes its rebuilds to temporary folders. Exit 0 means
-every listed check completed; exit 1 means verification failed. The first failure
-names its evidence. Earlier `OK` lines are partial progress, not a final verdict.
+to select an archive. **It executes that archive's own Python harnesses.** This
+is not a sandbox or a safe reader for untrusted code. The published harnesses
+need only the Python standard library, make no model or network calls, and write
+their rebuilds to temporary folders; modified code could behave differently.
+
+Exit 0 means every listed check completed; exit 1 means verification failed.
+The first failure names its evidence. Earlier `OK` lines are partial progress,
+not a final verdict. **`VERIFIED` means internal agreement with this archive's
+own manifest and freeze records.** It does not establish that the directory is
+the one published on GitHub. An independently obtained published GitHub commit
+hash supplies that outside reference; this verifier does not fetch or compare
+against it.
 
 ## What it checks
 
 1. **Publication coverage.** Every regular file must occur exactly once in
    `MANIFEST.sha256` with its current SHA-256. Missing, extra, duplicated, unsafe
-   or symlinked entries fail. The manifest itself, root Git metadata, Python
-   bytecode/cache files and `.DS_Store` are excluded. This is stricter than
-   checking only the paths already listed in a manifest.
+   or symlinked entries fail. Only the manifest itself and root Git metadata
+   are excluded. `.pyc`, `__pycache__` and `.DS_Store` entries are refused, even
+   if listed in the manifest or present as empty directories, before a harness
+   runs. Python's `-B` prevents writing bytecode; it does not prevent loading
+   existing bytecode. This is stricter than checking only the paths already
+   listed in a manifest.
 2. **Frozen commitments.** Both original freeze records are pinned to their
    published hashes at `19a3017`. All eleven 001 inputs match hashes and sizes.
    All eighteen 001b inputs match; four of its five inputs from 001 match their
@@ -66,12 +77,18 @@ with 127 expected and 126 captured, while its rendered sentence claims every
 planned pair has one reply. The published plan has no such duplicate. This is a
 failure of that malformed-input check, not evidence that the reported result is
 wrong. The new verifier refuses the duplicate without changing the frozen file.
+The finding is recorded in 001's append-only erratum E8.
 
 Tests deliberately damage copies of the archive: duplicate plans or IDs, missing
 scores, non-Boolean verdicts, altered packet text, changed totals, a wrong setup
 map, an altered U2 correction and changed frozen inputs even after a new manifest
 is written. Semantic tests call the evidence checker directly so that an early
-checksum failure cannot conceal an untested join.
+checksum failure cannot conceal an untested join. Reproduction tests separately
+change an allowed automatic verdict and a tally count, then regenerate the
+manifest and call the reproduction checker. A third changes the temporary mask
+builder's output to isolate its byte comparison from later packet checks. Each
+must fail at its own comparison. A planted bytecode module must be refused before
+it can execute.
 
 ## What a pass cannot establish
 
@@ -81,8 +98,13 @@ checksum failure cannot conceal an untested join.
 - Whether the judge made the right semantic decision, whether masking removed
   every cue, or whether the experiment has enough power. In particular, 001b E2
   remains a limit of its frozen mention-pattern checker.
-- Authenticity against someone changing this verifier and all its commitments.
-  These are local consistency checks, not an external signature service.
+- Authenticity of unfrozen results. Someone can consistently change judge
+  scores, derived totals and reports, then regenerate the manifest and pass
+  without modifying this verifier. Three of the four scored raw runs are also
+  unfrozen; 001's house raw run is committed by 001b's freeze. The fixed freeze
+  hashes protect their listed inputs, not the whole publication. Compare the
+  archive with an independently obtained published GitHub commit to establish
+  which version you have. A rewritten verifier could also change the checks.
 - New model behavior. The verifier reruns deterministic code; it neither repeats
   the models' trials nor upgrades pilots into established results.
 

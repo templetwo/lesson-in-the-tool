@@ -53,7 +53,9 @@ The receipt preserves three different things:
 - **Observation:** what the readback found, its file and content hashes, and a
   bounded conclusion.
 
-The conclusion has three states:
+The receipt also names the writer and reader as `default` or `injected` in
+`adapters`, and the observation's source as `filesystem` or `injected_reader`.
+With the default filesystem reader, the conclusion has three states:
 
 | State | Meaning | Example |
 |---|---|---|
@@ -70,6 +72,30 @@ that distinction visible.
 
 The tool must also be able to confirm real success plainly. A mechanism that
 replaces false confidence with permanent suspicion has learned the wrong lesson.
+
+## Name what supplied the evidence
+
+The optional `writer` and `reader` callables let development controls introduce
+specific faults. An injected reader can return matching bytes when no file
+exists. Its `confirmed` status means those returned records match; it does not
+establish filesystem state. The source field and reason preserve that limit.
+An injected writer's claim is always checked through whichever reader was
+selected. The tool does not certify an adapter's honesty or independence.
+
+The default writer's policy is included in `action.policy`. It refuses a
+destination symlink, including a dangling one, and preserves the link and its
+target. It still attempts the readback after refusal, so an already-matching
+symlink target can be observed alongside the writer's error. Parent-directory
+symlinks are followed; the destination checks do not protect against concurrent
+path changes. Use a directory whose paths are under your control.
+
+A successful default write replaces the file with a temporary file whose POSIX
+mode starts at `0600`, filtered by the process umask. Existing permissions and
+other metadata are not preserved. The contents are flushed and the temporary
+file is synced before replacement, but the parent directory is not synced: this
+is no promise of survival across a crash. Records and readback are held in
+memory with no size limit. These are boundaries of this small file operation,
+not judgments the receipt can settle for its caller.
 
 ## Let each tool carry its attempted refutation
 

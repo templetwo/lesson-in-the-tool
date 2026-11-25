@@ -1,6 +1,8 @@
 """A lesson must pass true success and catch false success, beyond the count."""
 import json
+import os
 from pathlib import Path
+import stat
 import sys
 import tempfile
 import unittest
@@ -33,6 +35,9 @@ class RecordsTests(unittest.TestCase):
         self.assertEqual(receipt["intent"]["destination"], str(self.path))
         self.assertEqual(receipt["action"]["claim"]["records"], 2)
         self.assertIsNone(receipt["action"]["error"])
+        self.assertEqual(receipt["adapters"], {"writer": "default", "reader": "default"})
+        self.assertEqual(receipt["observation"]["source"], "filesystem")
+        self.assertFalse(receipt["action"]["policy"]["preserves_existing_metadata"])
         self.assertEqual(list(self.path.parent.iterdir()), [self.path])
 
     def test_false_acknowledgment_cannot_confirm_missing_file(self):
@@ -99,6 +104,80 @@ class RecordsTests(unittest.TestCase):
         self.assertEqual(receipt["action"]["claim"]["status"], "ok")
         self.assertEqual(receipt["observation"]["status"], "unresolved")
         self.assertIsNone(receipt["observation"]["file_sha256"])
+        self.assertEqual(receipt["adapters"], {"writer": "default", "reader": "injected"})
+        self.assertEqual(receipt["observation"]["source"], "injected_reader")
+
+    def test_injected_reader_can_confirm_bytes_without_observing_a_file(self):
+        payload = ("\n".join(json.dumps(row) for row in self.records) + "\n").encode()
+        receipt = save_records(self.path, self.records,
+                               writer=lambda path, data: {"status": "ok"},
+                               reader=lambda path: payload)
+        self.assertFalse(self.path.exists())
+        self.assertEqual(receipt["observation"]["status"], "confirmed")
+        self.assertEqual(receipt["adapters"], {"writer": "injected", "reader": "injected"})
+        self.assertIsNone(receipt["action"]["policy"])
+        self.assertEqual(receipt["observation"]["source"], "injected_reader")
+        self.assertIn("does not establish filesystem state", receipt["observation"]["reason"])
+
+    def test_injected_reader_missing_report_is_attributed_to_that_reader(self):
+        def missing(path):
+            raise FileNotFoundError(path)
+        receipt = save_records(self.path, self.records, reader=missing)
+        self.assertTrue(self.path.exists())
+        self.assertEqual(receipt["observation"]["status"], "contradicted")
+        self.assertEqual(receipt["observation"]["source"], "injected_reader")
+        self.assertIn("Injected reader reported", receipt["observation"]["reason"])
+
+    def test_default_writer_refuses_existing_and_dangling_destination_symlinks(self):
+        target = self.path.parent / "target.jsonl"
+        for existing in (True, False):
+            with self.subTest(existing=existing):
+                if existing:
+                    target.write_bytes(b"unchanged target\n")
+                self.path.symlink_to(target)
+                receipt = save_records(self.path, self.records)
+                self.assertTrue(self.path.is_symlink())
+                self.assertEqual(os.readlink(self.path), str(target))
+                self.assertIsNone(receipt["action"]["claim"])
+                self.assertIn("refuses a symlink destination", receipt["action"]["error"])
+                self.assertEqual(receipt["action"]["policy"]["destination_symlinks"], "refuse")
+                self.assertEqual(receipt["observation"]["status"], "contradicted")
+                if existing:
+                    self.assertEqual(target.read_bytes(), b"unchanged target\n")
+                    target.unlink()
+                else:
+                    self.assertFalse(target.exists())
+                self.assertEqual(list(self.path.parent.iterdir()), [self.path])
+                self.path.unlink()
+
+    @unittest.skipUnless(os.name == "posix", "POSIX permission modes")
+    def test_default_replacement_has_owner_only_mode_filtered_by_umask(self):
+        for mask in (0o027, 0o277):
+            with self.subTest(umask=oct(mask)):
+                self.path.write_bytes(b"old contents\n")
+                self.path.chmod(0o644)
+                previous_mask = os.umask(mask)
+                try:
+                    receipt = save_records(self.path, self.records)
+                finally:
+                    os.umask(previous_mask)
+                self.assertEqual(stat.S_IMODE(self.path.stat().st_mode), 0o600 & ~mask)
+                self.assertEqual(receipt["action"]["policy"]["posix_mode"],
+                                 "0600 filtered by process umask")
+                self.assertFalse(receipt["action"]["policy"]["preserves_existing_metadata"])
+                self.assertEqual(receipt["observation"]["status"], "confirmed")
+                self.path.chmod(0o600)
+
+    def test_invalid_writer_claim_is_named_without_losing_the_observation(self):
+        def invalid_claim(path, data):
+            path.write_bytes(data)
+            return {"unsupported": (1, 2)}
+        receipt = save_records(self.path, self.records, writer=invalid_claim)
+        self.assertIsNone(receipt["action"]["claim"])
+        self.assertIn("writer claim must contain only JSON values", receipt["action"]["error"])
+        self.assertEqual(receipt["adapters"], {"writer": "injected", "reader": "default"})
+        self.assertEqual(receipt["observation"]["source"], "filesystem")
+        self.assertEqual(receipt["observation"]["status"], "confirmed")
 
     def test_falsey_adapters_are_not_replaced_with_real_io(self):
         class Adapter:

@@ -24,18 +24,18 @@ LESSON = {
 }
 
 
-def _json_value(value):
+def _json_value(value, context="records"):
     """Disallow implicit conversions, notably non-string object keys."""
     if isinstance(value, dict):
         if any(not isinstance(key, str) for key in value):
-            raise ValueError("JSON object keys must be strings")
+            raise ValueError("%s JSON object keys must be strings" % context)
         for item in value.values():
-            _json_value(item)
+            _json_value(item, context)
     elif isinstance(value, list):
         for item in value:
-            _json_value(item)
+            _json_value(item, context)
     elif value is not None and not isinstance(value, (str, int, float, bool)):
-        raise ValueError("records must contain only JSON values")
+        raise ValueError("%s must contain only JSON values" % context)
 
 
 def _canonical_records(records):
@@ -86,13 +86,22 @@ def _hash(data):
 
 
 def _write_atomic(destination, data):
-    """Replace one file; its parent must exist. Keep partial bytes off the path."""
+    """Replace one file with an owner-only temporary; its parent must exist.
+
+    Refuse a destination symlink at both checks. These checks do not defend
+    against concurrent path changes or symlinked parent directories. Existing
+    file metadata is not preserved; POSIX mode is 0600, filtered by the umask.
+    """
+    if destination.is_symlink():
+        raise ValueError("default writer refuses a symlink destination")
     fd, temporary = tempfile.mkstemp(prefix=".lesson-records-", dir=destination.parent)
     try:
         with os.fdopen(fd, "wb") as stream:
             stream.write(data)
             stream.flush()
             os.fsync(stream.fileno())
+        if destination.is_symlink():
+            raise ValueError("default writer refuses a symlink destination")
         os.replace(temporary, destination)
     finally:
         if os.path.exists(temporary):
@@ -108,30 +117,46 @@ def save_records(destination: Path, records: list, *, writer=None, reader=None) 
     from the filesystem. Every writer exception is retained and followed by a
     read. Invalid input raises ValueError before either function is called.
 
-    ``confirmed`` means exact desired ordered records were found, including an
-    already-correct file after a failed write. ``contradicted`` means a missing,
-    malformed or different file was observed. ``unresolved`` means the read
-    could not establish the state. None of these replaces the action report.
+    ``confirmed`` means the reader returned exact desired ordered records,
+    including an already-correct file after a failed write. ``contradicted``
+    means the reader reported absence or returned malformed/different records.
+    ``unresolved`` means the read could not establish the state. An injected
+    reader establishes only what that callable returned, not filesystem state.
+    The receipt names both adapters and the observation source. None of these
+    replaces the action report.
+
+    The default writer refuses destination symlinks and replaces existing file
+    metadata with the temporary file's metadata. POSIX permissions are 0600
+    filtered by the process umask. Path checks are not a concurrency boundary;
+    parent symlinks are followed. No directory fsync or durability is promised.
     """
     try:
         expected = _canonical_records(records)
     except (RecursionError, TypeError) as exc:
         raise ValueError("records must be finite, non-cyclic JSON values") from exc
     path = Path(destination).absolute()
-    observation = {"status": "unresolved", "record_count": None,
+    observation = {"status": "unresolved",
+                   "source": "filesystem" if reader is None else "injected_reader",
+                   "record_count": None,
                    "content_sha256": None, "file_sha256": None, "reason": ""}
     receipt = {
         "lesson": dict(LESSON),
         "intent": {"destination": str(path), "records": len(records),
                    "content_sha256": _hash(expected)},
-        "action": {"claim": None, "error": None},
+        "adapters": {"writer": "default" if writer is None else "injected",
+                     "reader": "default" if reader is None else "injected"},
+        "action": {"claim": None, "error": None,
+                   "policy": {"destination_symlinks": "refuse",
+                              "posix_mode": "0600 filtered by process umask",
+                              "preserves_existing_metadata": False}
+                   if writer is None else None},
         "observation": observation,
     }
     try:
         claim = (writer if writer is not None else _write_atomic)(path, expected)
         if not isinstance(claim, dict):
             raise ValueError("writer must return a JSON object claim")
-        _json_value(claim)
+        _json_value(claim, "writer claim")
         # Snapshot the claim so later mutation cannot rewrite this receipt.
         receipt["action"]["claim"] = json.loads(json.dumps(claim, allow_nan=False))
     except Exception as exc:
@@ -141,7 +166,10 @@ def save_records(destination: Path, records: list, *, writer=None, reader=None) 
         if not isinstance(data, bytes):
             raise TypeError("reader must return bytes")
     except FileNotFoundError:
-        observation.update(status="contradicted", reason="Requested destination was absent at readback.")
+        reason = ("Requested destination was absent at readback." if reader is None else
+                  "Injected reader reported the requested destination absent; "
+                  "filesystem state was not independently observed.")
+        observation.update(status="contradicted", reason=reason)
         return receipt
     except Exception as exc:
         observation["reason"] = "Readback unavailable (%s: %s)." % (type(exc).__name__, exc)
@@ -154,8 +182,11 @@ def save_records(destination: Path, records: list, *, writer=None, reader=None) 
         return receipt
     observation.update(record_count=len(found), content_sha256=_hash(canonical))
     if canonical == expected:
-        observation.update(status="confirmed", reason="Desired ordered records were present at readback; "
-                           "this does not establish which call wrote them.")
+        reason = ("Desired ordered records were present at readback; "
+                  "this does not establish which call wrote them." if reader is None else
+                  "Injected reader returned the desired ordered records; "
+                  "this does not establish filesystem state or which call wrote them.")
+        observation.update(status="confirmed", reason=reason)
     else:
         observation.update(status="contradicted", reason="Observed records differ from the requested "
                            "IDs, order or values (%d requested, %d found)." % (len(records), len(found)))

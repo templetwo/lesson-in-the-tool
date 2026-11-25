@@ -184,6 +184,12 @@ recorded errors and the documented public-edition hash exception; and rebuilds s
 re-judging tally in temporary folders. `docs/VERIFICATION.md` specifies its coverage and limits. The tests include
 deliberately damaged evidence, so the checker must demonstrate that it can refuse it.
 
+**`VERIFIED` means internal agreement with this archive's own manifest and freeze records.** Consistently changed
+unfrozen results and a regenerated manifest can pass without changing the verifier. An independently obtained
+published GitHub commit hash is the outside reference; this command does not compare the archive to that commit.
+It executes the archive's Python harnesses, including when `--root` selects another archive. Run it only on code
+you trust; it is not a sandbox for inspecting untrusted archives.
+
 - `experiments/001-sheet-pilot/FREEZE.json` lists the SHA-256 of the rules and of every input, taken at 13:48:07
   Eastern on 2026-11-24, before any model under test was called. `shasum -a 256` on the files should match. The frozen
   files are published byte for byte, which is why they still carry file paths from the machine they were made on and

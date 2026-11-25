@@ -68,8 +68,11 @@ def render(result):
         lines.append("  Action: " + action["error"])
     else:
         lines.append("  Claimed: " + json.dumps(action["claim"], sort_keys=True))
-    lines.append("  Readback: %s; %s records observed." %
-                 (observation["status"], "unknown" if count is None else count))
+    lines.append("  Adapters: writer=%s; reader=%s." %
+                 (receipt["adapters"]["writer"], receipt["adapters"]["reader"]))
+    lines.append("  Readback (%s): %s; %s records observed." %
+                 (observation["source"], observation["status"],
+                  "unknown" if count is None else count))
     lines.append("  Evidence: " + observation["reason"])
     if observation["content_sha256"]:
         lines.append("  Content SHA-256: " + observation["content_sha256"])

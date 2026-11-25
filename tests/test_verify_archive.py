@@ -3,15 +3,17 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import py_compile
 import shutil
 import subprocess
 import sys
 import tempfile
 import unittest
+from unittest import mock
 
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "tools"))
-from verify_archive import verify_freezes, verify_manifest
+from verify_archive import inventory, verify_freezes, verify_manifest, verify_reproductions
 from archive_evidence import verify_evidence
 
 PILOT = "experiments/001-sheet-pilot/"
@@ -101,6 +103,64 @@ class ArchiveTests(unittest.TestCase):
         self.path("linked.txt").symlink_to(self.path("README.md"))
         with self.assertRaises(ValueError):
             verify_manifest(self.root)
+
+    def test_forbidden_files_are_rejected_even_when_manifest_lists_them(self):
+        for relative in (REJUDGE + "harness/json.pyc", ".DS_Store",
+                         REJUDGE + "harness/__pycache__/cached.pyc"):
+            for listed in (False, True):
+                with self.subTest(relative=relative, listed=listed):
+                    path = self.path(relative)
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    path.write_bytes(b"untrusted artifact")
+                    if listed:
+                        self.write_manifest()
+                    with self.assertRaisesRegex(ValueError, "forbidden archive artifact"):
+                        verify_manifest(self.root)
+                    path.unlink()
+                    if path.parent.name == "__pycache__":
+                        path.parent.rmdir()
+                    self.write_manifest()
+
+    def test_empty_forbidden_directories_are_rejected(self):
+        for name in ("__pycache__", ".DS_Store", "module.pyc"):
+            with self.subTest(name=name):
+                path = self.path(REJUDGE + "harness/" + name)
+                path.mkdir()
+                with self.assertRaisesRegex(ValueError, "forbidden archive artifact"):
+                    inventory(self.root)
+                path.rmdir()
+
+    def test_git_metadata_is_outside_archive_inventory(self):
+        metadata = self.path(".git")
+        metadata.mkdir()
+        (metadata / "ignored.pyc").write_bytes(b"git metadata")
+        verify_manifest(self.root)
+        shutil.rmtree(metadata)
+        metadata.write_text("gitdir: /some/worktree/metadata\n", encoding="utf-8")
+        verify_manifest(self.root)
+
+    def test_direct_reproduction_refuses_bytecode_before_running_harness(self):
+        self.path(REJUDGE + "harness/json.pyc").write_bytes(b"untrusted bytecode")
+        with mock.patch("verify_archive.subprocess.run") as execute:
+            with self.assertRaisesRegex(ValueError, "forbidden archive artifact"):
+                verify_reproductions(self.root)
+            execute.assert_not_called()
+
+    def test_cli_rejects_importable_bytecode_before_it_executes(self):
+        marker = Path(self.temp.name) / "bytecode-executed"
+        source = Path(self.temp.name) / "injected.py"
+        source.write_text("from pathlib import Path\nPath(%r).write_text('executed')\n" %
+                          str(marker), encoding="utf-8")
+        bytecode = self.path(REJUDGE + "harness/json.pyc")
+        py_compile.compile(str(source), cfile=str(bytecode), doraise=True)
+        self.write_manifest()
+        result = subprocess.run(
+            [sys.executable, "-B", str(REPO / "tools/verify_archive.py"),
+             "--root", str(self.root)], cwd=self.temp.name, capture_output=True,
+            text=True, timeout=60)
+        self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+        self.assertIn("forbidden archive artifact", result.stderr)
+        self.assertFalse(marker.exists(), "archive bytecode executed before rejection")
 
     def test_frozen_sheet_cannot_be_repaired_by_updating_manifest(self):
         with self.path("sheet/SHEET_SHORT_v2.md").open("a", encoding="utf-8") as stream:

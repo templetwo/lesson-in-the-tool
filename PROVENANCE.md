@@ -144,3 +144,11 @@ The seat and its delegated reviewers read the published sheet and experimental d
 are not blinded tasks. No model-under-test calls were made. Frozen inputs, raw runs, judge scores, reported results
 and experiment 002's draft remain unchanged. These additions credit the Codex work as provenance; they do not
 establish new research results or alter the historical authorship above.
+
+Following HQ's review and publication of that contribution on branch commit `0ed07ea`, the same Codex seat
+refined it on 2026-11-25: made adapter provenance and default file-replacement policy explicit in receipts,
+refused destination symlinks, rejected archive bytecode and cache artifacts, and added controls for the automatic
+score, masked-file and tally reproduction checks. The documentation now distinguishes internal consistency from
+agreement with a published Git commit and states that verification executes the selected archive's Python.
+Experiment 001's erratum E8 records the duplicate-plan tally defect found by the seat and independently reproduced
+under HQ. That entry is appended beside the frozen code; frozen inputs, raw runs, scores and results remain unchanged.

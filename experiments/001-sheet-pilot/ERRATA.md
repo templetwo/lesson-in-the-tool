@@ -153,3 +153,17 @@ E6 point 4 said the judge could often tell that some checklist was present. Expe
 any judge call. No lean was shown: removing the mentions moved no verdict, so the judge numbers in `REPORT_HOUSE.md`
 stand for this judge, while one repeat of the judging read zero noise and three replies with unchanged text still
 flipped. See `experiments/001b-judge-lean/`.
+
+## E8. The frozen tally does not reject a duplicated planned pair
+Written 2026-11-25. Found by the GPT-6 Astra Codex seat; reproduced the same day by an independent Claude Opus
+reviewer under HQ. Nothing above is changed by this entry.
+
+`harness/tally.py` builds its per-pair table with a dict, which collapses a duplicated planned pair, while its
+expected count comes from the list (`len(planned)`). Its coverage sentence prints "all planned pairs have exactly
+one reply" without checking that the plan itself has no duplicates. Duplicating one planned pair in a copy of the
+house run's key makes `compute` return no problems with 127 expected and 126 captured; the rendered sentence still
+claims complete coverage.
+
+All four published plans (`house`, `house_null`, `lfm3`, `lfm3_null`) contain 126 distinct pairs. No published
+number depends on this defect. The frozen tally remains unchanged. The separate archive verifier rejects a
+duplicate plan, and its tests keep that malformed-input case as a control.

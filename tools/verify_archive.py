@@ -2,7 +2,9 @@
 """Check the published 001/001b evidence offline, without rewriting the archive.
 
 Python 3.9+, standard library only. Run from any directory. This checks internal
-consistency and reproducibility, not the truth of a judge or the time of a freeze.
+consistency and reproducibility against the archive's own records, not a Git
+commit, the truth of a judge, or the time of a freeze. It executes Python from
+the target archive; use only an archive whose code you trust.
 """
 import argparse
 import hashlib
@@ -34,6 +36,11 @@ def require(ok, message):
         raise ValueError(message)
 
 
+def require_archive_name(name, relative):
+    require(name not in ("__pycache__", ".DS_Store") and not name.endswith(".pyc"),
+            "forbidden archive artifact: %s" % relative)
+
+
 def local_file(root, relative):
     """Only canonical archive-relative regular files; never follow a symlink."""
     p = PurePosixPath(relative)
@@ -42,6 +49,7 @@ def local_file(root, relative):
             "unsafe or noncanonical path: %r" % relative)
     target = root
     for part in p.parts:
+        require_archive_name(part, relative)
         target = target / part
         require(not target.is_symlink(), "symlink is not an archive file: %s" % relative)
     require(target.is_file(), "missing regular file: %s" % relative)
@@ -69,17 +77,15 @@ def read_json(path):
 
 
 def inventory(root):
-    """Works on a Git checkout or a source ZIP; no Git executable required."""
+    """List every archive file, refusing caches and bytecode rather than hiding them."""
     files = set()
     for base, dirs, names in os.walk(root, followlinks=False):
         current = Path(base)
-        dirs[:] = sorted(d for d in dirs if d != "__pycache__"
-                         and not (current == root and d == ".git"))
+        dirs[:] = sorted(d for d in dirs if not (current == root and d == ".git"))
         for d in dirs:
+            require_archive_name(d, (current / d).relative_to(root).as_posix())
             require(not (current / d).is_symlink(), "symlink directory: %s" % (current / d))
         for name in names:
-            if name == ".DS_Store" or name.endswith(".pyc"):
-                continue
             if current == root and name in (".git", "MANIFEST.sha256"):
                 continue
             relative = (current / name).relative_to(root).as_posix()
@@ -163,6 +169,9 @@ def same_bytes(path, original):
 
 
 def verify_reproductions(root):
+    # -B prevents bytecode writes, not imports from existing .pyc files. Check
+    # before running any archived Python, including when called without main().
+    inventory(root)
     p, r = root / PILOT, root / REJUDGE
     tasks = p / "tasks/tasks.jsonl"
     checks = [(PILOT + "/tasks/check_items.py", ()),
@@ -174,7 +183,7 @@ def verify_reproductions(root):
     with tempfile.TemporaryDirectory(prefix="lesson-archive-") as temp:
         out = Path(temp)
         # The frozen 001 selftest writes beside itself and its conditions file
-        # names private absolute paths. Relocate only a temporary copy: neither
+        # names private absolute paths. Relocate only a temporary copy:
         # published files stay unchanged and old machine paths are never opened.
         staged = out / "selftest"
         for folder in ("harness", "tasks"):
@@ -233,7 +242,8 @@ def verify_reproductions(root):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1],
-                        help="archive root (default: this script's repository)")
+                        help="archive root whose Python harnesses will be executed "
+                             "(default: this script's repository)")
     args = parser.parse_args(argv)
     root = args.root.resolve()
     try:
@@ -243,7 +253,8 @@ def main(argv=None):
     except (ValueError, OSError, KeyError, TypeError, subprocess.TimeoutExpired) as exc:
         print("FAIL " + str(exc), file=sys.stderr)
         return 1
-    print("VERIFIED published archive consistency. No model calls; freeze timing and judge correctness are not verified.")
+    print("VERIFIED internal consistency with this archive's manifest and freeze records. "
+          "No Git commit comparison; freeze timing and judge correctness are not verified.")
     return 0
 
 
