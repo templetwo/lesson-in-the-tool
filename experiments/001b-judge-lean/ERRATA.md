@@ -13,3 +13,16 @@
 - Why not run the session again: a new session gives new verdicts, and choosing between two runs of the same packet
   after the fact is a choice the rules did not allow for. The mapping here is not in doubt.
 - What it could change: one verdict (a pass) of one reply in one of the two unmasked packets.
+
+## E2. The masking checker's word patterns are not complete, and its two exemptions are not counted. Written 2026-11-24 22:14:40 EST.
+- An automated review of `harness/check_mask.py` (a frozen file, so it is not changed) made two fair points. Its
+  list of mention patterns can miss forms such as a spelled-out number ("rule three") or a general pointer ("the list
+  you gave"). And its two exemptions are keyed on a reply id and a phrase, with no count, so a second use of the
+  phrase in the same reply would pass unseen.
+- The result does not rest on that script alone. Before the freeze the HQ seat read every one of the 39 changes and
+  searched all 126 masked replies with a wider pattern. After this review it searched them again with a pattern that
+  also covers spelled-out numbers and general pointers. Both searches find the same four places and no others: the
+  word "checklist" in one reply (the person is told they do not need one), "rules" in one plain reply (the person's
+  own world-building rules), and "Principle" and "principle" in one reply (named in the rules' freeze section). Each
+  exempted phrase occurs exactly once in its reply.
+- For anyone building on this: count the exemptions, and treat a leftover warning in a changed reply as a failure.
