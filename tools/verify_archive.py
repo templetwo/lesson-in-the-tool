@@ -6,6 +6,12 @@ consistency and reproducibility against the archive's own records, not a Git
 commit, the truth of a judge, or the time of a freeze. It executes Python from
 the target archive; use only an archive whose code you trust.
 """
+import sys
+
+# Keep a plain CLI run from creating the cache artifacts this verifier refuses.
+# This must precede local imports; -B is still passed to every harness process.
+sys.dont_write_bytecode = True
+
 import argparse
 import hashlib
 import json
@@ -14,7 +20,6 @@ from pathlib import Path, PurePosixPath
 import re
 import shutil
 import subprocess
-import sys
 import tempfile
 
 from archive_evidence import verify_evidence
@@ -37,8 +42,14 @@ def require(ok, message):
 
 
 def require_archive_name(name, relative):
-    require(name not in ("__pycache__", ".DS_Store") and not name.endswith(".pyc"),
-            "forbidden archive artifact: %s" % relative)
+    if name not in ("__pycache__", ".DS_Store") and not name.endswith(".pyc"):
+        return
+    cause = ("Finder may have created this metadata." if name == ".DS_Store" else
+             "Python may have created this cache during a run without -B.")
+    raise ValueError("forbidden archive artifact: %s. %s "
+                     "Inspect and remove the named artifact from the archive, then rerun. "
+                     "Use python3 -B for other Python commands to avoid creating caches."
+                     % (relative, cause))
 
 
 def local_file(root, relative):

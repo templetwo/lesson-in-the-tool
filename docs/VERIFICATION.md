@@ -21,6 +21,15 @@ the one published on GitHub. An independently obtained published GitHub commit
 hash supplies that outside reference; this verifier does not fetch or compare
 against it.
 
+The verifier disables bytecode writes before importing its local helpers, so a
+plain `python3 tools/verify_archive.py` also leaves the archive unchanged. Keep
+`-B` on the other Python commands shown here: running the demonstrations or
+tests without it may create caches beside their sources on some Python builds.
+Finder can also create `.DS_Store`. Existing artifacts are still refused, never
+deleted automatically. If the verifier names one, inspect and remove that file
+or cache directory from the archive, then rerun; a later `-B` run does not remove
+caches left by an earlier command.
+
 ## What it checks
 
 1. **Publication coverage.** Every regular file must occur exactly once in

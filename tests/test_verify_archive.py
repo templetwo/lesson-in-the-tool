@@ -48,6 +48,24 @@ class ArchiveTests(unittest.TestCase):
                 lines.append(digest + "  " + path.relative_to(self.root).as_posix())
         self.path("MANIFEST.sha256").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
+    def snapshot(self):
+        return {path.relative_to(self.root).as_posix():
+                hashlib.sha256(path.read_bytes()).hexdigest() if path.is_file() else None
+                for path in self.root.rglob("*")}
+
+    def run_plain_verifier(self):
+        # Force normal beside-source bytecode writes, even on Apple's Python
+        # (which redirects them to a user cache) or under a caller's -B/env.
+        launcher = (
+            "import runpy, sys; from pathlib import Path; "
+            "sys.dont_write_bytecode = False; sys.pycache_prefix = None; "
+            "script = sys.argv[1]; sys.path.insert(0, str(Path(script).parent)); "
+            "sys.argv = [script]; runpy.run_path(script, run_name='__main__')"
+        )
+        return subprocess.run(
+            [sys.executable, "-E", "-c", launcher, str(self.path("tools/verify_archive.py"))],
+            cwd=self.temp.name, capture_output=True, text=True, timeout=60)
+
     def edit_json(self, relative, edit):
         path = self.path(relative)
         value = json.loads(path.read_text(encoding="utf-8"))
@@ -162,6 +180,25 @@ class ArchiveTests(unittest.TestCase):
         self.assertIn("forbidden archive artifact", result.stderr)
         self.assertFalse(marker.exists(), "archive bytecode executed before rejection")
 
+    def test_plain_cli_does_not_create_a_cache_it_will_refuse(self):
+        before = self.snapshot()
+        result = self.run_plain_verifier()
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("VERIFIED internal consistency", result.stdout)
+        self.assertEqual(self.snapshot(), before, "plain verification changed the archive")
+
+    def test_plain_cli_explains_existing_cache_without_removing_it(self):
+        cache = self.path("tools/__pycache__")
+        cache.mkdir()
+        (cache / "cached.pyc").write_bytes(b"existing cache artifact")
+        before = self.snapshot()
+        result = self.run_plain_verifier()
+        self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+        self.assertIn("forbidden archive artifact: tools/__pycache__", result.stderr)
+        self.assertIn("remove", result.stderr.lower())
+        self.assertIn("-B", result.stderr)
+        self.assertEqual(self.snapshot(), before, "refusal changed the archive")
+
     def test_frozen_sheet_cannot_be_repaired_by_updating_manifest(self):
         with self.path("sheet/SHEET_SHORT_v2.md").open("a", encoding="utf-8") as stream:
             stream.write("\n")
@@ -251,15 +288,11 @@ class ArchiveTests(unittest.TestCase):
         command = [sys.executable, "-B", str(REPO / "tools/verify_archive.py"),
                    "--root", str(self.root)]
         env = dict(os.environ, PYTHONDONTWRITEBYTECODE="1")
-        def snapshot():
-            return {path.relative_to(self.root).as_posix():
-                    hashlib.sha256(path.read_bytes()).hexdigest() if path.is_file() else None
-                    for path in self.root.rglob("*")}
-        before = snapshot()
+        before = self.snapshot()
         good = subprocess.run(command, cwd=self.temp.name, capture_output=True,
                               text=True, env=env, timeout=60)
         self.assertEqual(good.returncode, 0, good.stdout + good.stderr)
-        self.assertEqual(snapshot(), before, "verification changed the archive")
+        self.assertEqual(self.snapshot(), before, "verification changed the archive")
         self.path("README.md").write_text("damaged\n", encoding="utf-8")
         bad = subprocess.run(command, cwd=self.temp.name, capture_output=True,
                              text=True, env=env, timeout=60)
