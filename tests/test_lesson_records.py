@@ -6,6 +6,7 @@ import stat
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lesson_tools import save_records
@@ -140,7 +141,8 @@ class RecordsTests(unittest.TestCase):
                 self.assertEqual(os.readlink(self.path), str(target))
                 self.assertIsNone(receipt["action"]["claim"])
                 self.assertIn("refuses a symlink destination", receipt["action"]["error"])
-                self.assertEqual(receipt["action"]["policy"]["destination_symlinks"], "refuse")
+                self.assertEqual(receipt["action"]["policy"]["destination_symlinks"], "refuse_if_observed")
+                self.assertEqual(receipt["action"]["policy"]["symlink_check_scope"], "final_component_only")
                 self.assertEqual(receipt["observation"]["status"], "contradicted")
                 if existing:
                     self.assertEqual(target.read_bytes(), b"unchanged target\n")
@@ -149,6 +151,75 @@ class RecordsTests(unittest.TestCase):
                     self.assertFalse(target.exists())
                 self.assertEqual(list(self.path.parent.iterdir()), [self.path])
                 self.path.unlink()
+
+    def test_parent_symlink_is_followed_and_disclosed(self):
+        target = self.path.parent / "target"
+        target.mkdir()
+        parent = self.path.parent / "linked-parent"
+        parent.symlink_to(target, target_is_directory=True)
+        destination = parent / "records.jsonl"
+        receipt = save_records(destination, self.records)
+        found = [json.loads(line) for line in (target / destination.name).read_text().splitlines()]
+        self.assertEqual(found, self.records)
+        self.assertTrue(parent.is_symlink())
+        self.assertEqual(receipt["intent"]["destination"], str(destination))
+        self.assertEqual(receipt["adapters"], {"writer": "default", "reader": "default"})
+        self.assertIsNone(receipt["action"]["error"])
+        self.assertEqual(receipt["observation"]["status"], "confirmed")
+        self.assertEqual(receipt["action"]["policy"]["parent_symlinks"], "followed")
+        self.assertEqual(receipt["action"]["policy"]["concurrent_path_changes"], "not_protected")
+
+    def test_parent_swap_can_redirect_write_with_the_limit_disclosed(self):
+        parent = self.path.parent / "requested-parent"
+        parent.mkdir()
+        original = self.path.parent / "original-parent"
+        redirected = self.path.parent / "redirected-parent"
+        redirected.mkdir()
+        destination = parent / "records.jsonl"
+        real_mkstemp = tempfile.mkstemp
+
+        def swap_parent(*args, **kwargs):
+            # Schedule a real path change after the first final-name check,
+            # without injecting a writer or reader or relying on thread timing.
+            self.assertEqual(kwargs["dir"], parent)
+            parent.rename(original)
+            parent.symlink_to(redirected, target_is_directory=True)
+            return real_mkstemp(*args, **kwargs)
+
+        with patch("lesson_tools.records.tempfile.mkstemp", side_effect=swap_parent) as create:
+            receipt = save_records(destination, self.records)
+        create.assert_called_once()
+        self.assertEqual(list(original.iterdir()), [])
+        found = [json.loads(line) for line in (redirected / destination.name).read_text().splitlines()]
+        self.assertEqual(found, self.records)
+        self.assertEqual(receipt["intent"]["destination"], str(destination))
+        self.assertEqual(receipt["adapters"], {"writer": "default", "reader": "default"})
+        self.assertIsNone(receipt["action"]["error"])
+        self.assertEqual(receipt["observation"]["status"], "confirmed")
+        self.assertEqual(receipt["action"]["policy"]["concurrent_path_changes"], "not_protected")
+        self.assertEqual(receipt["action"]["policy"]["symlink_check_scope"], "final_component_only")
+
+    def test_symlink_observed_at_second_check_stops_replacement(self):
+        target = self.path.parent / "target.jsonl"
+        payload = ("\n".join(json.dumps(row) for row in self.records) + "\n").encode()
+        target.write_bytes(payload)
+        real_mkstemp = tempfile.mkstemp
+
+        def insert_link(*args, **kwargs):
+            temporary = real_mkstemp(*args, **kwargs)
+            self.path.symlink_to(target)
+            return temporary
+
+        with patch("lesson_tools.records.tempfile.mkstemp", side_effect=insert_link):
+            receipt = save_records(self.path, self.records)
+        self.assertTrue(self.path.is_symlink())
+        self.assertEqual(target.read_bytes(), payload)
+        self.assertIn("refuses a symlink destination", receipt["action"]["error"])
+        self.assertIsNone(receipt["action"]["claim"])
+        self.assertEqual(receipt["observation"]["status"], "confirmed")
+        self.assertEqual(receipt["action"]["policy"]["symlink_check_points"],
+                         ["before_temporary_file", "before_replace"])
+        self.assertEqual(set(self.path.parent.iterdir()), {self.path, target})
 
     @unittest.skipUnless(os.name == "posix", "POSIX permission modes")
     def test_default_replacement_has_owner_only_mode_filtered_by_umask(self):

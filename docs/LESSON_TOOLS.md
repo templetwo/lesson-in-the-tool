@@ -82,12 +82,22 @@ establish filesystem state. The source field and reason preserve that limit.
 An injected writer's claim is always checked through whichever reader was
 selected. The tool does not certify an adapter's honesty or independence.
 
-The default writer's policy is included in `action.policy`. It refuses a
-destination symlink, including a dangling one, and preserves the link and its
-target. It still attempts the readback after refusal, so an already-matching
-symlink target can be observed alongside the writer's error. Parent-directory
-symlinks are followed; the destination checks do not protect against concurrent
-path changes. Use a directory whose paths are under your control.
+The default writer's policy is included in `action.policy`. Its symlink refusal
+is advisory: it checks the **final path component** before creating the temporary
+file and again before replacement. A symlink observed at either check, including
+a dangling one, stops the write. With paths held stable, the link and its target
+are preserved. Readback still runs after refusal, so an already-matching symlink
+target can be observed alongside the writer's error.
+
+The receipt spells out the boundary: `destination_symlinks: refuse_if_observed`,
+`symlink_check_scope: final_component_only`, and `symlink_check_points` naming
+those two checks. It also records `parent_symlinks: followed` and
+`concurrent_path_changes: not_protected`. The parent directory is not pinned by
+an open directory handle. Changing a parent between operations can redirect the
+write; readback resolves the path again and can confirm the redirected contents.
+A confirmed receipt therefore does not establish stable directory identity or
+containment within an intended directory. Use this prototype only where the
+directory paths are under your control and remain stable during the operation.
 
 A successful default write replaces the file with a temporary file whose POSIX
 mode starts at `0600`, filtered by the process umask. Existing permissions and
@@ -103,6 +113,9 @@ The tests are part of the tool's meaning. They cover true and empty success,
 partial writes, wrong values with the right count, duplicate or substituted
 identities, writes to the wrong destination, unreadable evidence and errors
 alongside an already-correct state. Invalid requests are rejected before writing.
+Boundary controls also demonstrate a followed parent symlink and a parent swapped
+between the first check and temporary-file creation. These expose the declared
+limit; they do not establish protection against those cases.
 
 ```sh
 python3 -B -m unittest discover -s tests -v

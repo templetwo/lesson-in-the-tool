@@ -88,9 +88,10 @@ def _hash(data):
 def _write_atomic(destination, data):
     """Replace one file with an owner-only temporary; its parent must exist.
 
-    Refuse a destination symlink at both checks. These checks do not defend
-    against concurrent path changes or symlinked parent directories. Existing
-    file metadata is not preserved; POSIX mode is 0600, filtered by the umask.
+    Refuse a symlink observed in the final path component before temporary-file
+    creation or before replacement. These are advisory checks: parent symlinks
+    are followed and concurrent path changes are not prevented. Existing file
+    metadata is not preserved; POSIX mode is 0600, filtered by the umask.
     """
     if destination.is_symlink():
         raise ValueError("default writer refuses a symlink destination")
@@ -125,10 +126,13 @@ def save_records(destination: Path, records: list, *, writer=None, reader=None) 
     The receipt names both adapters and the observation source. None of these
     replaces the action report.
 
-    The default writer refuses destination symlinks and replaces existing file
-    metadata with the temporary file's metadata. POSIX permissions are 0600
-    filtered by the process umask. Path checks are not a concurrency boundary;
-    parent symlinks are followed. No directory fsync or durability is promised.
+    The default writer refuses symlinks observed in the final path component
+    at either of two checks, before temporary-file creation and replacement.
+    The receipt states this advisory scope: parent symlinks are followed and
+    concurrent path changes are not protected. Readback resolves the path again;
+    confirmation does not prove the parent directory stayed the same. Existing
+    metadata is replaced; POSIX permissions are 0600 filtered by the process
+    umask. No directory fsync or durability is promised.
     """
     try:
         expected = _canonical_records(records)
@@ -146,7 +150,11 @@ def save_records(destination: Path, records: list, *, writer=None, reader=None) 
         "adapters": {"writer": "default" if writer is None else "injected",
                      "reader": "default" if reader is None else "injected"},
         "action": {"claim": None, "error": None,
-                   "policy": {"destination_symlinks": "refuse",
+                   "policy": {"destination_symlinks": "refuse_if_observed",
+                              "symlink_check_scope": "final_component_only",
+                              "symlink_check_points": ["before_temporary_file", "before_replace"],
+                              "parent_symlinks": "followed",
+                              "concurrent_path_changes": "not_protected",
                               "posix_mode": "0600 filtered by process umask",
                               "preserves_existing_metadata": False}
                    if writer is None else None},
