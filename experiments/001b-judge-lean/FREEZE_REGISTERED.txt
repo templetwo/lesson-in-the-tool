@@ -1,0 +1,4 @@
+an entry in the house's private record (its identifier withheld for publication)
+registered 2026-11-24 21:07:28 EST
+PREREG_001b.md e5c816900f4c5cd4a6aabbadbe28612abf3c1bf49649513691eb7b857ab989b1
+FREEZE.json 3579866bf9c980706075b91268b915d5b38b0e2186a1b48844c38aa742c047b6

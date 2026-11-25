@@ -1,7 +1,8 @@
 # Tier 35: where does a lesson live?
 
 **A research project at its starting line. Nothing here is an established result. Two small pilots have been run,
-their rules were frozen before they ran, and their raw data is in this repository.**
+and one of them has been judged again to test a doubt about its judge. Their rules were frozen before they ran, and
+their raw data is in this repository.**
 
 By Anthony Vasquez Sr. (Temple of Two), with Claude (Claude Fable 5.2, the HQ seat) and the other AI models consulted
 through the Temple of Two's multi-model process, named and unnamed. Started 2026-11-24.
@@ -80,11 +81,32 @@ Full reports, with every limit stated: `experiments/001-sheet-pilot/REPORT.md` (
 `experiments/001-sheet-pilot/REPORT_HOUSE.md` (larger model). What changed or was found along the way, including our
 own mistakes: `experiments/001-sheet-pilot/ERRATA.md`.
 
+**The second caution was then tested, for the larger model only** (experiment 001b, a re-judging; the model was not
+called again). The same judge model judged the same 126 replies three times in fresh sessions: twice as they were,
+and once with every mention of a rule or checklist deleted. Rules frozen before any judge call.
+
+| setup | as they were (twice) | mentions deleted | 001's judging |
+|---|---|---|---|
+| plain | 31, 31 | 30 | 31 |
+| generic checklist | 36, 36 | 37 | 37 |
+| the house's sheet | 38, 38 | 39 | 39 |
+
+5. **No lean was shown.** Deleting the mentions moved no verdict on any of the 39 changed replies. 001's numbers for
+   the larger model stand, for this judge, and the checklist's gain over plain is kept.
+6. **The judge's own noise is not zero, though one repeat read zero.** The two unmasked judgings agreed on all 126
+   replies, yet three replies whose text never changed got a different verdict in the masked session. A difference
+   of one or two between setups from a single judging should not be read as a difference.
+
+One pilot, one judge model, one repeat. It says nothing about the small model, whose empty replies cannot be masked,
+and it does not show the judge could not tell the setups apart by style. Details: `experiments/001b-judge-lean/`.
+
 ## What has not been shown
 
 - That the house's history adds anything beyond good generic advice. Forty-two tasks cannot separate them.
 - Anything about a model with tools, about cloud models, or about the larger model in its everyday setup. The pilot
   used bare instructions, no tools and no memory, with the larger model's reasoning switched off.
+- That the judge cannot tell a checklist from its style, or how large the judge's own noise is. 001b removed the
+  visible mentions and saw no lean, from one judge model and a single pair of repeats.
 - That a lesson in a tool beats a lesson in a prompt. That is the next experiment, and it has not run.
 
 ## What comes next
@@ -98,7 +120,8 @@ own mistakes: `experiments/001-sheet-pilot/ERRATA.md`.
    test that can fail. One seat's first sort is there, unchecked. The plan is for several models to sort it
    separately and to study where they disagree.
 3. **Bigger and cleaner tests** once the pilots have shown where the noise is: more tasks, task writers on another
-   provider, the larger model in its real setup, a lookup tool for the small one.
+   provider, the larger model in its real setup, a lookup tool for the small one, and the judge's noise taken from
+   several repeated judgings rather than one pair (001b showed why).
 
 See `docs/ROADMAP.md`.
 
@@ -120,6 +143,8 @@ model has yet reviewed the reports.
 sheet/                         the consolidated sheet: short form (drafts 1 and 2), a public edition of the long
                                form, and notes on what was withheld from it
 experiments/001-sheet-pilot/   frozen rules, hashes, errata, reports, harness, tasks, raw runs, judge scores
+experiments/001b-judge-lean/   a re-judging of 001's larger-model replies with the checklist mentions deleted:
+                               frozen rules, hashes, masking, packets, judge scores, report
 experiments/002-lesson-in-the-tool/   draft rules for the next test
 docs/                          method, the translation table, the roadmap
 reviews/                       reviews by other models, as relayed by Anthony
@@ -138,6 +163,10 @@ MANIFEST.sha256                the hash of every file in this repository
   publication. `experiments/001-sheet-pilot/ERRATA.md`, entry E6, lists what was changed and why.
 - `python3 experiments/001-sheet-pilot/harness/selftest.py` runs the scorer's self-check with no model and no network.
 - The harness runs against any Ollama endpoint. `experiments/001-sheet-pilot/harness/README.md` has the steps.
+- Experiment 001b has its own `FREEZE.json` (frozen at 21:07:07 Eastern on 2026-11-24, before any judge call). Its
+  README gives the commands that check its hashes, run its self-checks, rebuild its masked file and packets from the
+  frozen seeds, and reproduce its tally byte for byte, all from inside this repository. Its
+  `PUBLIC_EDITION_NOTES.md` lists what was generalised or left out for publication.
 - `shasum -a 256 -c MANIFEST.sha256` checks every file here.
 
 ## Who made this
@@ -146,7 +175,8 @@ Anthony Vasquez Sr. set the direction, asked the questions this project is built
 what any result means. Claude (Claude Fable 5.2, the HQ seat on the house's Mac Studio) wrote the rules of the test,
 reviewed every piece, ran the pilots and wrote the reports. Claude Opus 5.5 agents drafted the sheet from the record,
 built the harness and wrote the task items. The three-setup blind design and the rewording of rule 11 are ChatGPT's.
-The tools-and-true-successes design of experiment 002 is a Codex seat's. A Grok agent was the blind judge. Their
+The tools-and-true-successes design of experiment 002 is a Codex seat's. The design of experiment 001b is House's
+(the house's own qwen3.8 27B model), with one change from the HQ seat. A Grok agent was the blind judge. Their
 contributions are named where they were used.
 
 That list is the record, not the limit of the credit. Anthony reaches his decisions through the

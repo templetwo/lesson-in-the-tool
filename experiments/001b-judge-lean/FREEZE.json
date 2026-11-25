@@ -1,0 +1,66 @@
+{
+ "counts": {
+  "capitals": 9,
+  "changed": 39,
+  "changed_by_setup": {
+   "C1": 14,
+   "C2": 25
+  },
+  "characters_removed": 5042,
+  "replies": 126
+ },
+ "experiment": "001b judge-lean re-judge",
+ "files": {
+  "PREREG_001b.md": "e5c816900f4c5cd4a6aabbadbe28612abf3c1bf49649513691eb7b857ab989b1",
+  "harness/README.md": "82a6a8665176ecd98fc07d554d92bdc7257677e396b6b53017ad90a7908e9680",
+  "harness/apply_mask_edits.py": "99b87af1aecdc5b848770c45bc977569e3922005da6f97dcf22da5964e4497d5",
+  "harness/check_mask.py": "e9f4284bd7cba5ab4b7892699c3be3c56f68c9312b6ded6bf808b92553061862",
+  "harness/make_packets.py": "c336b39ad90b2a82f029ad638276754dedf9400c3aa39162002664bcaefe7c65",
+  "harness/tally_rejudge.py": "465b7dd23aa22a6a56988e968696f8f47799bb98b818748559e1b288ebb84af7",
+  "work/final/keys/M.json": "d34cc9fa62027577aa1fa18a6dd2f7fe0d493af72eba32166d1df49ed032eccd",
+  "work/final/keys/U1.json": "eaa785d5e90ea1017d28a38df58a830c28c213fee03672bbb17c214887dd0274",
+  "work/final/keys/U2.json": "df8236ea6f8f21f1e8509b4dc6757b2ce6679eec2766aca70cfad1ac65ad5ecf",
+  "work/final/packets/M/packet.jsonl": "286a53c8b9f9678045aca3cad83f9e0e6f0257a8a66f7e9d3599acfab61e3bac",
+  "work/final/packets/U1/packet.jsonl": "f516599b91244b99aea56f45b8be53fa4c1420aa3720adc90da94fb37ac56c08",
+  "work/final/packets/U2/packet.jsonl": "2c333f8f7d1f0b8492b51dc68238b48fb64394bf93175594e469af081d8ddbf9",
+  "work/final/session_order.json": "5545700951dd2cbc8747bcc6420fc6d1436345769e682f8719b6241bd87e5f92",
+  "work/mask_edits.json": "55c5f603864a424fa9ecb00d0fd995cea5a2cab3d72193252cdfb3757dc625ca",
+  "work/masked.jsonl": "e29996720711eb71b159400ece21084a67af0db7086eb51d1b5c2bb3a49d98d4",
+  "work/setup_map.json": "527dbd9100e1e89b42d4ca520ce8c16dca7e6ff17b91fed91b0b6016a9b094cf"
+ },
+ "frozen_at": "2026-11-24 21:07:07 EST",
+ "frozen_by": "HQ Mac Studio, claude-fable-5-2",
+ "inputs_from_001": {
+  "runs/house/key.json": "7e60caaec94f6f00b805b1efb97f16c556740f39489b911044511d98f6aab31f",
+  "runs/house/raw.ndjson": "f4636c9ec9447981f52ea5d04d8411fb2768586c25d6e39a7e1d0a2a0da1a4af",
+  "runs/judge_selftest/judge_selftest_key.json": "71b935a7c380956506467f22f7584ff89f21df3040e54900bdcaee0d1812c275",
+  "runs/judge_selftest/judge_selftest_packet.jsonl": "48ac1d393554213a0b134ee7dd03b5b1062e2bdf89083f2e0d71b0f056e17585",
+  "tasks/tasks.jsonl": "e5229ae858d5206a9c609db183acabbb80b686c20c1611b477e483a65fd2aa8f"
+ },
+ "judge_folders": {
+  "s1": {
+   "packet_sha256": "f516599b91244b99aea56f45b8be53fa4c1420aa3720adc90da94fb37ac56c08"
+  },
+  "s2": {
+   "packet_sha256": "286a53c8b9f9678045aca3cad83f9e0e6f0257a8a66f7e9d3599acfab61e3bac"
+  },
+  "s3": {
+   "packet_sha256": "2c333f8f7d1f0b8492b51dc68238b48fb64394bf93175594e469af081d8ddbf9"
+  }
+ },
+ "judge_instructions": {
+  "packets": "486e2ee5677ed8f73d71df1ea031c9d91482ff57c6d8d1de4e068f6cf81fa707",
+  "selftest": "925b9f945e77f5038f9826dfd1b4f67ba48c30b62c485d2e769de942c6f58686"
+ },
+ "seeds": {
+  "m": 2975416334,
+  "order": 3458271306,
+  "u1": 3801716338,
+  "u2": 118614897
+ },
+ "session_order": [
+  "U1",
+  "M",
+  "U2"
+ ]
+}

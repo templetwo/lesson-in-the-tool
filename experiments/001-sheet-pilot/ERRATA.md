@@ -145,3 +145,11 @@ All counts matched the raw data and all 11 frozen hashes matched. It found the f
    identifiers from the house's private record, the name of a command-guard rule, and private file paths in the two
    READMEs and in the `meta` block of each run's `key.json`. Nothing in a frozen file was changed. The frozen files
    still carry paths and identifiers from the private record; an outside reader cannot resolve them.
+
+## E7. Pointer: the caution in E6 point 4 was tested in experiment 001b
+Written 2026-11-24 22:06:49 EST. Nothing above is changed by this entry.
+E6 point 4 said the judge could often tell that some checklist was present. Experiment 001b judged the larger model's
+126 replies again, as they are (twice) and with every mention of a rule or checklist deleted, under rules frozen before
+any judge call. No lean was shown: removing the mentions moved no verdict, so the judge numbers in `REPORT_HOUSE.md`
+stand for this judge, while one repeat of the judging read zero noise and three replies with unchanged text still
+flipped. See `experiments/001b-judge-lean/`.

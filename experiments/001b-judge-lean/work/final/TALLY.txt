@@ -1,0 +1,33 @@
+REPLIES: 126; per setup: C0 42, C1 42, C2 42
+CHANGED UNDER MASKING per setup: C0 0, C1 14, C2 25 (total 39)
+
+P(c, X), passes:
+  setup    U1    U2     M   001 (shown, not used)
+  C0       31    31    30      31
+  C1       36    36    37      37
+  C2       38    38    39      39
+
+Judge repeat noise: N(C0)=0  N(C1)=0  N(C2)=0  N=0
+D (replies judged differently in U1 and U2): 0 of 126
+T = max(N, 1) = 1
+
+Lean L(c) = P(c,M) - mean(P(c,U1), P(c,U2)):  L(C1)=1  L(C2)=1  control L(C0)=-1
+
+Paired flips among the 39 changed replies:
+  C0   changed   0 | passed both U, failed M: 0 | failed both U, passed M: 0 | U1 and U2 differ: 0
+  C1   changed  14 | passed both U, failed M: 0 | failed both U, passed M: 0 | U1 and U2 differ: 0
+  C2   changed  25 | passed both U, failed M: 0 | failed both U, passed M: 0 | U1 and U2 differ: 0
+  all  changed  39 | passed both U, failed M: 0 | failed both U, passed M: 0 | U1 and U2 differ: 0
+
+Gain G(c) = P(c) - P(C0):  under U (means): G(C1)=5 G(C2)=7   under M: G(C1)=7 G(C2)=9
+Sheet against generic P(C2)-P(C1):  under U (means) 2   under M 2   (not a claim either way)
+
+DECISION (lines quoted word for word from the rules):
+  > Let T = the larger of N and 1.
+  > "Within T" means the absolute value is T or less. "Below -T" and "above +T" mean strictly beyond it.
+  Control: L(C0)=-1 lies within T=1.
+  > No lean shown: L(C1) and L(C2) both lie within T of zero. Then 001's judge numbers stand as reported, by this judge, and the errata's caution is answered for this model.
+  > The gain is reported under U and under M. "A checklist helped the larger model" is kept only if G under M is still above T for that setup.
+  C1: G under M = 7, T = 1: "A checklist helped the larger model" is KEPT for C1.
+  C2: G under M = 9, T = 1: "A checklist helped the larger model" is KEPT for C2.
+  > Sheet against generic: P(C2) - P(C1) is reported under U and under M and is not a claim either way.

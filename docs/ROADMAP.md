@@ -10,6 +10,11 @@ Written 2026-11-24, at the start. It will be wrong in places; changes are record
 - **Experiment 001, the sheet as a prompt.** Rules frozen before the run. Pilots on a 1.7B model and a 27B model.
   A checklist helped the larger model and silenced the smaller one; the house's sheet was not shown to beat good
   generic advice. `experiments/001-sheet-pilot/`
+- **Experiment 001b, did the judge lean on a visible checklist?** (added 2026-11-24, evening). The larger model's 126
+  replies judged again by the same judge model: twice as they were, once with every checklist mention deleted. Rules
+  frozen before any judge call. No lean was shown, so 001's numbers for that model stand for this judge. The one
+  repeat read zero noise while three same-text replies still flipped, so the judge's noise needs more than one pair
+  of repeats to measure. `experiments/001b-judge-lean/`
 
 ## Next
 
@@ -24,6 +29,8 @@ Written 2026-11-24, at the start. It will be wrong in places; changes are record
 
 4. **A full run of whichever comparison the pilots leave open**, with enough tasks to separate close conditions, a
    margin fixed in advance from the measured noise, and task writers who have never seen the house's material.
+   The noise includes the judge's own: measure it from several repeated judgings of the same packet, not one pair,
+   and test whether a verdict moves with the rest of its packet (House's reading of 001b). Added 2026-11-24.
 5. **The larger model in its real setup**: reasoning on, its own brief, memory and tools.
 6. **Cloud models**, under the same rules.
 7. **Building the tools the table calls for**, one at a time, each with its test, starting with the readback and

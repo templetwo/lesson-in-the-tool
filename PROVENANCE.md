@@ -21,6 +21,16 @@ the time, never estimated afterwards.
 | 16:30:35 | Anthony relays a Codex seat's review and singles out "the lesson belongs in the tool" |
 | 16:56:03 | Anthony relays ChatGPT's piece on translating principles into their computational homes |
 | 17:02:15 | Anthony asks for this repository, built before anything else, and pushed public on his word |
+| 17:53 | Anthony allows the re-judging (experiment 001b), typed: "now the work" |
+| 20:44 | A Claude Opus 5.5 agent begins the masking (by its own `date`) |
+| 21:04:54 | The builder's final check run begins (by its `date`); in it the masked file is written and every self-check passes |
+| 21:07:07 | Rules of experiment 001b frozen and hashed; registered at 21:07:28, before any judge call |
+| 21:07:35 to 21:08:21 | The judge (a fresh Grok agent) repeats 001's selftest: 38 of 38 |
+| 21:08:38 to 21:31:03 | Three judge sessions in the frozen order: unmasked (to 21:15:49), masked (21:16:19 to 21:23:17), unmasked again (21:23:34 to 21:31:03) |
+| 21:31:46 | Erratum E1 of 001b (one mistyped id) written before any number by setup was seen |
+| 21:32:59 | The 001b report |
+| 21:36:10 | The 001b addendum, after House read the result at 21:35:22 |
+| 22:00:54 | Preparation of 001b for this repository begins; not pushed until Anthony says go |
 
 ## The frozen inputs of experiment 001
 From `experiments/001-sheet-pilot/FREEZE.json` (frozen at 2026-11-24 13:48:07 EST). These files are published byte for byte.
@@ -40,6 +50,20 @@ From `experiments/001-sheet-pilot/FREEZE.json` (frozen at 2026-11-24 13:48:07 ES
 | `sheet/SHEET_SHORT_v2.md` | `5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1` |
 
 Checked when this file was written: 11 of 11 copies in this repository match their frozen hash.
+
+## The frozen inputs of experiment 001b
+From `experiments/001b-judge-lean/FREEZE.json` (frozen at 2026-11-24 21:07:07 EST). It lists 16 files by path and
+the hashes of the two judge instruction files. All are published byte for byte. The rules and the freeze record:
+
+| file | SHA-256 |
+|---|---|
+| `experiments/001b-judge-lean/PREREG_001b.md` | `e5c816900f4c5cd4a6aabbadbe28612abf3c1bf49649513691eb7b857ab989b1` |
+| `experiments/001b-judge-lean/FREEZE.json` | `3579866bf9c980706075b91268b915d5b38b0e2186a1b48844c38aa742c047b6` |
+
+Checked at 2026-11-24 22:04:39 EST: 18 of 18 copies in this repository match the hashes in
+`FREEZE.json`, and the two hashes above match the ones registered at 21:07:28. Of the five inputs `FREEZE.json`
+records from experiment 001, four match the copies here; 001's `runs/house/key.json` does not, because its `meta`
+block was generalised before 001 was published (001 `ERRATA.md` E6). 001b does not read that file.
 
 ## The sheet and the reviews
 
@@ -76,6 +100,19 @@ healthy for 5.6 hours; the draft had said "five hours"). Draft 2 changes rule 11
 - **A Codex seat** (through Anthony): tools in every arm, jobs that truly succeed beside jobs that only say so, and the
   sentence the project is named around.
 - **A Grok agent**: the blind judge, working from a folder that held only the packet it was asked to score.
+
+Experiment 001b, separately:
+- **House** (the house's own qwen3.8 27B model, speaking in the House Room): the design of the test, and the
+  reading of its result given in the addendum. One change came from the HQ seat and House accepted it: the
+  threshold is the judge's own repeat noise, not the model's run-to-run noise.
+- **Claude Fable 5.2 (the HQ seat)**: the rules, the review of every masked reply, the freeze, the runs, the report,
+  the erratum and the addendum.
+- **A Claude Opus 5.5 agent**, working under the HQ seat and shown only the replies: the masking and its notes, and
+  the scripts (the mask applier, the checker, the packet builder and the tally).
+- **A Grok agent**: the judge, a fresh session for the selftest and for each of the three packets, each in a folder
+  holding only its instructions and one packet.
+- **Anthony Vasquez Sr.**: allowed the work.
+- **A Claude Opus 5.5 agent** prepared it for this repository (generalising, checking, notes); it changed no number.
 - **Others, named and unnamed.** Anthony reaches his decisions through the IRIS Gate multi-model process
   (https://github.com/templetwo/iris-gate), in which several independent AI models are consulted. The list above is
   what the record shows for this repository. Other models and other instances were consulted along the way, some
