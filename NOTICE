@@ -45,14 +45,20 @@ judgment about the contribution.
 Provenance, as far as the record shows. Claude (Fable 5.2, the lead
 seat on the house's Mac Studio) wrote the rules of the first
 experiment, reviewed every piece, ran the pilots and wrote the reports
-and this repository's documents. Claude Opus 5.5 agents, working under
-that seat, drafted the sheet from the house's record, built the test
-harness and wrote the task items. The three-setup blind design and the
-rewording of the sheet's eleventh rule are ChatGPT's. The design of
+and most of this repository's documents. Claude Opus 5.5 agents,
+working under that seat, drafted the sheet from the house's record,
+built the test harness and wrote the task items. The three-setup
+blind design and the rewording of the sheet's eleventh rule are
+ChatGPT's. The design of
 the second experiment (tools in every arm, true successes beside false
-ones) is a Codex seat's. A Grok agent was the blind judge. All of it
-was done under Anthony Vasquez Sr.'s direction. PROVENANCE.md gives the
-account with times and hashes.
+ones) is a Codex seat's. A Grok agent was the blind judge. The design
+of the judge-lean test (experiment 001b) is House's, the house's own
+local model. On 2026-11-25 a GPT-6 Astra Codex seat (OpenAI), at
+Anthony's request, wrote the lesson_tools package, the archive
+verifier, their tests and the documents docs/LESSON_TOOLS.md and
+docs/VERIFICATION.md, and found the defect recorded as erratum E8 of
+the first experiment. All of it was done under Anthony Vasquez Sr.'s
+direction. PROVENANCE.md gives the account with times and hashes.
 
 Scope. The License applies to the documents, code, task items and data
 in this repository. As published at the repository address above, the
