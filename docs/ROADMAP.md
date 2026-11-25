@@ -18,6 +18,11 @@ Written 2026-11-24, at the start. It will be wrong in places; changes are record
 
 ## Next
 
+Development contribution, 2026-11-25: `lesson_tools/` now contains the first real record-writing operation with a
+required readback, plus six local demonstrations. `docs/LESSON_TOOLS.md` develops its concept and proposes search
+coverage, live-setting readback and revisitable receipts as possible siblings. `tools/verify_archive.py` checks
+the existing evidence chain. Neither contribution is an experiment result; experiment 002 remains a draft.
+
 1. **Experiment 002, the lesson in the tool.** Draft rules exist. To do: agree the rules, have a seat on another
    provider write the jobs, build the tool loop and the simulated workspace, test the scorers, freeze, run the small
    model first, then the larger one.

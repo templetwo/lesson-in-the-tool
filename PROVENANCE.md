@@ -126,3 +126,21 @@ Experiment 001b, separately:
 - Anything about family, personal finance, credentials, protected material or his personal schedule. The drafter of
   the sheet had already skipped 17 such items in the record; the counts by category are in the notes file.
 - The private record itself.
+
+## Development contribution, 2026-11-25
+
+At Anthony's request to investigate, contribute from a separate tree, and help build the project's tools and
+concepts, a GPT-6 Astra Codex seat prepared the following from repository main `19a3017`:
+
+- `lesson_tools/`: a real JSONL save with required readback, structured intent/action/observation receipts, and
+  temporary demonstrations of true success, false success and unavailable evidence.
+- `docs/LESSON_TOOLS.md`: the concept of a tool carrying an incident, an executable obligation, an attempted
+  refutation and a stated boundary. Its proposed experiments and future tools are explicitly distinguished from
+  implemented behavior.
+- `tools/verify_archive.py` and `tools/archive_evidence.py`: offline checks and deterministic reproductions of the
+  public 001/001b archive, with adversarial controls in `tests/` and scope in `docs/VERIFICATION.md`.
+
+The seat and its delegated reviewers read the published sheet and experimental design. Their development examples
+are not blinded tasks. No model-under-test calls were made. Frozen inputs, raw runs, judge scores, reported results
+and experiment 002's draft remain unchanged. These additions credit the Codex work as provenance; they do not
+establish new research results or alter the historical authorship above.

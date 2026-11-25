@@ -125,6 +125,23 @@ and it does not show the judge could not tell the setups apart by style. Details
 
 See `docs/ROADMAP.md`.
 
+## Building the lesson into an operation
+
+The first working prototype is `save_records`: it writes a JSONL file and reads the requested destination back,
+checking identities, order and values. Its receipt keeps the request, the writer's claim and the observation
+separate. A correct count with wrong records is a contradiction; an unavailable readback is unresolved; a real
+success is confirmed. The tool performs this obligation even if the next model never reads the lesson.
+
+Try six local demonstrations, with invented records and deliberate faults in a temporary folder:
+
+```sh
+python3 -B -m lesson_tools
+```
+
+`docs/LESSON_TOOLS.md`, **The part that remembers**, develops the concept, shows the real writing API and proposes
+the next tools. These are development controls, not experiment 002 results or blinded task material. The prototype
+does not change that experiment's draft rules.
+
 ## How this work is done
 
 The rules are in `docs/METHOD.md`. In short: the rules of a test are written, hashed and registered before the first
@@ -153,6 +170,19 @@ MANIFEST.sha256                the hash of every file in this repository
 ```
 
 ## Checking our work
+
+One command now checks the published archive and reproduces its deterministic outputs, with Python 3.9 or later,
+no dependencies, model calls or network:
+
+```sh
+python3 -B tools/verify_archive.py
+python3 -B -m unittest discover -s tests -v
+```
+
+The verifier checks manifest coverage, frozen commitments, raw/packet/score joins and published totals; preserves
+recorded errors and the documented public-edition hash exception; and rebuilds scores, masks, packets and the
+re-judging tally in temporary folders. `docs/VERIFICATION.md` specifies its coverage and limits. The tests include
+deliberately damaged evidence, so the checker must demonstrate that it can refuse it.
 
 - `experiments/001-sheet-pilot/FREEZE.json` lists the SHA-256 of the rules and of every input, taken at 13:48:07
   Eastern on 2026-11-24, before any model under test was called. `shasum -a 256` on the files should match. The frozen
