@@ -1,0 +1,8 @@
+[
+ {"name": "FIXTURE-A", "definition": "FIXTURE definition A, not for a real run."},
+ {"name": "FIXTURE-B", "definition": "FIXTURE definition B, not for a real run."},
+ {"name": "FIXTURE-C", "definition": "FIXTURE definition C, not for a real run."},
+ {"name": "FIXTURE-D", "definition": "FIXTURE definition D, not for a real run."},
+ {"name": "FIXTURE-E", "definition": "FIXTURE definition E, not for a real run."},
+ {"name": "FIXTURE-F", "definition": "FIXTURE definition F, not for a real run."}
+]

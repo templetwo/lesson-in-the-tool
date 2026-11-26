@@ -1,0 +1,397 @@
+{
+  "dry_run": false,
+  "sorter": "cloud-grok",
+  "group": "cloud",
+  "provider": "xai",
+  "repeat": 1,
+  "caller": "xai:grok-4.7",
+  "line_seed": 4104138130,
+  "home_seed": 2443090887,
+  "lines_commit": "441752cd2d7536ad9d6fa806e2f752752676342b",
+  "lines_sha256": "5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1",
+  "homes_sha256": "a10a13d8818caa81cf8005f6d99f7aecdbe3bbd63a38c13ec6b481ff4dee66fa",
+  "prompt_file": "prompts/cloud-grok__r1.json",
+  "prompt_sha256": "f1477a3fc0ce06507f01d77f0f893c5fe29cd6f3ec7bfc8a1641a7e04e346a80",
+  "question_sha256": "e34ca9c61f04cdbe4e5ac0b2b3a7b5d0ec90bf72ee0165a92a1942341ed712a8",
+  "raw_reply": "L01 | main: check | second: harness\nL02 | main: judgment | second: harness\nL03 | main: check | second: harness\nL04 | main: check | second: judgment\nL05 | main: check | second: gate\nL06 | main: check | second: gate\nL07 | main: check | second: retrieval\nL08 | main: harness | second: none\nL09 | main: tool | second: harness\nL10 | main: gate | second: check\nL11 | main: judgment | second: check\nL12 | main: check | second: judgment\nL13 | main: check | second: judgment\nL14 | main: check | second: judgment\nL15 | main: check | second: harness\nL16 | main: check | second: gate\nL17 | main: judgment | second: harness",
+  "parse_ok": true,
+  "parse_errors": [],
+  "rows": [
+    {
+      "dry_run": false,
+      "label": "L01",
+      "home_main": "check",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L02",
+      "home_main": "judgment",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L03",
+      "home_main": "check",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L04",
+      "home_main": "check",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L05",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L06",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L07",
+      "home_main": "check",
+      "home_second": "retrieval"
+    },
+    {
+      "dry_run": false,
+      "label": "L08",
+      "home_main": "harness",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L09",
+      "home_main": "tool",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L10",
+      "home_main": "gate",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L11",
+      "home_main": "judgment",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L12",
+      "home_main": "check",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L13",
+      "home_main": "check",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L14",
+      "home_main": "check",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L15",
+      "home_main": "check",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L16",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L17",
+      "home_main": "judgment",
+      "home_second": "harness"
+    }
+  ],
+  "turn2": {
+    "dry_run": false,
+    "sent": true,
+    "not_sent_reason": null,
+    "raw_reply": "L01 | What remains judgment is which clock and which moment the record is about, not whether to read a clock before writing a time.\nL02 | What remains judgment is recognizing that calm attention was asked for, and telling presence from the extra help that was not.\nL03 | What remains judgment is who counts as a different kind of reviewer, and whether the correction they offer is the one to keep.\nL04 | What remains judgment is whether you have found the real cause or only a plausible name, and where an exact quote ends and your own words begin.\nL05 | What remains judgment is which deliberate failure would expose a false green, and when a monitor that failed once may be trusted again.\nL06 | What remains judgment is what outside source is enough to call an answer checked, and when the honest label is not checked.\nL07 | What remains judgment is which test would catch a dropped warning, and whether a fact that survived the test still applies here.\nL08 | What remains judgment is which remembered lesson deserves an always-step, and when that step should be changed or dropped.\nL09 | What remains judgment is which code or hash is the one to copy, and whether the program copied the span that belongs in the record.\nL10 | What remains judgment is which check decides, and what result is required before done or verified may be said.\nL11 | What remains judgment is what an empty result, a zero, or a short list says about the search, and what may still be claimed about the world.\nL12 | What remains judgment is whether the loss is real or only a wrong location or a wrong reading, and whether the remedy would destroy work that is still running.\nL13 | What remains judgment is what must be inspected to see what landed, and whether that outcome matches the success that was reported.\nL14 | What remains judgment is whether another source could change the answer owed, and when the places already searched are enough.\nL15 | What remains judgment is which things sit beside the fix, and whether checking them shows a new break or an old one.\nL16 | What remains judgment is what it would look like for the saved change to act, and whether the behavior you see was caused by that setting.\nL17 | What remains judgment is how strong a claim the stated evidence can bear, and when three chats or one example are too thin to support it.",
+    "parse_ok": true,
+    "parse_errors": [],
+    "rows": [
+      {
+        "dry_run": false,
+        "label": "L01",
+        "sentence": "What remains judgment is which clock and which moment the record is about, not whether to read a clock before writing a time."
+      },
+      {
+        "dry_run": false,
+        "label": "L02",
+        "sentence": "What remains judgment is recognizing that calm attention was asked for, and telling presence from the extra help that was not."
+      },
+      {
+        "dry_run": false,
+        "label": "L03",
+        "sentence": "What remains judgment is who counts as a different kind of reviewer, and whether the correction they offer is the one to keep."
+      },
+      {
+        "dry_run": false,
+        "label": "L04",
+        "sentence": "What remains judgment is whether you have found the real cause or only a plausible name, and where an exact quote ends and your own words begin."
+      },
+      {
+        "dry_run": false,
+        "label": "L05",
+        "sentence": "What remains judgment is which deliberate failure would expose a false green, and when a monitor that failed once may be trusted again."
+      },
+      {
+        "dry_run": false,
+        "label": "L06",
+        "sentence": "What remains judgment is what outside source is enough to call an answer checked, and when the honest label is not checked."
+      },
+      {
+        "dry_run": false,
+        "label": "L07",
+        "sentence": "What remains judgment is which test would catch a dropped warning, and whether a fact that survived the test still applies here."
+      },
+      {
+        "dry_run": false,
+        "label": "L08",
+        "sentence": "What remains judgment is which remembered lesson deserves an always-step, and when that step should be changed or dropped."
+      },
+      {
+        "dry_run": false,
+        "label": "L09",
+        "sentence": "What remains judgment is which code or hash is the one to copy, and whether the program copied the span that belongs in the record."
+      },
+      {
+        "dry_run": false,
+        "label": "L10",
+        "sentence": "What remains judgment is which check decides, and what result is required before done or verified may be said."
+      },
+      {
+        "dry_run": false,
+        "label": "L11",
+        "sentence": "What remains judgment is what an empty result, a zero, or a short list says about the search, and what may still be claimed about the world."
+      },
+      {
+        "dry_run": false,
+        "label": "L12",
+        "sentence": "What remains judgment is whether the loss is real or only a wrong location or a wrong reading, and whether the remedy would destroy work that is still running."
+      },
+      {
+        "dry_run": false,
+        "label": "L13",
+        "sentence": "What remains judgment is what must be inspected to see what landed, and whether that outcome matches the success that was reported."
+      },
+      {
+        "dry_run": false,
+        "label": "L14",
+        "sentence": "What remains judgment is whether another source could change the answer owed, and when the places already searched are enough."
+      },
+      {
+        "dry_run": false,
+        "label": "L15",
+        "sentence": "What remains judgment is which things sit beside the fix, and whether checking them shows a new break or an old one."
+      },
+      {
+        "dry_run": false,
+        "label": "L16",
+        "sentence": "What remains judgment is what it would look like for the saved change to act, and whether the behavior you see was caused by that setting."
+      },
+      {
+        "dry_run": false,
+        "label": "L17",
+        "sentence": "What remains judgment is how strong a claim the stated evidence can bear, and when three chats or one example are too thin to support it."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "dry_run": false,
+      "caller": "xai:grok-4.7",
+      "turn": 1,
+      "provider": "xai",
+      "model_requested": "grok-4.7",
+      "model_reported": "grok-4.7",
+      "model_matches": true,
+      "url": "https://api.x.ai/v1/responses",
+      "settings_sent_json": "{\"max_output_tokens\": 19000, \"model\": \"grok-4.7\", \"reasoning\": {\"effort\": \"high\"}}",
+      "message_count": 1,
+      "started_at": "2026-11-26 00:01:34 EST",
+      "finished_at": "2026-11-26 00:03:23 EST",
+      "complete": true,
+      "stop": "completed",
+      "usage_json": "{\"context_details\": {\"input_tokens\": 2242, \"output_tokens\": 8392}, \"cost_in_usd_ticks\": 530600000, \"input_tokens\": 2242, \"input_tokens_details\": {\"cached_tokens\": 1152}, \"num_server_side_tools_used\": 0, \"num_sources_used\": 0, \"output_tokens\": 8384, \"output_tokens_details\": {\"reasoning_tokens\": 8198}, \"total_tokens\": 10626}",
+      "response_body_json": "{\"status\": \"completed\"}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "output_tokens",
+        "reported_output_tokens": 8384,
+        "limit": 19000
+      }
+    },
+    {
+      "dry_run": false,
+      "caller": "xai:grok-4.7",
+      "turn": 2,
+      "provider": "xai",
+      "model_requested": "grok-4.7",
+      "model_reported": "grok-4.7",
+      "model_matches": true,
+      "url": "https://api.x.ai/v1/responses",
+      "settings_sent_json": "{\"max_output_tokens\": 19000, \"model\": \"grok-4.7\", \"reasoning\": {\"effort\": \"high\"}}",
+      "message_count": 3,
+      "started_at": "2026-11-26 00:03:23 EST",
+      "finished_at": "2026-11-26 00:04:03 EST",
+      "complete": true,
+      "stop": "completed",
+      "usage_json": "{\"context_details\": {\"input_tokens\": 10748, \"output_tokens\": 3182}, \"cost_in_usd_ticks\": 372700000, \"input_tokens\": 10748, \"input_tokens_details\": {\"cached_tokens\": 2176}, \"num_server_side_tools_used\": 0, \"num_sources_used\": 0, \"output_tokens\": 3173, \"output_tokens_details\": {\"reasoning_tokens\": 2688}, \"total_tokens\": 13921}",
+      "response_body_json": "{\"status\": \"completed\"}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "output_tokens",
+        "reported_output_tokens": 3173,
+        "limit": 19000
+      }
+    }
+  ],
+  "persistence_state": "complete",
+  "call_budget": {
+    "mode": "main",
+    "output_token_limit": 19000,
+    "planned": {
+      "total": 48,
+      "external": 36,
+      "anthropic": 12,
+      "other_external": 24,
+      "local": 12,
+      "dry_fixture": 0
+    },
+    "attempted": {
+      "total": 26,
+      "external": 26,
+      "anthropic": 12,
+      "other_external": 14,
+      "local": 0,
+      "dry_fixture": 0
+    },
+    "per_sorter": {
+      "cloud-fable": {
+        "caller": "anthropic:claude-fable-5-2",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-opus": {
+        "caller": "anthropic:claude-opus-5-5",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-astra": {
+        "caller": "openai:gpt-6.2-astra",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-sol": {
+        "caller": "openai:gpt-6.2-sol",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-grok": {
+        "caller": "xai:grok-4.7",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 2,
+        "stop": null
+      },
+      "cloud-deepseek": {
+        "caller": "deepseek:deepseek-v4-pro",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "local-house": {
+        "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "local-gemma": {
+        "caller": "ollama-local-b:gemma4:e4b-mlx",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      }
+    },
+    "per_adapter": {
+      "anthropic:claude-fable-5-2": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "anthropic:claude-opus-5-5": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-astra": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-sol": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "xai:grok-4.7": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 2
+      },
+      "deepseek:deepseek-v4-pro": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "ollama-local-a:qwen3.8:27b-draft4-text": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      },
+      "ollama-local-b:gemma4:e4b-mlx": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      }
+    }
+  }
+}

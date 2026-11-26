@@ -1,0 +1,397 @@
+{
+  "dry_run": false,
+  "sorter": "cloud-grok",
+  "group": "cloud",
+  "provider": "xai",
+  "repeat": 2,
+  "caller": "xai:grok-4.7",
+  "line_seed": 3665862845,
+  "home_seed": 1741756703,
+  "lines_commit": "441752cd2d7536ad9d6fa806e2f752752676342b",
+  "lines_sha256": "5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1",
+  "homes_sha256": "a10a13d8818caa81cf8005f6d99f7aecdbe3bbd63a38c13ec6b481ff4dee66fa",
+  "prompt_file": "prompts/cloud-grok__r2.json",
+  "prompt_sha256": "da83f2e2d41c722bbd293ee132d4d0e2cc5f32486ae88653fed7f46aba7443c7",
+  "question_sha256": "e34ca9c61f04cdbe4e5ac0b2b3a7b5d0ec90bf72ee0165a92a1942341ed712a8",
+  "raw_reply": "L01 | main: judgment | second: harness\nL02 | main: check | second: gate\nL03 | main: check | second: judgment\nL04 | main: check | second: harness\nL05 | main: harness | second: none\nL06 | main: tool | second: harness\nL07 | main: check | second: gate\nL08 | main: check | second: none\nL09 | main: check | second: none\nL10 | main: check | second: gate\nL11 | main: judgment | second: harness\nL12 | main: check | second: judgment\nL13 | main: check | second: none\nL14 | main: check | second: tool\nL15 | main: check | second: tool\nL16 | main: check | second: judgment\nL17 | main: judgment | second: check",
+  "parse_ok": true,
+  "parse_errors": [],
+  "rows": [
+    {
+      "dry_run": false,
+      "label": "L01",
+      "home_main": "judgment",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L02",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L03",
+      "home_main": "check",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L04",
+      "home_main": "check",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L05",
+      "home_main": "harness",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L06",
+      "home_main": "tool",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L07",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L08",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L09",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L10",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L11",
+      "home_main": "judgment",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L12",
+      "home_main": "check",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L13",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L14",
+      "home_main": "check",
+      "home_second": "tool"
+    },
+    {
+      "dry_run": false,
+      "label": "L15",
+      "home_main": "check",
+      "home_second": "tool"
+    },
+    {
+      "dry_run": false,
+      "label": "L16",
+      "home_main": "check",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L17",
+      "home_main": "judgment",
+      "home_second": "check"
+    }
+  ],
+  "turn2": {
+    "dry_run": false,
+    "sent": true,
+    "not_sent_reason": null,
+    "raw_reply": "L01 | Judging how much weight the stated evidence can bear, and how far the claim must be cut to match it, still remains.\nL02 | Judging which check is the deciding one, and whether passing it is enough to say done or verified, still remains.\nL03 | Judging whether another source could change the answer you owe, and when the places you named are enough, still remains.\nL04 | Judging which work is important and which reviewer is different enough to catch the error, still remains.\nL05 | Judging which lesson must become a standing step, and whether that step fits the case in front of you, still remains.\nL06 | Judging which strings are long codes or hashes that must not be typed, and whether the program copied the intended source, still remains.\nL07 | Judging what behavior would show that the saved setting is actually in effect, and whether you have seen it, still remains.\nL08 | Judging which things sit beside the fix, and how far from the change you still need to look, still remains.\nL09 | Judging what should have landed, and whether the thing you inspect is the success the status line claimed, still remains.\nL10 | Judging whether a source is truly outside yourself and fit to check this answer, so that marking it checked is earned, still remains.\nL11 | Judging whether calm attention is what was asked for, and what presence looks like here without adding anything else, still remains.\nL12 | Judging what the real cause is after you have looked, and whether a quotation is exact enough to file as someone else's finding, still remains.\nL13 | Judging what would count as a real test of the noted fact, and whether the result lets you repeat, qualify, or drop it, still remains.\nL14 | Judging which failure to force on purpose, and whether that one failure is reason enough to trust the test or monitor, still remains.\nL15 | Judging which clock and which moment the written time is supposed to record, still remains.\nL16 | Judging whether a wrong location or a bad reading explains the alarm, or whether the thing is truly lost, still remains.\nL17 | Judging whether the search was sound enough that an empty result, a zero, or a short list is a fact about the world, still remains.",
+    "parse_ok": true,
+    "parse_errors": [],
+    "rows": [
+      {
+        "dry_run": false,
+        "label": "L01",
+        "sentence": "Judging how much weight the stated evidence can bear, and how far the claim must be cut to match it, still remains."
+      },
+      {
+        "dry_run": false,
+        "label": "L02",
+        "sentence": "Judging which check is the deciding one, and whether passing it is enough to say done or verified, still remains."
+      },
+      {
+        "dry_run": false,
+        "label": "L03",
+        "sentence": "Judging whether another source could change the answer you owe, and when the places you named are enough, still remains."
+      },
+      {
+        "dry_run": false,
+        "label": "L04",
+        "sentence": "Judging which work is important and which reviewer is different enough to catch the error, still remains."
+      },
+      {
+        "dry_run": false,
+        "label": "L05",
+        "sentence": "Judging which lesson must become a standing step, and whether that step fits the case in front of you, still remains."
+      },
+      {
+        "dry_run": false,
+        "label": "L06",
+        "sentence": "Judging which strings are long codes or hashes that must not be typed, and whether the program copied the intended source, still remains."
+      },
+      {
+        "dry_run": false,
+        "label": "L07",
+        "sentence": "Judging what behavior would show that the saved setting is actually in effect, and whether you have seen it, still remains."
+      },
+      {
+        "dry_run": false,
+        "label": "L08",
+        "sentence": "Judging which things sit beside the fix, and how far from the change you still need to look, still remains."
+      },
+      {
+        "dry_run": false,
+        "label": "L09",
+        "sentence": "Judging what should have landed, and whether the thing you inspect is the success the status line claimed, still remains."
+      },
+      {
+        "dry_run": false,
+        "label": "L10",
+        "sentence": "Judging whether a source is truly outside yourself and fit to check this answer, so that marking it checked is earned, still remains."
+      },
+      {
+        "dry_run": false,
+        "label": "L11",
+        "sentence": "Judging whether calm attention is what was asked for, and what presence looks like here without adding anything else, still remains."
+      },
+      {
+        "dry_run": false,
+        "label": "L12",
+        "sentence": "Judging what the real cause is after you have looked, and whether a quotation is exact enough to file as someone else's finding, still remains."
+      },
+      {
+        "dry_run": false,
+        "label": "L13",
+        "sentence": "Judging what would count as a real test of the noted fact, and whether the result lets you repeat, qualify, or drop it, still remains."
+      },
+      {
+        "dry_run": false,
+        "label": "L14",
+        "sentence": "Judging which failure to force on purpose, and whether that one failure is reason enough to trust the test or monitor, still remains."
+      },
+      {
+        "dry_run": false,
+        "label": "L15",
+        "sentence": "Judging which clock and which moment the written time is supposed to record, still remains."
+      },
+      {
+        "dry_run": false,
+        "label": "L16",
+        "sentence": "Judging whether a wrong location or a bad reading explains the alarm, or whether the thing is truly lost, still remains."
+      },
+      {
+        "dry_run": false,
+        "label": "L17",
+        "sentence": "Judging whether the search was sound enough that an empty result, a zero, or a short list is a fact about the world, still remains."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "dry_run": false,
+      "caller": "xai:grok-4.7",
+      "turn": 1,
+      "provider": "xai",
+      "model_requested": "grok-4.7",
+      "model_reported": "grok-4.7",
+      "model_matches": true,
+      "url": "https://api.x.ai/v1/responses",
+      "settings_sent_json": "{\"max_output_tokens\": 19000, \"model\": \"grok-4.7\", \"reasoning\": {\"effort\": \"high\"}}",
+      "message_count": 1,
+      "started_at": "2026-11-26 00:04:03 EST",
+      "finished_at": "2026-11-26 00:06:15 EST",
+      "complete": true,
+      "stop": "completed",
+      "usage_json": "{\"context_details\": {\"input_tokens\": 2242, \"output_tokens\": 11156}, \"cost_in_usd_ticks\": 696500000, \"input_tokens\": 2242, \"input_tokens_details\": {\"cached_tokens\": 1152}, \"num_server_side_tools_used\": 0, \"num_sources_used\": 0, \"output_tokens\": 11149, \"output_tokens_details\": {\"reasoning_tokens\": 10963}, \"total_tokens\": 13391}",
+      "response_body_json": "{\"status\": \"completed\"}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "output_tokens",
+        "reported_output_tokens": 11149,
+        "limit": 19000
+      }
+    },
+    {
+      "dry_run": false,
+      "caller": "xai:grok-4.7",
+      "turn": 2,
+      "provider": "xai",
+      "model_requested": "grok-4.7",
+      "model_reported": "grok-4.7",
+      "model_matches": true,
+      "url": "https://api.x.ai/v1/responses",
+      "settings_sent_json": "{\"max_output_tokens\": 19000, \"model\": \"grok-4.7\", \"reasoning\": {\"effort\": \"high\"}}",
+      "message_count": 3,
+      "started_at": "2026-11-26 00:06:15 EST",
+      "finished_at": "2026-11-26 00:06:59 EST",
+      "complete": true,
+      "stop": "completed",
+      "usage_json": "{\"context_details\": {\"input_tokens\": 13513, \"output_tokens\": 4080}, \"cost_in_usd_ticks\": 481880000, \"input_tokens\": 13513, \"input_tokens_details\": {\"cached_tokens\": 2176}, \"num_server_side_tools_used\": 0, \"num_sources_used\": 0, \"output_tokens\": 4071, \"output_tokens_details\": {\"reasoning_tokens\": 3589}, \"total_tokens\": 17584}",
+      "response_body_json": "{\"status\": \"completed\"}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "output_tokens",
+        "reported_output_tokens": 4071,
+        "limit": 19000
+      }
+    }
+  ],
+  "persistence_state": "complete",
+  "call_budget": {
+    "mode": "main",
+    "output_token_limit": 19000,
+    "planned": {
+      "total": 48,
+      "external": 36,
+      "anthropic": 12,
+      "other_external": 24,
+      "local": 12,
+      "dry_fixture": 0
+    },
+    "attempted": {
+      "total": 28,
+      "external": 28,
+      "anthropic": 12,
+      "other_external": 16,
+      "local": 0,
+      "dry_fixture": 0
+    },
+    "per_sorter": {
+      "cloud-fable": {
+        "caller": "anthropic:claude-fable-5-2",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-opus": {
+        "caller": "anthropic:claude-opus-5-5",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-astra": {
+        "caller": "openai:gpt-6.2-astra",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-sol": {
+        "caller": "openai:gpt-6.2-sol",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-grok": {
+        "caller": "xai:grok-4.7",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 4,
+        "stop": null
+      },
+      "cloud-deepseek": {
+        "caller": "deepseek:deepseek-v4-pro",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "local-house": {
+        "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "local-gemma": {
+        "caller": "ollama-local-b:gemma4:e4b-mlx",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      }
+    },
+    "per_adapter": {
+      "anthropic:claude-fable-5-2": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "anthropic:claude-opus-5-5": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-astra": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-sol": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "xai:grok-4.7": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 4
+      },
+      "deepseek:deepseek-v4-pro": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "ollama-local-a:qwen3.8:27b-draft4-text": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      },
+      "ollama-local-b:gemma4:e4b-mlx": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      }
+    }
+  }
+}

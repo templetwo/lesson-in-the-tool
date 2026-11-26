@@ -1,0 +1,74 @@
+{
+ "run_dir": "real_runs/run_1",
+ "out_dir": "real_runs/run_1_tally",
+ "sorters": [
+  {
+   "name": "cloud-fable",
+   "group": "cloud",
+   "provider": "anthropic"
+  },
+  {
+   "name": "cloud-opus",
+   "group": "cloud",
+   "provider": "anthropic"
+  },
+  {
+   "name": "cloud-astra",
+   "group": "cloud",
+   "provider": "openai"
+  },
+  {
+   "name": "cloud-sol",
+   "group": "cloud",
+   "provider": "openai"
+  },
+  {
+   "name": "cloud-grok",
+   "group": "cloud",
+   "provider": "xai"
+  },
+  {
+   "name": "cloud-deepseek",
+   "group": "cloud",
+   "provider": "deepseek"
+  },
+  {
+   "name": "local-house",
+   "group": "local",
+   "provider": "ollama-local-a"
+  },
+  {
+   "name": "local-gemma",
+   "group": "local",
+   "provider": "ollama-local-b"
+  }
+ ],
+ "groups": {
+  "cloud": {
+   "min_providers": 3
+  }
+ },
+ "repeats": 3,
+ "cut_points_by_size": {
+  "6": {
+   "settled_min": 5,
+   "leaning_min": 4
+  }
+ },
+ "bootstrap": {
+  "seed": 20261125,
+  "draws": 2000,
+  "level": 0.95
+ },
+ "house_table": "house_table.json",
+ "real_callers": [
+  "anthropic:claude-fable-5-2",
+  "anthropic:claude-opus-5-5",
+  "deepseek:deepseek-v4-pro",
+  "ollama-local-a:qwen3.8:27b-draft4-text",
+  "ollama-local-b:gemma4:e4b-mlx",
+  "openai:gpt-6.2-astra",
+  "openai:gpt-6.2-sol",
+  "xai:grok-4.7"
+ ]
+}

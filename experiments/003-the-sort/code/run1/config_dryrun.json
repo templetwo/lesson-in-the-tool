@@ -1,0 +1,24 @@
+{
+ "dry_run": true,
+ "caller": "dryrun",
+ "repo": "../../../../",
+ "commit": "441752c",
+ "lines_path": "sheet/SHEET_SHORT_v2.md",
+ "homes_file": "fixtures/homes_fixture.json",
+ "deny_list": "deny_list.txt",
+ "prompt_text": "prompt_text.json",
+ "sorters": [
+  {"name": "cloud-1", "group": "cloud", "provider": "provider-1"},
+  {"name": "cloud-2", "group": "cloud", "provider": "provider-1"},
+  {"name": "cloud-3", "group": "cloud", "provider": "provider-2"},
+  {"name": "cloud-4", "group": "cloud", "provider": "provider-2"},
+  {"name": "cloud-5", "group": "cloud", "provider": "provider-3"},
+  {"name": "cloud-6", "group": "cloud", "provider": "provider-3"},
+  {"name": "local-house", "group": "local", "provider": "local-a"},
+  {"name": "local-gemma", "group": "local", "provider": "local-b"}
+ ],
+ "groups": {"cloud": {"min_providers": 3}},
+ "repeats": 3,
+ "master_seed": 20261125,
+ "out_dir": "scratch/dryrun_v3"
+}

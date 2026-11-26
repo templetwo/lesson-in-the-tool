@@ -1,0 +1,81 @@
+{
+  "dry_run": false,
+  "written_at": "2026-11-26 11:38:48 EST",
+  "caller": "by_sorter",
+  "call_budget": {
+    "mode": "main",
+    "output_token_limit": 60000,
+    "planned": {
+      "total": 6,
+      "external": 6,
+      "anthropic": 0,
+      "other_external": 6,
+      "local": 0,
+      "dry_fixture": 0
+    },
+    "attempted": {
+      "total": 6,
+      "external": 6,
+      "anthropic": 0,
+      "other_external": 6,
+      "local": 0,
+      "dry_fixture": 0
+    },
+    "per_sorter": {
+      "cloud-deepseek": {
+        "caller": "deepseek:deepseek-v4-pro",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      }
+    },
+    "per_adapter": {
+      "deepseek:deepseek-v4-pro": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      }
+    }
+  },
+  "callers": [
+    "deepseek:deepseek-v4-pro"
+  ],
+  "files": [
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-deepseek__r1.json",
+      "sha256": "32c074c0268b5ced312a978167d40b3974c6a3a8b82f3106b0ef70a51f90c6d0"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-deepseek__r1.json",
+      "sha256": "73bb017a4e94af7d70a04fa5f02813622c3979d08bde21a391880ae463e584ec"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-deepseek__r2.json",
+      "sha256": "3fe509ccb412bf25bec0a493b294451f118615deb5ed2f91a8ffb6c89ddcf011"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-deepseek__r2.json",
+      "sha256": "f645bae5cf70a9441f9fe76dced81f200b78b9a02d9d02bcec186524861b0568"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-deepseek__r3.json",
+      "sha256": "b68173353dc3d360961e2071960150d379c8f327ad4e153c4278b5e8bfea9e23"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-deepseek__r3.json",
+      "sha256": "843139c3b0e0d0afce0aae09844d234caac34985b46d05239a46c4f6d3df7bd6"
+    },
+    {
+      "dry_run": false,
+      "path": "key.json",
+      "sha256": "29debba07ed9fd4ec5d696519d98ba753c843ce68bc81d9dd765e498985de66f"
+    }
+  ]
+}

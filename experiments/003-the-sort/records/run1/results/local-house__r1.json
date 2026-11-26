@@ -1,0 +1,397 @@
+{
+  "dry_run": false,
+  "sorter": "local-house",
+  "group": "local",
+  "provider": "ollama-local-a",
+  "repeat": 1,
+  "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+  "line_seed": 321986193,
+  "home_seed": 2459829474,
+  "lines_commit": "441752cd2d7536ad9d6fa806e2f752752676342b",
+  "lines_sha256": "5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1",
+  "homes_sha256": "a10a13d8818caa81cf8005f6d99f7aecdbe3bbd63a38c13ec6b481ff4dee66fa",
+  "prompt_file": "prompts/local-house__r1.json",
+  "prompt_sha256": "717238d0882c64ceab40a7ac4b583c358936dc897636dd64b481265c9c9b5134",
+  "question_sha256": "e34ca9c61f04cdbe4e5ac0b2b3a7b5d0ec90bf72ee0165a92a1942341ed712a8",
+  "raw_reply": "L01 | main: check | second: retrieval\nL02 | main: check | second: none\nL03 | main: check | second: retrieval\nL04 | main: judgment | second: none\nL05 | main: check | second: retrieval\nL06 | main: check | second: gate\nL07 | main: check | second: none\nL08 | main: judgment | second: check\nL09 | main: check | second: harness\nL10 | main: check | second: gate\nL11 | main: check | second: retrieval\nL12 | main: harness | second: check\nL13 | main: gate | second: check\nL14 | main: check | second: tool\nL15 | main: judgment | second: check\nL16 | main: check | second: gate\nL17 | main: tool | second: harness",
+  "parse_ok": true,
+  "parse_errors": [],
+  "rows": [
+    {
+      "dry_run": false,
+      "label": "L01",
+      "home_main": "check",
+      "home_second": "retrieval"
+    },
+    {
+      "dry_run": false,
+      "label": "L02",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L03",
+      "home_main": "check",
+      "home_second": "retrieval"
+    },
+    {
+      "dry_run": false,
+      "label": "L04",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L05",
+      "home_main": "check",
+      "home_second": "retrieval"
+    },
+    {
+      "dry_run": false,
+      "label": "L06",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L07",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L08",
+      "home_main": "judgment",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L09",
+      "home_main": "check",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L10",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L11",
+      "home_main": "check",
+      "home_second": "retrieval"
+    },
+    {
+      "dry_run": false,
+      "label": "L12",
+      "home_main": "harness",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L13",
+      "home_main": "gate",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L14",
+      "home_main": "check",
+      "home_second": "tool"
+    },
+    {
+      "dry_run": false,
+      "label": "L15",
+      "home_main": "judgment",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L16",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L17",
+      "home_main": "tool",
+      "home_second": "harness"
+    }
+  ],
+  "turn2": {
+    "dry_run": false,
+    "sent": true,
+    "not_sent_reason": null,
+    "raw_reply": "L01 | Judging whether the search scope you ran actually captured the right population remains a context-dependent call that the check of reading the result cannot settle for you.\nL02 | Deciding which timezone, which instant (start versus end), and what precision the record demands is still a judgment the act of glancing at the clock does not resolve.\nL03 | Deciding which numbers in a summary are load-bearing enough to warrant re-testing, and how much of the dropped warning to carry into your new claim, still requires interpretive judgment.\nL04 | Calibrating exactly how much presence, silence, and non-technical language the specific person in the specific moment needs is the judgment the lesson itself demands.\nL05 | Deciding which alternate branches, folders, or machines are plausible enough to warrant a second look, and how much the answer would shift if the file turns up elsewhere, remains a judgment call.\nL06 | Deciding how far \"the things beside it\" extend and where the coupling actually ends is a judgment that no fixed check-list can fully pre-determine.\nL07 | Deciding what observable behavior counts as evidence that a particular setting is live, and whether the program you are watching is the one that would read it, still requires interpretive judgment.\nL08 | Drawing the line between a fair paraphrase and a distortion, and weighing competing causal hypotheses when the evidence is ambiguous, is the judgment the lesson points toward but cannot automate.\nL09 | Deciding which reviewer is genuinely \"different\" enough to catch your blind spots, and how much weight a correction from an unlikely source deserves, remains a contextual judgment.\nL10 | Deciding what \"what actually landed\" means for a specific operation and how many samples to inspect before trusting the count is a judgment the exit-code check does not supply.\nL11 | Deciding whether the external source you reached is actually authoritative for that fact, and how to phrase \"not checked\" so the reader calibrates their trust correctly, still requires judgment.\nL12 | Deciding what the step concretely is, how to phrase it so it is actionable in the moment, and whether applying it this time would actually be the right call, remains a judgment the harness structure does not make for you.\nL13 | Deciding what \"the one deciding check\" is for a particular task, and what \"done\" genuinely requires in that context, is a judgment that the gate's structure leaves open.\nL14 | Deciding what a meaningful failure looks like for a specific monitor and whether the test is actually exercising the path it claims to test is a judgment that running the negative case does not fully resolve.\nL15 | Deciding what counts as meaningful evidence, how to weigh three short chats against a single example, and whether the number of instances matters less than their diversity, is the judgment the lesson invokes.\nL16 | Deciding how many independent readings constitute sufficient evidence of liveness and what \"dead\" means for the specific process and its state is a judgment the verification step does not fully settle.\nL17 | Deciding which codes and hashes require verbatim fidelity in a given record, and when a truncated form would be acceptable for downstream consumers, remains a judgment the copy-tool does not make for you.",
+    "parse_ok": true,
+    "parse_errors": [],
+    "rows": [
+      {
+        "dry_run": false,
+        "label": "L01",
+        "sentence": "Judging whether the search scope you ran actually captured the right population remains a context-dependent call that the check of reading the result cannot settle for you."
+      },
+      {
+        "dry_run": false,
+        "label": "L02",
+        "sentence": "Deciding which timezone, which instant (start versus end), and what precision the record demands is still a judgment the act of glancing at the clock does not resolve."
+      },
+      {
+        "dry_run": false,
+        "label": "L03",
+        "sentence": "Deciding which numbers in a summary are load-bearing enough to warrant re-testing, and how much of the dropped warning to carry into your new claim, still requires interpretive judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L04",
+        "sentence": "Calibrating exactly how much presence, silence, and non-technical language the specific person in the specific moment needs is the judgment the lesson itself demands."
+      },
+      {
+        "dry_run": false,
+        "label": "L05",
+        "sentence": "Deciding which alternate branches, folders, or machines are plausible enough to warrant a second look, and how much the answer would shift if the file turns up elsewhere, remains a judgment call."
+      },
+      {
+        "dry_run": false,
+        "label": "L06",
+        "sentence": "Deciding how far \"the things beside it\" extend and where the coupling actually ends is a judgment that no fixed check-list can fully pre-determine."
+      },
+      {
+        "dry_run": false,
+        "label": "L07",
+        "sentence": "Deciding what observable behavior counts as evidence that a particular setting is live, and whether the program you are watching is the one that would read it, still requires interpretive judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L08",
+        "sentence": "Drawing the line between a fair paraphrase and a distortion, and weighing competing causal hypotheses when the evidence is ambiguous, is the judgment the lesson points toward but cannot automate."
+      },
+      {
+        "dry_run": false,
+        "label": "L09",
+        "sentence": "Deciding which reviewer is genuinely \"different\" enough to catch your blind spots, and how much weight a correction from an unlikely source deserves, remains a contextual judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L10",
+        "sentence": "Deciding what \"what actually landed\" means for a specific operation and how many samples to inspect before trusting the count is a judgment the exit-code check does not supply."
+      },
+      {
+        "dry_run": false,
+        "label": "L11",
+        "sentence": "Deciding whether the external source you reached is actually authoritative for that fact, and how to phrase \"not checked\" so the reader calibrates their trust correctly, still requires judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L12",
+        "sentence": "Deciding what the step concretely is, how to phrase it so it is actionable in the moment, and whether applying it this time would actually be the right call, remains a judgment the harness structure does not make for you."
+      },
+      {
+        "dry_run": false,
+        "label": "L13",
+        "sentence": "Deciding what \"the one deciding check\" is for a particular task, and what \"done\" genuinely requires in that context, is a judgment that the gate's structure leaves open."
+      },
+      {
+        "dry_run": false,
+        "label": "L14",
+        "sentence": "Deciding what a meaningful failure looks like for a specific monitor and whether the test is actually exercising the path it claims to test is a judgment that running the negative case does not fully resolve."
+      },
+      {
+        "dry_run": false,
+        "label": "L15",
+        "sentence": "Deciding what counts as meaningful evidence, how to weigh three short chats against a single example, and whether the number of instances matters less than their diversity, is the judgment the lesson invokes."
+      },
+      {
+        "dry_run": false,
+        "label": "L16",
+        "sentence": "Deciding how many independent readings constitute sufficient evidence of liveness and what \"dead\" means for the specific process and its state is a judgment the verification step does not fully settle."
+      },
+      {
+        "dry_run": false,
+        "label": "L17",
+        "sentence": "Deciding which codes and hashes require verbatim fidelity in a given record, and when a truncated form would be acceptable for downstream consumers, remains a judgment the copy-tool does not make for you."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "dry_run": false,
+      "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+      "turn": 1,
+      "provider": "ollama-local-a",
+      "model_requested": "qwen3.8:27b-draft4-text",
+      "model_reported": "qwen3.8:27b-draft4-text",
+      "model_matches": true,
+      "url": "https://local-model.example.invalid/api/chat",
+      "settings_sent_json": "{\"model\": \"qwen3.8:27b-draft4-text\", \"options\": {\"num_predict\": 19000}, \"stream\": false, \"think\": null}",
+      "message_count": 1,
+      "started_at": "2026-11-26 00:21:48 EST",
+      "finished_at": "2026-11-26 00:22:57 EST",
+      "complete": true,
+      "stop": "stop",
+      "usage_json": "{\"eval_count\": 3173, \"eval_duration\": 66070123999, \"load_duration\": 744619, \"prompt_eval_cached_count\": 0, \"prompt_eval_count\": 1066, \"prompt_eval_duration\": 1861958000, \"total_duration\": 68083322549}",
+      "response_body_json": "{}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "eval_count",
+        "reported_output_tokens": 3173,
+        "limit": 19000
+      }
+    },
+    {
+      "dry_run": false,
+      "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+      "turn": 2,
+      "provider": "ollama-local-a",
+      "model_requested": "qwen3.8:27b-draft4-text",
+      "model_reported": "qwen3.8:27b-draft4-text",
+      "model_matches": true,
+      "url": "https://local-model.example.invalid/api/chat",
+      "settings_sent_json": "{\"model\": \"qwen3.8:27b-draft4-text\", \"options\": {\"num_predict\": 19000}, \"stream\": false, \"think\": null}",
+      "message_count": 3,
+      "started_at": "2026-11-26 00:22:57 EST",
+      "finished_at": "2026-11-26 00:23:50 EST",
+      "complete": true,
+      "stop": "stop",
+      "usage_json": "{\"eval_count\": 1998, \"eval_duration\": 52713197000, \"load_duration\": 648411, \"prompt_eval_cached_count\": 1062, \"prompt_eval_count\": 1398, \"prompt_eval_duration\": 885819000, \"total_duration\": 53891815316}",
+      "response_body_json": "{}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "eval_count",
+        "reported_output_tokens": 1998,
+        "limit": 19000
+      }
+    }
+  ],
+  "persistence_state": "complete",
+  "call_budget": {
+    "mode": "main",
+    "output_token_limit": 19000,
+    "planned": {
+      "total": 48,
+      "external": 36,
+      "anthropic": 12,
+      "other_external": 24,
+      "local": 12,
+      "dry_fixture": 0
+    },
+    "attempted": {
+      "total": 36,
+      "external": 34,
+      "anthropic": 12,
+      "other_external": 22,
+      "local": 2,
+      "dry_fixture": 0
+    },
+    "per_sorter": {
+      "cloud-fable": {
+        "caller": "anthropic:claude-fable-5-2",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-opus": {
+        "caller": "anthropic:claude-opus-5-5",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-astra": {
+        "caller": "openai:gpt-6.2-astra",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-sol": {
+        "caller": "openai:gpt-6.2-sol",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-grok": {
+        "caller": "xai:grok-4.7",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-deepseek": {
+        "caller": "deepseek:deepseek-v4-pro",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 4,
+        "stop": null
+      },
+      "local-house": {
+        "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+        "category": "local",
+        "planned": 6,
+        "attempted": 2,
+        "stop": null
+      },
+      "local-gemma": {
+        "caller": "ollama-local-b:gemma4:e4b-mlx",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      }
+    },
+    "per_adapter": {
+      "anthropic:claude-fable-5-2": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "anthropic:claude-opus-5-5": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-astra": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-sol": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "xai:grok-4.7": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "deepseek:deepseek-v4-pro": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 4
+      },
+      "ollama-local-a:qwen3.8:27b-draft4-text": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 2
+      },
+      "ollama-local-b:gemma4:e4b-mlx": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      }
+    }
+  }
+}

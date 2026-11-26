@@ -1,0 +1,397 @@
+{
+  "dry_run": false,
+  "sorter": "local-gemma",
+  "group": "local",
+  "provider": "ollama-local-b",
+  "repeat": 2,
+  "caller": "ollama-local-b:gemma4:e4b-mlx",
+  "line_seed": 1510656016,
+  "home_seed": 4167854003,
+  "lines_commit": "441752cd2d7536ad9d6fa806e2f752752676342b",
+  "lines_sha256": "5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1",
+  "homes_sha256": "a10a13d8818caa81cf8005f6d99f7aecdbe3bbd63a38c13ec6b481ff4dee66fa",
+  "prompt_file": "prompts/local-gemma__r2.json",
+  "prompt_sha256": "d472601897e0724f826aff77427b8b7ce93942e2e8e53968a830a0f6c67c0876",
+  "question_sha256": "e34ca9c61f04cdbe4e5ac0b2b3a7b5d0ec90bf72ee0165a92a1942341ed712a8",
+  "raw_reply": "L01 | main: check | second: none\nL02 | main: retrieval | second: none\nL03 | main: judgment | second: none\nL04 | main: check | second: none\nL05 | main: judgment | second: none\nL06 | main: check | second: none\nL07 | main: check | second: none\nL08 | main: gate | second: none\nL09 | main: retrieval | second: none\nL10 | main: judgment | second: none\nL11 | main: harness | second: none\nL12 | main: check | second: none\nL13 | main: retrieval | second: none\nL14 | main: harness | second: none\nL15 | main: harness | second: none\nL16 | main: check | second: none\nL17 | main: check | second: none",
+  "parse_ok": true,
+  "parse_errors": [],
+  "rows": [
+    {
+      "dry_run": false,
+      "label": "L01",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L02",
+      "home_main": "retrieval",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L03",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L04",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L05",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L06",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L07",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L08",
+      "home_main": "gate",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L09",
+      "home_main": "retrieval",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L10",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L11",
+      "home_main": "harness",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L12",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L13",
+      "home_main": "retrieval",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L14",
+      "home_main": "harness",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L15",
+      "home_main": "harness",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L16",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L17",
+      "home_main": "check",
+      "home_second": null
+    }
+  ],
+  "turn2": {
+    "dry_run": false,
+    "sent": true,
+    "not_sent_reason": null,
+    "raw_reply": "L01 | Judgment remains the suspicion that success might be misleading.\nL02 | Judgment remains the requirement to justify conclusions by referencing specific sources.\nL03 | Judgment remains the understanding that zero or empty results are limited data, not absolute truth.\nL04 | Judgment remains the acknowledgment that external review can provide more useful context than internal knowledge.\nL05 | Judgment remains the recognition that the context and needs of the recipient must guide the decision.\nL06 | Judgment remains the focus on verifying the actual result of a process, not just its reported status.\nL07 | Judgment remains the necessity of examining collateral damage when correcting a specific error.\nL08 | Judgment remains the adherence to a final decision only after all required procedures have executed.\nL09 | Judgment remains the mandate to test every claimed fact rather than accepting historical summaries.\nL10 | Judgment remains the discipline of qualifying claims with the degree of supporting evidence.\nL11 | Judgment remains the diligence required to maintain precise temporal accuracy in documentation.\nL12 | Judgment remains the insistence on using independent evidence to validate internal assertions.\nL13 | Judgment remains the commitment to accurately attribute findings, even if a concept is similar.\nL14 | Judgment remains the adoption of rigorous technical procedures to ensure consistency.\nL15 | Judgment remains the systematic transformation of historical lessons into repeatable process steps.\nL16 | Judgment remains the requirement to verify that an internal configuration change has functional effect.\nL17 | Judgment remains the need to differentiate a functional state from an alarming status.",
+    "parse_ok": true,
+    "parse_errors": [],
+    "rows": [
+      {
+        "dry_run": false,
+        "label": "L01",
+        "sentence": "Judgment remains the suspicion that success might be misleading."
+      },
+      {
+        "dry_run": false,
+        "label": "L02",
+        "sentence": "Judgment remains the requirement to justify conclusions by referencing specific sources."
+      },
+      {
+        "dry_run": false,
+        "label": "L03",
+        "sentence": "Judgment remains the understanding that zero or empty results are limited data, not absolute truth."
+      },
+      {
+        "dry_run": false,
+        "label": "L04",
+        "sentence": "Judgment remains the acknowledgment that external review can provide more useful context than internal knowledge."
+      },
+      {
+        "dry_run": false,
+        "label": "L05",
+        "sentence": "Judgment remains the recognition that the context and needs of the recipient must guide the decision."
+      },
+      {
+        "dry_run": false,
+        "label": "L06",
+        "sentence": "Judgment remains the focus on verifying the actual result of a process, not just its reported status."
+      },
+      {
+        "dry_run": false,
+        "label": "L07",
+        "sentence": "Judgment remains the necessity of examining collateral damage when correcting a specific error."
+      },
+      {
+        "dry_run": false,
+        "label": "L08",
+        "sentence": "Judgment remains the adherence to a final decision only after all required procedures have executed."
+      },
+      {
+        "dry_run": false,
+        "label": "L09",
+        "sentence": "Judgment remains the mandate to test every claimed fact rather than accepting historical summaries."
+      },
+      {
+        "dry_run": false,
+        "label": "L10",
+        "sentence": "Judgment remains the discipline of qualifying claims with the degree of supporting evidence."
+      },
+      {
+        "dry_run": false,
+        "label": "L11",
+        "sentence": "Judgment remains the diligence required to maintain precise temporal accuracy in documentation."
+      },
+      {
+        "dry_run": false,
+        "label": "L12",
+        "sentence": "Judgment remains the insistence on using independent evidence to validate internal assertions."
+      },
+      {
+        "dry_run": false,
+        "label": "L13",
+        "sentence": "Judgment remains the commitment to accurately attribute findings, even if a concept is similar."
+      },
+      {
+        "dry_run": false,
+        "label": "L14",
+        "sentence": "Judgment remains the adoption of rigorous technical procedures to ensure consistency."
+      },
+      {
+        "dry_run": false,
+        "label": "L15",
+        "sentence": "Judgment remains the systematic transformation of historical lessons into repeatable process steps."
+      },
+      {
+        "dry_run": false,
+        "label": "L16",
+        "sentence": "Judgment remains the requirement to verify that an internal configuration change has functional effect."
+      },
+      {
+        "dry_run": false,
+        "label": "L17",
+        "sentence": "Judgment remains the need to differentiate a functional state from an alarming status."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "dry_run": false,
+      "caller": "ollama-local-b:gemma4:e4b-mlx",
+      "turn": 1,
+      "provider": "ollama-local-b",
+      "model_requested": "gemma4:e4b-mlx",
+      "model_reported": "gemma4:e4b-mlx",
+      "model_matches": true,
+      "url": "https://local-model.example.invalid/api/chat",
+      "settings_sent_json": "{\"model\": \"gemma4:e4b-mlx\", \"options\": {\"num_predict\": 19000}, \"stream\": false, \"think\": null}",
+      "message_count": 1,
+      "started_at": "2026-11-26 00:28:28 EST",
+      "finished_at": "2026-11-26 00:28:36 EST",
+      "complete": true,
+      "stop": "stop",
+      "usage_json": "{\"eval_count\": 1387, \"eval_duration\": 7355576209, \"load_duration\": 38374584, \"prompt_eval_cached_count\": 0, \"prompt_eval_count\": 1070, \"prompt_eval_duration\": 473287625, \"total_duration\": 7869882875}",
+      "response_body_json": "{}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "eval_count",
+        "reported_output_tokens": 1387,
+        "limit": 19000
+      }
+    },
+    {
+      "dry_run": false,
+      "caller": "ollama-local-b:gemma4:e4b-mlx",
+      "turn": 2,
+      "provider": "ollama-local-b",
+      "model_requested": "gemma4:e4b-mlx",
+      "model_reported": "gemma4:e4b-mlx",
+      "model_matches": true,
+      "url": "https://local-model.example.invalid/api/chat",
+      "settings_sent_json": "{\"model\": \"gemma4:e4b-mlx\", \"options\": {\"num_predict\": 19000}, \"stream\": false, \"think\": null}",
+      "message_count": 3,
+      "started_at": "2026-11-26 00:28:36 EST",
+      "finished_at": "2026-11-26 00:28:44 EST",
+      "complete": true,
+      "stop": "stop",
+      "usage_json": "{\"eval_count\": 1123, \"eval_duration\": 8583740292, \"load_duration\": 25705791, \"prompt_eval_cached_count\": 1066, \"prompt_eval_count\": 1397, \"prompt_eval_duration\": 162764750, \"total_duration\": 8774835500}",
+      "response_body_json": "{}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "eval_count",
+        "reported_output_tokens": 1123,
+        "limit": 19000
+      }
+    }
+  ],
+  "persistence_state": "complete",
+  "call_budget": {
+    "mode": "main",
+    "output_token_limit": 19000,
+    "planned": {
+      "total": 48,
+      "external": 36,
+      "anthropic": 12,
+      "other_external": 24,
+      "local": 12,
+      "dry_fixture": 0
+    },
+    "attempted": {
+      "total": 43,
+      "external": 34,
+      "anthropic": 12,
+      "other_external": 22,
+      "local": 9,
+      "dry_fixture": 0
+    },
+    "per_sorter": {
+      "cloud-fable": {
+        "caller": "anthropic:claude-fable-5-2",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-opus": {
+        "caller": "anthropic:claude-opus-5-5",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-astra": {
+        "caller": "openai:gpt-6.2-astra",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-sol": {
+        "caller": "openai:gpt-6.2-sol",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-grok": {
+        "caller": "xai:grok-4.7",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-deepseek": {
+        "caller": "deepseek:deepseek-v4-pro",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 4,
+        "stop": null
+      },
+      "local-house": {
+        "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+        "category": "local",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "local-gemma": {
+        "caller": "ollama-local-b:gemma4:e4b-mlx",
+        "category": "local",
+        "planned": 6,
+        "attempted": 3,
+        "stop": null
+      }
+    },
+    "per_adapter": {
+      "anthropic:claude-fable-5-2": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "anthropic:claude-opus-5-5": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-astra": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-sol": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "xai:grok-4.7": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "deepseek:deepseek-v4-pro": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 4
+      },
+      "ollama-local-a:qwen3.8:27b-draft4-text": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 6
+      },
+      "ollama-local-b:gemma4:e4b-mlx": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 3
+      }
+    }
+  }
+}

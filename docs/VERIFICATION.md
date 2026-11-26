@@ -141,3 +141,19 @@ PY
 
 The two freeze commitments remain independent of this manifest update. Changing
 them would require changing the verifier's explicit historical commitments too.
+
+## Experiment 003: projected-record edition
+
+The `experiments/003-the-sort/` public edition is covered by the repository-wide publication manifest. The existing
+verifier does not reconstruct its counts, validate its original freeze times or authenticate its model replies.
+The separate `python3 -B experiments/003-the-sort/tools/reproduce.py` command validates the public manifests,
+rebuilds prompt text and label maps from saved seeds, reparses the visible answers, and reconstructs classification
+and judgment counts, limit-ending counts and the side comparison using the two code editions. It does not repeat
+model calls. Provider reasoning, identifiers, smoke records and personal rulings are withheld. Saved first-prompt
+and follow-up-question text is not a complete serialized second request, so this is not an exact provider-request
+replay archive. Report price estimates and private reasoning-character counts are outside this helper's scope.
+
+Consult `experiments/003-the-sort/PUBLIC_EDITION_NOTES.md` and `SOURCE_MAP.json` for original-to-public mappings,
+omissions, measured hashes and the checks actually run. The original freeze commitments remain historical
+commitments to private originals; the root manifest covers the new public bytes. The limitations above for 001
+and 001b continue to apply, and their archived evidence has not been changed for this addition.

@@ -1,0 +1,397 @@
+{
+  "dry_run": false,
+  "sorter": "cloud-opus",
+  "group": "cloud",
+  "provider": "anthropic",
+  "repeat": 2,
+  "caller": "anthropic:claude-opus-5-5",
+  "line_seed": 1251315754,
+  "home_seed": 1394820379,
+  "lines_commit": "441752cd2d7536ad9d6fa806e2f752752676342b",
+  "lines_sha256": "5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1",
+  "homes_sha256": "a10a13d8818caa81cf8005f6d99f7aecdbe3bbd63a38c13ec6b481ff4dee66fa",
+  "prompt_file": "prompts/cloud-opus__r2.json",
+  "prompt_sha256": "8a2f5bbc2b269aac0eb593264f693e4f4a11962403c257bde0d3a683ff9de6c1",
+  "question_sha256": "e34ca9c61f04cdbe4e5ac0b2b3a7b5d0ec90bf72ee0165a92a1942341ed712a8",
+  "raw_reply": "L01 | main: judgment | second: retrieval\nL02 | main: judgment | second: none\nL03 | main: gate | second: check\nL04 | main: judgment | second: none\nL05 | main: check | second: tool\nL06 | main: check | second: none\nL07 | main: check | second: gate\nL08 | main: retrieval | second: check\nL09 | main: harness | second: tool\nL10 | main: judgment | second: check\nL11 | main: tool | second: harness\nL12 | main: harness | second: retrieval\nL13 | main: check | second: judgment\nL14 | main: check | second: none\nL15 | main: check | second: none\nL16 | main: check | second: gate\nL17 | main: check | second: retrieval",
+  "parse_ok": true,
+  "parse_errors": [],
+  "rows": [
+    {
+      "dry_run": false,
+      "label": "L01",
+      "home_main": "judgment",
+      "home_second": "retrieval"
+    },
+    {
+      "dry_run": false,
+      "label": "L02",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L03",
+      "home_main": "gate",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L04",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L05",
+      "home_main": "check",
+      "home_second": "tool"
+    },
+    {
+      "dry_run": false,
+      "label": "L06",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L07",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L08",
+      "home_main": "retrieval",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L09",
+      "home_main": "harness",
+      "home_second": "tool"
+    },
+    {
+      "dry_run": false,
+      "label": "L10",
+      "home_main": "judgment",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L11",
+      "home_main": "tool",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L12",
+      "home_main": "harness",
+      "home_second": "retrieval"
+    },
+    {
+      "dry_run": false,
+      "label": "L13",
+      "home_main": "check",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L14",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L15",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L16",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L17",
+      "home_main": "check",
+      "home_second": "retrieval"
+    }
+  ],
+  "turn2": {
+    "dry_run": false,
+    "sent": true,
+    "not_sent_reason": null,
+    "raw_reply": "L01 | Deciding when a search has been thorough enough that its silence can count as evidence about the world.\nL02 | Reading what the person actually needs in the moment, especially when the request for calm attention is implied rather than stated.\nL03 | Choosing which single check truly decides whether the work is done, rather than one that only looks related.\nL04 | Weighing how much evidence a particular claim needs before it can be stated with confidence.\nL05 | Designing a deliberate failure that exercises the same path a real failure would take.\nL06 | Deciding which neighboring parts share enough logic with the fix to count as beside it.\nL07 | Judging whether an outside source is reliable and independent enough to count as a real check.\nL08 | Deciding which other sources could plausibly change the answer and so are worth the extra look.\nL09 | Choosing the right time zone, precision, and format, and noticing when a time is being written down implicitly.\nL10 | Deciding when the evidence is strong enough to name a cause, and when the exact words matter more than a summary.\nL11 | Recognizing which strings are long or precise enough that hand copying is a risk.\nL12 | Choosing which lessons deserve to become fixed steps and where in the workflow each step should sit.\nL13 | Deciding which work is important enough for outside review and which reviewer is different enough to catch what you missed.\nL14 | Defining what actually landing means for this tool and how deeply to sample the results.\nL15 | Identifying which observable behavior would prove that the change is really in effect.\nL16 | Weighing how fast to act on an alarm against the chance that only the location or the reading is wrong.\nL17 | Deciding which remembered facts carry enough weight to retest and how to test them cheaply.",
+    "parse_ok": true,
+    "parse_errors": [],
+    "rows": [
+      {
+        "dry_run": false,
+        "label": "L01",
+        "sentence": "Deciding when a search has been thorough enough that its silence can count as evidence about the world."
+      },
+      {
+        "dry_run": false,
+        "label": "L02",
+        "sentence": "Reading what the person actually needs in the moment, especially when the request for calm attention is implied rather than stated."
+      },
+      {
+        "dry_run": false,
+        "label": "L03",
+        "sentence": "Choosing which single check truly decides whether the work is done, rather than one that only looks related."
+      },
+      {
+        "dry_run": false,
+        "label": "L04",
+        "sentence": "Weighing how much evidence a particular claim needs before it can be stated with confidence."
+      },
+      {
+        "dry_run": false,
+        "label": "L05",
+        "sentence": "Designing a deliberate failure that exercises the same path a real failure would take."
+      },
+      {
+        "dry_run": false,
+        "label": "L06",
+        "sentence": "Deciding which neighboring parts share enough logic with the fix to count as beside it."
+      },
+      {
+        "dry_run": false,
+        "label": "L07",
+        "sentence": "Judging whether an outside source is reliable and independent enough to count as a real check."
+      },
+      {
+        "dry_run": false,
+        "label": "L08",
+        "sentence": "Deciding which other sources could plausibly change the answer and so are worth the extra look."
+      },
+      {
+        "dry_run": false,
+        "label": "L09",
+        "sentence": "Choosing the right time zone, precision, and format, and noticing when a time is being written down implicitly."
+      },
+      {
+        "dry_run": false,
+        "label": "L10",
+        "sentence": "Deciding when the evidence is strong enough to name a cause, and when the exact words matter more than a summary."
+      },
+      {
+        "dry_run": false,
+        "label": "L11",
+        "sentence": "Recognizing which strings are long or precise enough that hand copying is a risk."
+      },
+      {
+        "dry_run": false,
+        "label": "L12",
+        "sentence": "Choosing which lessons deserve to become fixed steps and where in the workflow each step should sit."
+      },
+      {
+        "dry_run": false,
+        "label": "L13",
+        "sentence": "Deciding which work is important enough for outside review and which reviewer is different enough to catch what you missed."
+      },
+      {
+        "dry_run": false,
+        "label": "L14",
+        "sentence": "Defining what actually landing means for this tool and how deeply to sample the results."
+      },
+      {
+        "dry_run": false,
+        "label": "L15",
+        "sentence": "Identifying which observable behavior would prove that the change is really in effect."
+      },
+      {
+        "dry_run": false,
+        "label": "L16",
+        "sentence": "Weighing how fast to act on an alarm against the chance that only the location or the reading is wrong."
+      },
+      {
+        "dry_run": false,
+        "label": "L17",
+        "sentence": "Deciding which remembered facts carry enough weight to retest and how to test them cheaply."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "dry_run": false,
+      "caller": "anthropic:claude-opus-5-5",
+      "turn": 1,
+      "provider": "anthropic",
+      "model_requested": "claude-opus-5-5",
+      "model_reported": "claude-opus-5-5",
+      "model_matches": true,
+      "url": "https://api.anthropic.com/v1/messages",
+      "settings_sent_json": "{\"max_tokens\": 19000, \"model\": \"claude-opus-5-5\", \"output_config\": {\"effort\": \"high\"}, \"thinking\": {\"type\": \"adaptive\"}}",
+      "message_count": 1,
+      "started_at": "2026-11-25 23:58:04 EST",
+      "finished_at": "2026-11-25 23:58:06 EST",
+      "complete": true,
+      "stop": "end_turn",
+      "usage_json": "{\"cache_creation\": {\"ephemeral_1h_input_tokens\": 0, \"ephemeral_5m_input_tokens\": 0}, \"cache_creation_input_tokens\": 0, \"cache_read_input_tokens\": 0, \"input_tokens\": 1390, \"output_tokens\": 236, \"output_tokens_details\": {\"thinking_tokens\": 0}}",
+      "response_body_json": "{}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "output_tokens",
+        "reported_output_tokens": 236,
+        "limit": 19000
+      }
+    },
+    {
+      "dry_run": false,
+      "caller": "anthropic:claude-opus-5-5",
+      "turn": 2,
+      "provider": "anthropic",
+      "model_requested": "claude-opus-5-5",
+      "model_reported": "claude-opus-5-5",
+      "model_matches": true,
+      "url": "https://api.anthropic.com/v1/messages",
+      "settings_sent_json": "{\"max_tokens\": 19000, \"model\": \"claude-opus-5-5\", \"output_config\": {\"effort\": \"high\"}, \"thinking\": {\"type\": \"adaptive\"}}",
+      "message_count": 3,
+      "started_at": "2026-11-25 23:58:06 EST",
+      "finished_at": "2026-11-25 23:58:19 EST",
+      "complete": true,
+      "stop": "end_turn",
+      "usage_json": "{\"cache_creation\": {\"ephemeral_1h_input_tokens\": 0, \"ephemeral_5m_input_tokens\": 0}, \"cache_creation_input_tokens\": 0, \"cache_read_input_tokens\": 0, \"input_tokens\": 1794, \"output_tokens\": 1073, \"output_tokens_details\": {\"thinking_tokens\": 507}}",
+      "response_body_json": "{}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "output_tokens",
+        "reported_output_tokens": 1073,
+        "limit": 19000
+      }
+    }
+  ],
+  "persistence_state": "complete",
+  "call_budget": {
+    "mode": "main",
+    "output_token_limit": 19000,
+    "planned": {
+      "total": 48,
+      "external": 36,
+      "anthropic": 12,
+      "other_external": 24,
+      "local": 12,
+      "dry_fixture": 0
+    },
+    "attempted": {
+      "total": 10,
+      "external": 10,
+      "anthropic": 10,
+      "other_external": 0,
+      "local": 0,
+      "dry_fixture": 0
+    },
+    "per_sorter": {
+      "cloud-fable": {
+        "caller": "anthropic:claude-fable-5-2",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-opus": {
+        "caller": "anthropic:claude-opus-5-5",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 4,
+        "stop": null
+      },
+      "cloud-astra": {
+        "caller": "openai:gpt-6.2-astra",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "cloud-sol": {
+        "caller": "openai:gpt-6.2-sol",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "cloud-grok": {
+        "caller": "xai:grok-4.7",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "cloud-deepseek": {
+        "caller": "deepseek:deepseek-v4-pro",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "local-house": {
+        "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "local-gemma": {
+        "caller": "ollama-local-b:gemma4:e4b-mlx",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      }
+    },
+    "per_adapter": {
+      "anthropic:claude-fable-5-2": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "anthropic:claude-opus-5-5": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 4
+      },
+      "openai:gpt-6.2-astra": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "openai:gpt-6.2-sol": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "xai:grok-4.7": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "deepseek:deepseek-v4-pro": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "ollama-local-a:qwen3.8:27b-draft4-text": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      },
+      "ollama-local-b:gemma4:e4b-mlx": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      }
+    }
+  }
+}

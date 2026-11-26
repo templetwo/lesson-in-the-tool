@@ -1,0 +1,1551 @@
+{
+  "dry_run": false,
+  "inputs": {
+    "run_dir": "records/run1",
+    "manifest_sha256": "5e5e57118642f6ea9beb34db7df2c5dd2076f466f20358a30403c0f4a39e0c7d",
+    "key_sha256": "fc8e1a5be5cb20147d24097b5d244c52d8277a612ce9a1b0714d5d2f352a0e54",
+    "callers": [
+      "anthropic:claude-fable-5-2",
+      "anthropic:claude-opus-5-5",
+      "deepseek:deepseek-v4-pro",
+      "ollama-local-a:qwen3.8:27b-draft4-text",
+      "ollama-local-b:gemma4:e4b-mlx",
+      "openai:gpt-6.2-astra",
+      "openai:gpt-6.2-sol",
+      "xai:grok-4.7"
+    ],
+    "real_callers": [
+      "anthropic:claude-fable-5-2",
+      "anthropic:claude-opus-5-5",
+      "deepseek:deepseek-v4-pro",
+      "ollama-local-a:qwen3.8:27b-draft4-text",
+      "ollama-local-b:gemma4:e4b-mlx",
+      "openai:gpt-6.2-astra",
+      "openai:gpt-6.2-sol",
+      "xai:grok-4.7"
+    ],
+    "allow_fixture": false,
+    "house_table": "code/run1/house_table.json",
+    "house_table_sha256": "b527688c618579725eae7f1eb03e01f3aaf34cce1d6ae2168ee04d63e82be431",
+    "original_manifest_sha256": "76f85b26b289ffc037e503bac59a22b8bcd1d0f8ce6aed987f480f6219289b9b",
+    "original_key_sha256": "12bce5400e44dbaaab1305e8b66eaaef039d8ec616f7b1e2fa603b0f1d6d9157",
+    "original_house_table_sha256": "b527688c618579725eae7f1eb03e01f3aaf34cce1d6ae2168ee04d63e82be431"
+  },
+  "settings": {
+    "sorters": [
+      {
+        "name": "cloud-fable",
+        "group": "cloud",
+        "provider": "anthropic"
+      },
+      {
+        "name": "cloud-opus",
+        "group": "cloud",
+        "provider": "anthropic"
+      },
+      {
+        "name": "cloud-astra",
+        "group": "cloud",
+        "provider": "openai"
+      },
+      {
+        "name": "cloud-sol",
+        "group": "cloud",
+        "provider": "openai"
+      },
+      {
+        "name": "cloud-grok",
+        "group": "cloud",
+        "provider": "xai"
+      },
+      {
+        "name": "cloud-deepseek",
+        "group": "cloud",
+        "provider": "deepseek"
+      },
+      {
+        "name": "local-house",
+        "group": "local",
+        "provider": "ollama-local-a"
+      },
+      {
+        "name": "local-gemma",
+        "group": "local",
+        "provider": "ollama-local-b"
+      }
+    ],
+    "groups": {
+      "cloud": {
+        "min_providers": 3
+      }
+    },
+    "repeats": 3,
+    "cut_points_by_size": {
+      "6": {
+        "settled_min": 5,
+        "leaning_min": 4
+      }
+    },
+    "bootstrap": {
+      "seed": 20261125,
+      "draws": 2000,
+      "level": 0.95
+    },
+    "majority_rule": "more than half of the expected repeats; failed repeats count in the denominator",
+    "figures_use": "main home only; second homes are reported beside and change no figure",
+    "agreement_values": "each sorter's majority main home per line; no majority = missing",
+    "groups_note": "computed separately and never pooled"
+  },
+  "parse_failures_listed": [
+    {
+      "sorter": "cloud-deepseek",
+      "group": "cloud",
+      "repeat": 1,
+      "errors": [
+        "reply is not text"
+      ],
+      "file": "results/cloud-deepseek__r1.json"
+    },
+    {
+      "sorter": "cloud-deepseek",
+      "group": "cloud",
+      "repeat": 3,
+      "errors": [
+        "reply is not text"
+      ],
+      "file": "results/cloud-deepseek__r3.json"
+    },
+    {
+      "sorter": "local-gemma",
+      "group": "local",
+      "repeat": 1,
+      "errors": [
+        "reply line 1 cannot be placed: 'L01 | check | none'",
+        "reply line 2 cannot be placed: 'L02 | tool | none'",
+        "reply line 3 cannot be placed: 'L03 | judgment | none'",
+        "reply line 4 cannot be placed: 'L04 | check | none'",
+        "reply line 5 cannot be placed: 'L05 | check | harness'",
+        "reply line 6 cannot be placed: 'L06 | judgment | none'",
+        "reply line 7 cannot be placed: 'L07 | retrieval | none'",
+        "reply line 8 cannot be placed: 'L08 | check | harness'",
+        "reply line 9 cannot be placed: 'L09 | harness | none'",
+        "reply line 10 cannot be placed: 'L10 | retrieval | none'",
+        "reply line 11 cannot be placed: 'L11 | gate | none'",
+        "reply line 12 cannot be placed: 'L12 | tool | none'",
+        "reply line 13 cannot be placed: 'L13 | harness | none'",
+        "reply line 14 cannot be placed: 'L14 | check | none'",
+        "reply line 15 cannot be placed: 'L15 | check | none'",
+        "reply line 16 cannot be placed: 'L16 | check | none'",
+        "reply line 17 cannot be placed: 'L17 | gate | none'",
+        "also missing or unusable: L01, L02, L03, L04, L05, L06, L07, L08, L09, L10, L11, L12, L13, L14, L15, L16, L17"
+      ],
+      "file": "results/local-gemma__r1.json"
+    },
+    {
+      "sorter": "local-gemma",
+      "group": "local",
+      "repeat": 3,
+      "errors": [
+        "reply line 1 cannot be placed: 'L01 | check | harness'",
+        "reply line 2 cannot be placed: 'L02 | check | retrieval'",
+        "reply line 3 cannot be placed: 'L03 | retrieval | harness'",
+        "reply line 4 cannot be placed: 'L04 | check | retrieval'",
+        "reply line 5 cannot be placed: 'L05 | check | harness'",
+        "reply line 6 cannot be placed: 'L06 | judgment | harness'",
+        "reply line 7 cannot be placed: 'L07 | tool | check'",
+        "reply line 8 cannot be placed: 'L08 | check | gate'",
+        "reply line 9 cannot be placed: 'L09 | gate | check'",
+        "reply line 10 cannot be placed: 'L10 | judgment | harness'",
+        "reply line 11 cannot be placed: 'L11 | gate | check'",
+        "reply line 12 cannot be placed: 'L12 | check | judgment'",
+        "reply line 13 cannot be placed: 'L13 | tool | harness'",
+        "reply line 14 cannot be placed: 'L14 | judgment | retrieval'",
+        "reply line 15 cannot be placed: 'L15 | check | retrieval'",
+        "reply line 16 cannot be placed: 'L16 | check | gate'",
+        "reply line 17 cannot be placed: 'L17 | tool | harness'",
+        "also missing or unusable: L01, L02, L03, L04, L05, L06, L07, L08, L09, L10, L11, L12, L13, L14, L15, L16, L17"
+      ],
+      "file": "results/local-gemma__r3.json"
+    }
+  ],
+  "parse_failures_note": "listed only, never counted across groups; each group carries its own count",
+  "groups": {
+    "cloud": {
+      "sorters": [
+        "cloud-fable",
+        "cloud-opus",
+        "cloud-astra",
+        "cloud-sol",
+        "cloud-grok",
+        "cloud-deepseek"
+      ],
+      "size": 6,
+      "cut_points": {
+        "settled_min": 5,
+        "leaning_min": 4
+      },
+      "parse_failures": {
+        "count": 2,
+        "of_replies": 18
+      },
+      "per_line": [
+        {
+          "line_number": 1,
+          "sorter_majority": {
+            "cloud-fable": "check",
+            "cloud-opus": "check",
+            "cloud-astra": "gate",
+            "cloud-sol": "gate",
+            "cloud-grok": "check",
+            "cloud-deepseek": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 3,
+          "count_text": "3 of 6",
+          "class": "contested"
+        },
+        {
+          "line_number": 2,
+          "sorter_majority": {
+            "cloud-fable": "judgment",
+            "cloud-opus": "judgment",
+            "cloud-astra": "judgment",
+            "cloud-sol": "judgment",
+            "cloud-grok": "judgment",
+            "cloud-deepseek": null
+          },
+          "modal_homes": [
+            "judgment"
+          ],
+          "modal_count": 5,
+          "count_text": "5 of 6",
+          "class": "settled"
+        },
+        {
+          "line_number": 3,
+          "sorter_majority": {
+            "cloud-fable": "check",
+            "cloud-opus": "check",
+            "cloud-astra": "check",
+            "cloud-sol": "check",
+            "cloud-grok": "check",
+            "cloud-deepseek": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 5,
+          "count_text": "5 of 6",
+          "class": "settled"
+        },
+        {
+          "line_number": 4,
+          "sorter_majority": {
+            "cloud-fable": "harness",
+            "cloud-opus": null,
+            "cloud-astra": "check",
+            "cloud-sol": "check",
+            "cloud-grok": "check",
+            "cloud-deepseek": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 3,
+          "count_text": "3 of 6",
+          "class": "contested"
+        },
+        {
+          "line_number": 5,
+          "sorter_majority": {
+            "cloud-fable": "gate",
+            "cloud-opus": "gate",
+            "cloud-astra": "gate",
+            "cloud-sol": "gate",
+            "cloud-grok": "gate",
+            "cloud-deepseek": null
+          },
+          "modal_homes": [
+            "gate"
+          ],
+          "modal_count": 5,
+          "count_text": "5 of 6",
+          "class": "settled"
+        },
+        {
+          "line_number": 6,
+          "sorter_majority": {
+            "cloud-fable": "check",
+            "cloud-opus": "check",
+            "cloud-astra": "check",
+            "cloud-sol": "check",
+            "cloud-grok": "check",
+            "cloud-deepseek": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 5,
+          "count_text": "5 of 6",
+          "class": "settled"
+        },
+        {
+          "line_number": 7,
+          "sorter_majority": {
+            "cloud-fable": "check",
+            "cloud-opus": "check",
+            "cloud-astra": "check",
+            "cloud-sol": "check",
+            "cloud-grok": "check",
+            "cloud-deepseek": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 5,
+          "count_text": "5 of 6",
+          "class": "settled"
+        },
+        {
+          "line_number": 8,
+          "sorter_majority": {
+            "cloud-fable": "check",
+            "cloud-opus": "check",
+            "cloud-astra": "check",
+            "cloud-sol": "check",
+            "cloud-grok": "check",
+            "cloud-deepseek": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 5,
+          "count_text": "5 of 6",
+          "class": "settled"
+        },
+        {
+          "line_number": 9,
+          "sorter_majority": {
+            "cloud-fable": "harness",
+            "cloud-opus": "harness",
+            "cloud-astra": "harness",
+            "cloud-sol": "harness",
+            "cloud-grok": "harness",
+            "cloud-deepseek": null
+          },
+          "modal_homes": [
+            "harness"
+          ],
+          "modal_count": 5,
+          "count_text": "5 of 6",
+          "class": "settled"
+        },
+        {
+          "line_number": 10,
+          "sorter_majority": {
+            "cloud-fable": "check",
+            "cloud-opus": "check",
+            "cloud-astra": "check",
+            "cloud-sol": "check",
+            "cloud-grok": "check",
+            "cloud-deepseek": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 5,
+          "count_text": "5 of 6",
+          "class": "settled"
+        },
+        {
+          "line_number": 11,
+          "sorter_majority": {
+            "cloud-fable": "check",
+            "cloud-opus": "retrieval",
+            "cloud-astra": "check",
+            "cloud-sol": "check",
+            "cloud-grok": "check",
+            "cloud-deepseek": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 4,
+          "count_text": "4 of 6",
+          "class": "leaning"
+        },
+        {
+          "line_number": 12,
+          "sorter_majority": {
+            "cloud-fable": "tool",
+            "cloud-opus": "tool",
+            "cloud-astra": "tool",
+            "cloud-sol": "tool",
+            "cloud-grok": "tool",
+            "cloud-deepseek": null
+          },
+          "modal_homes": [
+            "tool"
+          ],
+          "modal_count": 5,
+          "count_text": "5 of 6",
+          "class": "settled"
+        },
+        {
+          "line_number": 13,
+          "sorter_majority": {
+            "cloud-fable": "check",
+            "cloud-opus": "check",
+            "cloud-astra": "check",
+            "cloud-sol": "check",
+            "cloud-grok": "check",
+            "cloud-deepseek": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 5,
+          "count_text": "5 of 6",
+          "class": "settled"
+        },
+        {
+          "line_number": 14,
+          "sorter_majority": {
+            "cloud-fable": "judgment",
+            "cloud-opus": "judgment",
+            "cloud-astra": "judgment",
+            "cloud-sol": "judgment",
+            "cloud-grok": "judgment",
+            "cloud-deepseek": null
+          },
+          "modal_homes": [
+            "judgment"
+          ],
+          "modal_count": 5,
+          "count_text": "5 of 6",
+          "class": "settled"
+        },
+        {
+          "line_number": 15,
+          "sorter_majority": {
+            "cloud-fable": "check",
+            "cloud-opus": "judgment",
+            "cloud-astra": "check",
+            "cloud-sol": "check",
+            "cloud-grok": "check",
+            "cloud-deepseek": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 4,
+          "count_text": "4 of 6",
+          "class": "leaning"
+        },
+        {
+          "line_number": 16,
+          "sorter_majority": {
+            "cloud-fable": "check",
+            "cloud-opus": "check",
+            "cloud-astra": "check",
+            "cloud-sol": "check",
+            "cloud-grok": "check",
+            "cloud-deepseek": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 5,
+          "count_text": "5 of 6",
+          "class": "settled"
+        },
+        {
+          "line_number": 17,
+          "sorter_majority": {
+            "cloud-fable": "judgment",
+            "cloud-opus": "judgment",
+            "cloud-astra": "judgment",
+            "cloud-sol": "judgment",
+            "cloud-grok": "judgment",
+            "cloud-deepseek": null
+          },
+          "modal_homes": [
+            "judgment"
+          ],
+          "modal_count": 5,
+          "count_text": "5 of 6",
+          "class": "settled"
+        }
+      ],
+      "class_counts": {
+        "contested": 2,
+        "settled": 13,
+        "leaning": 2
+      },
+      "per_sorter": {
+        "cloud-fable": {
+          "repeats_failed": 0,
+          "lines_not_all_same": 1,
+          "share_lines_not_all_same": 0.058823529411764705,
+          "lines_no_majority": 0,
+          "share_lines_no_majority": 0.0
+        },
+        "cloud-opus": {
+          "repeats_failed": 0,
+          "lines_not_all_same": 2,
+          "share_lines_not_all_same": 0.11764705882352941,
+          "lines_no_majority": 1,
+          "share_lines_no_majority": 0.058823529411764705
+        },
+        "cloud-astra": {
+          "repeats_failed": 0,
+          "lines_not_all_same": 0,
+          "share_lines_not_all_same": 0.0,
+          "lines_no_majority": 0,
+          "share_lines_no_majority": 0.0
+        },
+        "cloud-sol": {
+          "repeats_failed": 0,
+          "lines_not_all_same": 1,
+          "share_lines_not_all_same": 0.058823529411764705,
+          "lines_no_majority": 0,
+          "share_lines_no_majority": 0.0
+        },
+        "cloud-grok": {
+          "repeats_failed": 0,
+          "lines_not_all_same": 1,
+          "share_lines_not_all_same": 0.058823529411764705,
+          "lines_no_majority": 0,
+          "share_lines_no_majority": 0.0
+        },
+        "cloud-deepseek": {
+          "repeats_failed": 2,
+          "lines_not_all_same": 17,
+          "share_lines_not_all_same": 1.0,
+          "lines_no_majority": 17,
+          "share_lines_no_majority": 1.0
+        }
+      },
+      "agreement": {
+        "fleiss_kappa": {
+          "value": null,
+          "reason": "not computed: at least one sorter has no majority home on at least one line"
+        },
+        "krippendorff_alpha": {
+          "value": 0.8257929104477612,
+          "bootstrap": {
+            "interval": [
+              0.5721649484536082,
+              0.9650582362728786
+            ],
+            "draws": 2000,
+            "draws_undefined": 0,
+            "seed": 20261125,
+            "level": 0.95,
+            "method": "percentile, lines resampled with replacement"
+          }
+        }
+      },
+      "second_homes": [
+        {
+          "line_number": 1,
+          "by_majority": {
+            "sorters_with_second": 4,
+            "of": 6,
+            "homes": {
+              "check": 2,
+              "gate": 2
+            }
+          },
+          "raw": {
+            "replies_with_second": 14,
+            "of_replies": 16,
+            "homes": {
+              "check": 7,
+              "gate": 6,
+              "judgment": 1
+            }
+          }
+        },
+        {
+          "line_number": 2,
+          "by_majority": {
+            "sorters_with_second": 3,
+            "of": 6,
+            "homes": {
+              "check": 2,
+              "retrieval": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 10,
+            "of_replies": 16,
+            "homes": {
+              "check": 7,
+              "retrieval": 3
+            }
+          }
+        },
+        {
+          "line_number": 3,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 6,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 2,
+            "of_replies": 16,
+            "homes": {
+              "gate": 1,
+              "judgment": 1
+            }
+          }
+        },
+        {
+          "line_number": 4,
+          "by_majority": {
+            "sorters_with_second": 5,
+            "of": 6,
+            "homes": {
+              "harness": 1,
+              "tool": 4
+            }
+          },
+          "raw": {
+            "replies_with_second": 15,
+            "of_replies": 16,
+            "homes": {
+              "check": 1,
+              "harness": 4,
+              "tool": 10
+            }
+          }
+        },
+        {
+          "line_number": 5,
+          "by_majority": {
+            "sorters_with_second": 5,
+            "of": 6,
+            "homes": {
+              "check": 5
+            }
+          },
+          "raw": {
+            "replies_with_second": 16,
+            "of_replies": 16,
+            "homes": {
+              "check": 15,
+              "gate": 1
+            }
+          }
+        },
+        {
+          "line_number": 6,
+          "by_majority": {
+            "sorters_with_second": 5,
+            "of": 6,
+            "homes": {
+              "gate": 3,
+              "tool": 2
+            }
+          },
+          "raw": {
+            "replies_with_second": 14,
+            "of_replies": 16,
+            "homes": {
+              "gate": 9,
+              "tool": 5
+            }
+          }
+        },
+        {
+          "line_number": 7,
+          "by_majority": {
+            "sorters_with_second": 3,
+            "of": 6,
+            "homes": {
+              "gate": 3
+            }
+          },
+          "raw": {
+            "replies_with_second": 8,
+            "of_replies": 16,
+            "homes": {
+              "gate": 8
+            }
+          }
+        },
+        {
+          "line_number": 8,
+          "by_majority": {
+            "sorters_with_second": 5,
+            "of": 6,
+            "homes": {
+              "gate": 1,
+              "judgment": 1,
+              "retrieval": 3
+            }
+          },
+          "raw": {
+            "replies_with_second": 15,
+            "of_replies": 16,
+            "homes": {
+              "gate": 4,
+              "judgment": 2,
+              "retrieval": 9
+            }
+          }
+        },
+        {
+          "line_number": 9,
+          "by_majority": {
+            "sorters_with_second": 1,
+            "of": 6,
+            "homes": {
+              "retrieval": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 3,
+            "of_replies": 16,
+            "homes": {
+              "retrieval": 3
+            }
+          }
+        },
+        {
+          "line_number": 10,
+          "by_majority": {
+            "sorters_with_second": 5,
+            "of": 6,
+            "homes": {
+              "gate": 1,
+              "judgment": 4
+            }
+          },
+          "raw": {
+            "replies_with_second": 15,
+            "of_replies": 16,
+            "homes": {
+              "gate": 6,
+              "judgment": 9
+            }
+          }
+        },
+        {
+          "line_number": 11,
+          "by_majority": {
+            "sorters_with_second": 5,
+            "of": 6,
+            "homes": {
+              "check": 1,
+              "judgment": 4
+            }
+          },
+          "raw": {
+            "replies_with_second": 16,
+            "of_replies": 16,
+            "homes": {
+              "check": 3,
+              "judgment": 13
+            }
+          }
+        },
+        {
+          "line_number": 12,
+          "by_majority": {
+            "sorters_with_second": 5,
+            "of": 6,
+            "homes": {
+              "harness": 5
+            }
+          },
+          "raw": {
+            "replies_with_second": 16,
+            "of_replies": 16,
+            "homes": {
+              "harness": 16
+            }
+          }
+        },
+        {
+          "line_number": 13,
+          "by_majority": {
+            "sorters_with_second": 1,
+            "of": 6,
+            "homes": {
+              "harness": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 2,
+            "of_replies": 16,
+            "homes": {
+              "harness": 2
+            }
+          }
+        },
+        {
+          "line_number": 14,
+          "by_majority": {
+            "sorters_with_second": 1,
+            "of": 6,
+            "homes": {
+              "harness": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 4,
+            "of_replies": 16,
+            "homes": {
+              "harness": 4
+            }
+          }
+        },
+        {
+          "line_number": 15,
+          "by_majority": {
+            "sorters_with_second": 5,
+            "of": 6,
+            "homes": {
+              "check": 1,
+              "judgment": 4
+            }
+          },
+          "raw": {
+            "replies_with_second": 16,
+            "of_replies": 16,
+            "homes": {
+              "check": 3,
+              "harness": 1,
+              "judgment": 12
+            }
+          }
+        },
+        {
+          "line_number": 16,
+          "by_majority": {
+            "sorters_with_second": 4,
+            "of": 6,
+            "homes": {
+              "harness": 3,
+              "judgment": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 13,
+            "of_replies": 16,
+            "homes": {
+              "harness": 10,
+              "judgment": 3
+            }
+          }
+        },
+        {
+          "line_number": 17,
+          "by_majority": {
+            "sorters_with_second": 1,
+            "of": 6,
+            "homes": {
+              "harness": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 3,
+            "of_replies": 16,
+            "homes": {
+              "harness": 3
+            }
+          }
+        }
+      ],
+      "house_table": {
+        "excluded_lines": [
+          {
+            "line_number": 9,
+            "home_main": "(this table)",
+            "home_second": null,
+            "reason": "a home not on the list"
+          }
+        ],
+        "per_sorter": {
+          "cloud-fable": {
+            "exact": 1,
+            "overlap": 7,
+            "of": 16
+          },
+          "cloud-opus": {
+            "exact": 1,
+            "overlap": 6,
+            "of": 16
+          },
+          "cloud-astra": {
+            "exact": 1,
+            "overlap": 7,
+            "of": 16
+          },
+          "cloud-sol": {
+            "exact": 1,
+            "overlap": 7,
+            "of": 16
+          },
+          "cloud-grok": {
+            "exact": 0,
+            "overlap": 8,
+            "of": 16
+          },
+          "cloud-deepseek": {
+            "exact": 0,
+            "overlap": 0,
+            "of": 16
+          }
+        },
+        "group": {
+          "exact": 4,
+          "overlap": 35,
+          "of": 96
+        },
+        "note": "exploratory; every exact match is also an overlap match; the two counts are never added"
+      },
+      "turn2": {
+        "sent": 16,
+        "failed": 0,
+        "not_sent": 2,
+        "of_replies": 18
+      }
+    },
+    "local": {
+      "sorters": [
+        "local-house",
+        "local-gemma"
+      ],
+      "size": 2,
+      "cut_points": null,
+      "parse_failures": {
+        "count": 2,
+        "of_replies": 6
+      },
+      "per_line": [
+        {
+          "line_number": 1,
+          "sorter_majority": {
+            "local-house": "check",
+            "local-gemma": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 2",
+          "class": null
+        },
+        {
+          "line_number": 2,
+          "sorter_majority": {
+            "local-house": "check",
+            "local-gemma": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 2",
+          "class": null
+        },
+        {
+          "line_number": 3,
+          "sorter_majority": {
+            "local-house": "check",
+            "local-gemma": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 2",
+          "class": null
+        },
+        {
+          "line_number": 4,
+          "sorter_majority": {
+            "local-house": "check",
+            "local-gemma": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 2",
+          "class": null
+        },
+        {
+          "line_number": 5,
+          "sorter_majority": {
+            "local-house": "gate",
+            "local-gemma": null
+          },
+          "modal_homes": [
+            "gate"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 2",
+          "class": null
+        },
+        {
+          "line_number": 6,
+          "sorter_majority": {
+            "local-house": "check",
+            "local-gemma": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 2",
+          "class": null
+        },
+        {
+          "line_number": 7,
+          "sorter_majority": {
+            "local-house": "check",
+            "local-gemma": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 2",
+          "class": null
+        },
+        {
+          "line_number": 8,
+          "sorter_majority": {
+            "local-house": "check",
+            "local-gemma": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 2",
+          "class": null
+        },
+        {
+          "line_number": 9,
+          "sorter_majority": {
+            "local-house": "harness",
+            "local-gemma": null
+          },
+          "modal_homes": [
+            "harness"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 2",
+          "class": null
+        },
+        {
+          "line_number": 10,
+          "sorter_majority": {
+            "local-house": "check",
+            "local-gemma": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 2",
+          "class": null
+        },
+        {
+          "line_number": 11,
+          "sorter_majority": {
+            "local-house": "retrieval",
+            "local-gemma": null
+          },
+          "modal_homes": [
+            "retrieval"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 2",
+          "class": null
+        },
+        {
+          "line_number": 12,
+          "sorter_majority": {
+            "local-house": "tool",
+            "local-gemma": null
+          },
+          "modal_homes": [
+            "tool"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 2",
+          "class": null
+        },
+        {
+          "line_number": 13,
+          "sorter_majority": {
+            "local-house": "check",
+            "local-gemma": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 2",
+          "class": null
+        },
+        {
+          "line_number": 14,
+          "sorter_majority": {
+            "local-house": "judgment",
+            "local-gemma": null
+          },
+          "modal_homes": [
+            "judgment"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 2",
+          "class": null
+        },
+        {
+          "line_number": 15,
+          "sorter_majority": {
+            "local-house": "judgment",
+            "local-gemma": null
+          },
+          "modal_homes": [
+            "judgment"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 2",
+          "class": null
+        },
+        {
+          "line_number": 16,
+          "sorter_majority": {
+            "local-house": "check",
+            "local-gemma": null
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 2",
+          "class": null
+        },
+        {
+          "line_number": 17,
+          "sorter_majority": {
+            "local-house": "judgment",
+            "local-gemma": null
+          },
+          "modal_homes": [
+            "judgment"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 2",
+          "class": null
+        }
+      ],
+      "class_counts": null,
+      "per_sorter": {
+        "local-house": {
+          "repeats_failed": 0,
+          "lines_not_all_same": 4,
+          "share_lines_not_all_same": 0.23529411764705882,
+          "lines_no_majority": 0,
+          "share_lines_no_majority": 0.0
+        },
+        "local-gemma": {
+          "repeats_failed": 2,
+          "lines_not_all_same": 17,
+          "share_lines_not_all_same": 1.0,
+          "lines_no_majority": 17,
+          "share_lines_no_majority": 1.0
+        }
+      },
+      "agreement": {},
+      "second_homes": [
+        {
+          "line_number": 1,
+          "by_majority": {
+            "sorters_with_second": 1,
+            "of": 2,
+            "homes": {
+              "retrieval": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 2,
+            "of_replies": 4,
+            "homes": {
+              "retrieval": 2
+            }
+          }
+        },
+        {
+          "line_number": 2,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 2,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 3,
+            "of_replies": 4,
+            "homes": {
+              "check": 1,
+              "judgment": 1,
+              "retrieval": 1
+            }
+          }
+        },
+        {
+          "line_number": 3,
+          "by_majority": {
+            "sorters_with_second": 1,
+            "of": 2,
+            "homes": {
+              "gate": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 2,
+            "of_replies": 4,
+            "homes": {
+              "gate": 2
+            }
+          }
+        },
+        {
+          "line_number": 4,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 2,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 1,
+            "of_replies": 4,
+            "homes": {
+              "check": 1
+            }
+          }
+        },
+        {
+          "line_number": 5,
+          "by_majority": {
+            "sorters_with_second": 1,
+            "of": 2,
+            "homes": {
+              "check": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 3,
+            "of_replies": 4,
+            "homes": {
+              "check": 3
+            }
+          }
+        },
+        {
+          "line_number": 6,
+          "by_majority": {
+            "sorters_with_second": 1,
+            "of": 2,
+            "homes": {
+              "harness": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 3,
+            "of_replies": 4,
+            "homes": {
+              "harness": 2,
+              "tool": 1
+            }
+          }
+        },
+        {
+          "line_number": 7,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 2,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 0,
+            "of_replies": 4,
+            "homes": {}
+          }
+        },
+        {
+          "line_number": 8,
+          "by_majority": {
+            "sorters_with_second": 1,
+            "of": 2,
+            "homes": {
+              "retrieval": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 3,
+            "of_replies": 4,
+            "homes": {
+              "retrieval": 3
+            }
+          }
+        },
+        {
+          "line_number": 9,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 2,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 3,
+            "of_replies": 4,
+            "homes": {
+              "check": 1,
+              "retrieval": 1,
+              "tool": 1
+            }
+          }
+        },
+        {
+          "line_number": 10,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 2,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 3,
+            "of_replies": 4,
+            "homes": {
+              "check": 1,
+              "gate": 1,
+              "judgment": 1
+            }
+          }
+        },
+        {
+          "line_number": 11,
+          "by_majority": {
+            "sorters_with_second": 1,
+            "of": 2,
+            "homes": {
+              "check": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 3,
+            "of_replies": 4,
+            "homes": {
+              "check": 2,
+              "retrieval": 1
+            }
+          }
+        },
+        {
+          "line_number": 12,
+          "by_majority": {
+            "sorters_with_second": 1,
+            "of": 2,
+            "homes": {
+              "harness": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 2,
+            "of_replies": 4,
+            "homes": {
+              "harness": 2
+            }
+          }
+        },
+        {
+          "line_number": 13,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 2,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 2,
+            "of_replies": 4,
+            "homes": {
+              "gate": 1,
+              "harness": 1
+            }
+          }
+        },
+        {
+          "line_number": 14,
+          "by_majority": {
+            "sorters_with_second": 1,
+            "of": 2,
+            "homes": {
+              "check": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 2,
+            "of_replies": 4,
+            "homes": {
+              "check": 2
+            }
+          }
+        },
+        {
+          "line_number": 15,
+          "by_majority": {
+            "sorters_with_second": 1,
+            "of": 2,
+            "homes": {
+              "check": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 2,
+            "of_replies": 4,
+            "homes": {
+              "check": 2
+            }
+          }
+        },
+        {
+          "line_number": 16,
+          "by_majority": {
+            "sorters_with_second": 1,
+            "of": 2,
+            "homes": {
+              "harness": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 2,
+            "of_replies": 4,
+            "homes": {
+              "harness": 2
+            }
+          }
+        },
+        {
+          "line_number": 17,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 2,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 0,
+            "of_replies": 4,
+            "homes": {}
+          }
+        }
+      ],
+      "house_table": {
+        "excluded_lines": [
+          {
+            "line_number": 9,
+            "home_main": "(this table)",
+            "home_second": null,
+            "reason": "a home not on the list"
+          }
+        ],
+        "per_sorter": {
+          "local-house": {
+            "exact": 1,
+            "overlap": 10,
+            "of": 16
+          },
+          "local-gemma": {
+            "exact": 0,
+            "overlap": 0,
+            "of": 16
+          }
+        },
+        "group": {
+          "exact": 1,
+          "overlap": 10,
+          "of": 32
+        },
+        "note": "exploratory; every exact match is also an overlap match; the two counts are never added"
+      },
+      "agreement_note": "Agreement statistics are not computed for a group of two, by rule.",
+      "turn2": {
+        "sent": 4,
+        "failed": 0,
+        "not_sent": 2,
+        "of_replies": 6
+      }
+    }
+  },
+  "limit_endings_by_sorter": [
+    {
+      "sorter": "cloud-fable",
+      "group": "cloud",
+      "message_1": 0,
+      "message_2": 0,
+      "sorts_not_sent_after_f": 0
+    },
+    {
+      "sorter": "cloud-opus",
+      "group": "cloud",
+      "message_1": 0,
+      "message_2": 0,
+      "sorts_not_sent_after_f": 0
+    },
+    {
+      "sorter": "cloud-astra",
+      "group": "cloud",
+      "message_1": 0,
+      "message_2": 0,
+      "sorts_not_sent_after_f": 0
+    },
+    {
+      "sorter": "cloud-sol",
+      "group": "cloud",
+      "message_1": 0,
+      "message_2": 0,
+      "sorts_not_sent_after_f": 0
+    },
+    {
+      "sorter": "cloud-grok",
+      "group": "cloud",
+      "message_1": 0,
+      "message_2": 0,
+      "sorts_not_sent_after_f": 0
+    },
+    {
+      "sorter": "cloud-deepseek",
+      "group": "cloud",
+      "message_1": 2,
+      "message_2": 0,
+      "sorts_not_sent_after_f": 0
+    },
+    {
+      "sorter": "local-house",
+      "group": "local",
+      "message_1": 0,
+      "message_2": 0,
+      "sorts_not_sent_after_f": 0
+    },
+    {
+      "sorter": "local-gemma",
+      "group": "local",
+      "message_1": 0,
+      "message_2": 0,
+      "sorts_not_sent_after_f": 0
+    }
+  ],
+  "limit_endings_note": "Counts use provider-reported limit/length endings, not proof that the configured output cap caused them. Zero means no such marker was recorded; missing or redacted evidence and F-stopped sorts may still limit what was observed. Comparisons involving a sorter with a recorded limit ending or F stop must report that limitation.",
+  "written_at": "2026-11-26 00:29:38 EST"
+}

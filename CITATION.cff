@@ -15,6 +15,6 @@ date-released: "2026-11-24"
 license: PolyForm-Noncommercial-1.0.0
 repository-code: "https://github.com/templetwo/lesson-in-the-tool"
 url: "https://thetempleoftwo.com"
-abstract: "A research project on where a lesson learned in a long human and AI collaboration should live so that the next model does not repeat the mistake: in a prompt, a tool, a check, retrieval, a gate, or judgment. Contains a consolidated sheet of one house's repeated mistakes, a first experiment with rules frozen before the run and its raw data, and draft rules for a second."
+abstract: "A research project on where a lesson learned in a long human and AI collaboration should live so that the next model does not repeat the mistake: in a prompt, a tool, a check, retrieval, a gate, or judgment. Contains a consolidated sheet of one house's repeated mistakes, a first experiment with rules frozen before the run and its raw data, draft rules for a second, and a public edition of a descriptive lesson-sort experiment."
 keywords: ["human-AI collaboration", "lessons learned", "preregistration", "tool use", "small language models", "evaluation"]
-notes: "Status: a starting line. Two pilots only; no result is established."
+notes: "Status: a starting line. Two pilots and a descriptive lesson-sort public edition; no result is established. The Sort edition projects visible answers for count reconstruction; provider reasoning is withheld. Anthony directed its publication on 2026-11-26 before his own review. Its opening, exact wording and draft credit remain for his review; any changes he makes will be dated errata. Publication is not outside registration, adoption of further tests or authorization for additional model calls. The rulings file remains omitted at his discretion."

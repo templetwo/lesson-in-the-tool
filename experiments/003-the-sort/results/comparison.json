@@ -1,0 +1,190 @@
+{
+  "format": "sort-side-comparison-v1",
+  "dry_run": false,
+  "descriptive_only": true,
+  "reference_group": "cloud",
+  "side_group": "side",
+  "side_sorter": "cloud-deepseek",
+  "sources": {
+    "reference": {
+      "path": "run1_tally.json",
+      "sha256": "44e28c5ec2093a15b0227ca42cb1a8c632851ca22e26aab118b1973339477cb3",
+      "reported_run_provenance": {
+        "run_dir": "records/run1",
+        "manifest_sha256": "5e5e57118642f6ea9beb34db7df2c5dd2076f466f20358a30403c0f4a39e0c7d",
+        "key_sha256": "fc8e1a5be5cb20147d24097b5d244c52d8277a612ce9a1b0714d5d2f352a0e54"
+      },
+      "original_sha256": "78879c80560cde940027808742c04c75e921372b1a953297bcfd42e317dada5f",
+      "original_reported_run_provenance": {
+        "run_dir": "WITHHELD/run_1",
+        "manifest_sha256": "76f85b26b289ffc037e503bac59a22b8bcd1d0f8ce6aed987f480f6219289b9b",
+        "key_sha256": "12bce5400e44dbaaab1305e8b66eaaef039d8ec616f7b1e2fa603b0f1d6d9157"
+      }
+    },
+    "side": {
+      "path": "side_tally.json",
+      "sha256": "a42196a32c8f2aa5a6a5f32c47d7d689f8d28facec72a4e7881a61d1d15bb819",
+      "reported_run_provenance": {
+        "run_dir": "records/side",
+        "manifest_sha256": "ca35d6f37f24eaba89c3cdd160699bd1f94a61d084feed6d4eb28f183a11872f",
+        "key_sha256": "29debba07ed9fd4ec5d696519d98ba753c843ce68bc81d9dd765e498985de66f"
+      },
+      "original_sha256": "a9130fcf0539dc881740bdf4625cbcc689bc91857dc2e8792dd1e26cc848cfa6",
+      "original_reported_run_provenance": {
+        "run_dir": "WITHHELD/side_1",
+        "manifest_sha256": "e65a25d86bc4c34250db7a5dbb895d2b5fa6aa14b332d0e9cc42b6bfa67d7d78",
+        "key_sha256": "0d9fd772240ec6e8b4d265eab7d70a249152a469add033d4606f618aa9edad43"
+      }
+    }
+  },
+  "provenance_note": "Tally byte hashes were measured here. Run directory, manifest and key hashes below are reported by those tallies; raw runs were not revalidated. Public edition: source paths and sha256 values above identify the sanitized summary copies beside this file; original_sha256 preserves the private-original commitment. The comparison rows and counts are unchanged. This is not a new comparison run or reconstruction of model replies.",
+  "comparison_note": "All reference lines remain in the denominator, including missing side majorities. Reference classes are copied labels, not new side classes or scored guesses.",
+  "counts": {
+    "match": 13,
+    "different": 3,
+    "missing": 1,
+    "of": 17
+  },
+  "match_fraction": {
+    "numerator": 13,
+    "denominator": 17
+  },
+  "rows": [
+    {
+      "line_number": 1,
+      "reference_home": "check",
+      "reference_class": "contested",
+      "reference_attention": true,
+      "side_home": "check",
+      "result": "match"
+    },
+    {
+      "line_number": 2,
+      "reference_home": "judgment",
+      "reference_class": "settled",
+      "reference_attention": false,
+      "side_home": "retrieval",
+      "result": "different"
+    },
+    {
+      "line_number": 3,
+      "reference_home": "check",
+      "reference_class": "settled",
+      "reference_attention": false,
+      "side_home": "check",
+      "result": "match"
+    },
+    {
+      "line_number": 4,
+      "reference_home": "check",
+      "reference_class": "contested",
+      "reference_attention": true,
+      "side_home": null,
+      "result": "missing"
+    },
+    {
+      "line_number": 5,
+      "reference_home": "gate",
+      "reference_class": "settled",
+      "reference_attention": false,
+      "side_home": "gate",
+      "result": "match"
+    },
+    {
+      "line_number": 6,
+      "reference_home": "check",
+      "reference_class": "settled",
+      "reference_attention": false,
+      "side_home": "check",
+      "result": "match"
+    },
+    {
+      "line_number": 7,
+      "reference_home": "check",
+      "reference_class": "settled",
+      "reference_attention": false,
+      "side_home": "check",
+      "result": "match"
+    },
+    {
+      "line_number": 8,
+      "reference_home": "check",
+      "reference_class": "settled",
+      "reference_attention": false,
+      "side_home": "check",
+      "result": "match"
+    },
+    {
+      "line_number": 9,
+      "reference_home": "harness",
+      "reference_class": "settled",
+      "reference_attention": false,
+      "side_home": "harness",
+      "result": "match"
+    },
+    {
+      "line_number": 10,
+      "reference_home": "check",
+      "reference_class": "settled",
+      "reference_attention": false,
+      "side_home": "check",
+      "result": "match"
+    },
+    {
+      "line_number": 11,
+      "reference_home": "check",
+      "reference_class": "leaning",
+      "reference_attention": true,
+      "side_home": "retrieval",
+      "result": "different"
+    },
+    {
+      "line_number": 12,
+      "reference_home": "tool",
+      "reference_class": "settled",
+      "reference_attention": false,
+      "side_home": "tool",
+      "result": "match"
+    },
+    {
+      "line_number": 13,
+      "reference_home": "check",
+      "reference_class": "settled",
+      "reference_attention": false,
+      "side_home": "check",
+      "result": "match"
+    },
+    {
+      "line_number": 14,
+      "reference_home": "judgment",
+      "reference_class": "settled",
+      "reference_attention": false,
+      "side_home": "judgment",
+      "result": "match"
+    },
+    {
+      "line_number": 15,
+      "reference_home": "check",
+      "reference_class": "leaning",
+      "reference_attention": true,
+      "side_home": "judgment",
+      "result": "different"
+    },
+    {
+      "line_number": 16,
+      "reference_home": "check",
+      "reference_class": "settled",
+      "reference_attention": false,
+      "side_home": "check",
+      "result": "match"
+    },
+    {
+      "line_number": 17,
+      "reference_home": "judgment",
+      "reference_class": "settled",
+      "reference_attention": false,
+      "side_home": "judgment",
+      "result": "match"
+    }
+  ]
+}

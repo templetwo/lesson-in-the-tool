@@ -1,0 +1,548 @@
+{
+  "dry_run": false,
+  "inputs": {
+    "run_dir": "records/side",
+    "manifest_sha256": "ca35d6f37f24eaba89c3cdd160699bd1f94a61d084feed6d4eb28f183a11872f",
+    "key_sha256": "29debba07ed9fd4ec5d696519d98ba753c843ce68bc81d9dd765e498985de66f",
+    "callers": [
+      "deepseek:deepseek-v4-pro"
+    ],
+    "real_callers": [
+      "deepseek:deepseek-v4-pro"
+    ],
+    "allow_fixture": false,
+    "house_table": null,
+    "house_table_sha256": null,
+    "original_manifest_sha256": "e65a25d86bc4c34250db7a5dbb895d2b5fa6aa14b332d0e9cc42b6bfa67d7d78",
+    "original_key_sha256": "0d9fd772240ec6e8b4d265eab7d70a249152a469add033d4606f618aa9edad43"
+  },
+  "settings": {
+    "sorters": [
+      {
+        "name": "cloud-deepseek",
+        "group": "side",
+        "provider": "deepseek"
+      }
+    ],
+    "groups": {
+      "side": {
+        "min_providers": 1
+      }
+    },
+    "repeats": 3,
+    "cut_points_by_size": {},
+    "bootstrap": {
+      "seed": 20261125,
+      "draws": 2000,
+      "level": 0.95
+    },
+    "majority_rule": "more than half of the expected repeats; failed repeats count in the denominator",
+    "figures_use": "main home only; second homes are reported beside and change no figure",
+    "agreement_values": "each sorter's majority main home per line; no majority = missing",
+    "groups_note": "computed separately and never pooled"
+  },
+  "parse_failures_listed": [],
+  "parse_failures_note": "listed only, never counted across groups; each group carries its own count",
+  "groups": {
+    "side": {
+      "sorters": [
+        "cloud-deepseek"
+      ],
+      "size": 1,
+      "cut_points": null,
+      "parse_failures": {
+        "count": 0,
+        "of_replies": 3
+      },
+      "per_line": [
+        {
+          "line_number": 1,
+          "sorter_majority": {
+            "cloud-deepseek": "check"
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 1",
+          "class": null
+        },
+        {
+          "line_number": 2,
+          "sorter_majority": {
+            "cloud-deepseek": "retrieval"
+          },
+          "modal_homes": [
+            "retrieval"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 1",
+          "class": null
+        },
+        {
+          "line_number": 3,
+          "sorter_majority": {
+            "cloud-deepseek": "check"
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 1",
+          "class": null
+        },
+        {
+          "line_number": 4,
+          "sorter_majority": {
+            "cloud-deepseek": null
+          },
+          "modal_homes": [],
+          "modal_count": 0,
+          "count_text": "0 of 1",
+          "class": null
+        },
+        {
+          "line_number": 5,
+          "sorter_majority": {
+            "cloud-deepseek": "gate"
+          },
+          "modal_homes": [
+            "gate"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 1",
+          "class": null
+        },
+        {
+          "line_number": 6,
+          "sorter_majority": {
+            "cloud-deepseek": "check"
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 1",
+          "class": null
+        },
+        {
+          "line_number": 7,
+          "sorter_majority": {
+            "cloud-deepseek": "check"
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 1",
+          "class": null
+        },
+        {
+          "line_number": 8,
+          "sorter_majority": {
+            "cloud-deepseek": "check"
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 1",
+          "class": null
+        },
+        {
+          "line_number": 9,
+          "sorter_majority": {
+            "cloud-deepseek": "harness"
+          },
+          "modal_homes": [
+            "harness"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 1",
+          "class": null
+        },
+        {
+          "line_number": 10,
+          "sorter_majority": {
+            "cloud-deepseek": "check"
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 1",
+          "class": null
+        },
+        {
+          "line_number": 11,
+          "sorter_majority": {
+            "cloud-deepseek": "retrieval"
+          },
+          "modal_homes": [
+            "retrieval"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 1",
+          "class": null
+        },
+        {
+          "line_number": 12,
+          "sorter_majority": {
+            "cloud-deepseek": "tool"
+          },
+          "modal_homes": [
+            "tool"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 1",
+          "class": null
+        },
+        {
+          "line_number": 13,
+          "sorter_majority": {
+            "cloud-deepseek": "check"
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 1",
+          "class": null
+        },
+        {
+          "line_number": 14,
+          "sorter_majority": {
+            "cloud-deepseek": "judgment"
+          },
+          "modal_homes": [
+            "judgment"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 1",
+          "class": null
+        },
+        {
+          "line_number": 15,
+          "sorter_majority": {
+            "cloud-deepseek": "judgment"
+          },
+          "modal_homes": [
+            "judgment"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 1",
+          "class": null
+        },
+        {
+          "line_number": 16,
+          "sorter_majority": {
+            "cloud-deepseek": "check"
+          },
+          "modal_homes": [
+            "check"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 1",
+          "class": null
+        },
+        {
+          "line_number": 17,
+          "sorter_majority": {
+            "cloud-deepseek": "judgment"
+          },
+          "modal_homes": [
+            "judgment"
+          ],
+          "modal_count": 1,
+          "count_text": "1 of 1",
+          "class": null
+        }
+      ],
+      "class_counts": null,
+      "per_sorter": {
+        "cloud-deepseek": {
+          "repeats_failed": 0,
+          "lines_not_all_same": 6,
+          "share_lines_not_all_same": 0.35294117647058826,
+          "lines_no_majority": 1,
+          "share_lines_no_majority": 0.058823529411764705
+        }
+      },
+      "agreement": {},
+      "second_homes": [
+        {
+          "line_number": 1,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 1,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 2,
+            "of_replies": 3,
+            "homes": {
+              "check": 1,
+              "gate": 1
+            }
+          }
+        },
+        {
+          "line_number": 2,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 1,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 2,
+            "of_replies": 3,
+            "homes": {
+              "check": 1,
+              "judgment": 1
+            }
+          }
+        },
+        {
+          "line_number": 3,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 1,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 0,
+            "of_replies": 3,
+            "homes": {}
+          }
+        },
+        {
+          "line_number": 4,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 1,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 2,
+            "of_replies": 3,
+            "homes": {
+              "check": 1,
+              "harness": 1
+            }
+          }
+        },
+        {
+          "line_number": 5,
+          "by_majority": {
+            "sorters_with_second": 1,
+            "of": 1,
+            "homes": {
+              "check": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 3,
+            "of_replies": 3,
+            "homes": {
+              "check": 2,
+              "gate": 1
+            }
+          }
+        },
+        {
+          "line_number": 6,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 1,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 0,
+            "of_replies": 3,
+            "homes": {}
+          }
+        },
+        {
+          "line_number": 7,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 1,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 0,
+            "of_replies": 3,
+            "homes": {}
+          }
+        },
+        {
+          "line_number": 8,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 1,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 1,
+            "of_replies": 3,
+            "homes": {
+              "retrieval": 1
+            }
+          }
+        },
+        {
+          "line_number": 9,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 1,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 1,
+            "of_replies": 3,
+            "homes": {
+              "retrieval": 1
+            }
+          }
+        },
+        {
+          "line_number": 10,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 1,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 1,
+            "of_replies": 3,
+            "homes": {
+              "check": 1
+            }
+          }
+        },
+        {
+          "line_number": 11,
+          "by_majority": {
+            "sorters_with_second": 1,
+            "of": 1,
+            "homes": {
+              "check": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 3,
+            "of_replies": 3,
+            "homes": {
+              "check": 3
+            }
+          }
+        },
+        {
+          "line_number": 12,
+          "by_majority": {
+            "sorters_with_second": 1,
+            "of": 1,
+            "homes": {
+              "harness": 1
+            }
+          },
+          "raw": {
+            "replies_with_second": 2,
+            "of_replies": 3,
+            "homes": {
+              "harness": 2
+            }
+          }
+        },
+        {
+          "line_number": 13,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 1,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 0,
+            "of_replies": 3,
+            "homes": {}
+          }
+        },
+        {
+          "line_number": 14,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 1,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 0,
+            "of_replies": 3,
+            "homes": {}
+          }
+        },
+        {
+          "line_number": 15,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 1,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 1,
+            "of_replies": 3,
+            "homes": {
+              "check": 1
+            }
+          }
+        },
+        {
+          "line_number": 16,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 1,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 0,
+            "of_replies": 3,
+            "homes": {}
+          }
+        },
+        {
+          "line_number": 17,
+          "by_majority": {
+            "sorters_with_second": 0,
+            "of": 1,
+            "homes": {}
+          },
+          "raw": {
+            "replies_with_second": 0,
+            "of_replies": 3,
+            "homes": {}
+          }
+        }
+      ],
+      "house_table": {
+        "not_given": true
+      },
+      "agreement_note": "Single-sorter group: descriptive counts only; classes and agreement statistics are not computed.",
+      "turn2": {
+        "sent": 3,
+        "failed": 0,
+        "not_sent": 0,
+        "of_replies": 3
+      }
+    }
+  },
+  "limit_endings_by_sorter": [
+    {
+      "sorter": "cloud-deepseek",
+      "group": "side",
+      "message_1": 0,
+      "message_2": 0,
+      "sorts_not_sent_after_f": 0
+    }
+  ],
+  "limit_endings_note": "Counts use provider-reported limit/length endings, not proof that the configured output cap caused them. Zero means no such marker was recorded; missing or redacted evidence and F-stopped sorts may still limit what was observed. Comparisons involving a sorter with a recorded limit ending or F stop must report that limitation.",
+  "written_at": "2026-11-26 11:39:22 EST"
+}

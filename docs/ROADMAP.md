@@ -26,8 +26,8 @@ the existing evidence chain. Neither contribution is an experiment result; exper
 1. **Experiment 002, the lesson in the tool.** Draft rules exist. To do: agree the rules, have a seat on another
    provider write the jobs, build the tool loop and the simulated workspace, test the scorers, freeze, run the small
    model first, then the larger one.
-2. **The translation table, sorted by several models.** Give each model the seventeen lines and the list of homes.
-   Collect their sorts separately. Study the rows where they disagree.
+2. **Follow up on the translation-table sort.** Experiment 003 completed that descriptive sort and one
+   exploratory side run. Its projected records support count reconstruction; which homes actually change behavior remains open.
 3. **A lookup tool for the small model.** The first pilot showed it reaching for one. Give it one and rerun.
 
 ## After that
@@ -48,3 +48,13 @@ the existing evidence chain. Neither contribution is an experiment result; exper
 - What the practice of kindness and respect in this collaboration contributes that a tool cannot. The record shows
   models reporting their own errors and corrections that changed the record. Whether one caused the other has not
   been measured, and may not be measurable.
+
+## Experiment 003 public edition, 2026-11-26
+
+`experiments/003-the-sort/` holds a public edition of the Sort and its exploratory side run.
+It includes the checked summaries, rules, two code versions and freeze commitments, with declared omissions and
+public-copy hashes. Visible answers and judgment prose are projected for count reconstruction; private reasoning and provider identifiers are withheld.
+Anthony directed publication on 2026-11-26 before his own review, asking that the work go out in the open first.
+Its opening, exact wording and draft credit remain for his review; any changes he makes will be dated errata.
+The rulings file remains omitted, and its disposition remains his. Publication does not register the experiment
+with an outside registry, adopt the proposed next tests or authorize additional model calls.

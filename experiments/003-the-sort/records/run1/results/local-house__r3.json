@@ -1,0 +1,397 @@
+{
+  "dry_run": false,
+  "sorter": "local-house",
+  "group": "local",
+  "provider": "ollama-local-a",
+  "repeat": 3,
+  "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+  "line_seed": 3057905140,
+  "home_seed": 3319921499,
+  "lines_commit": "441752cd2d7536ad9d6fa806e2f752752676342b",
+  "lines_sha256": "5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1",
+  "homes_sha256": "a10a13d8818caa81cf8005f6d99f7aecdbe3bbd63a38c13ec6b481ff4dee66fa",
+  "prompt_file": "prompts/local-house__r3.json",
+  "prompt_sha256": "7b485c1e2e40fb298315837513a4d1916bd9c31ae3bd8d4a59986ec50839c19a",
+  "question_sha256": "e34ca9c61f04cdbe4e5ac0b2b3a7b5d0ec90bf72ee0165a92a1942341ed712a8",
+  "raw_reply": "L01 | main: judgment | second: check\nL02 | main: check | second: retrieval\nL03 | main: judgment | second: none\nL04 | main: check | second: harness\nL05 | main: check | second: harness\nL06 | main: retrieval | second: check\nL07 | main: check | second: none\nL08 | main: gate | second: check\nL09 | main: harness | second: tool\nL10 | main: check | second: none\nL11 | main: check | second: none\nL12 | main: check | second: none\nL13 | main: tool | second: harness\nL14 | main: gate | second: check\nL15 | main: judgment | second: none\nL16 | main: check | second: none\nL17 | main: judgment | second: none",
+  "parse_ok": true,
+  "parse_errors": [],
+  "rows": [
+    {
+      "dry_run": false,
+      "label": "L01",
+      "home_main": "judgment",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L02",
+      "home_main": "check",
+      "home_second": "retrieval"
+    },
+    {
+      "dry_run": false,
+      "label": "L03",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L04",
+      "home_main": "check",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L05",
+      "home_main": "check",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L06",
+      "home_main": "retrieval",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L07",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L08",
+      "home_main": "gate",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L09",
+      "home_main": "harness",
+      "home_second": "tool"
+    },
+    {
+      "dry_run": false,
+      "label": "L10",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L11",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L12",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L13",
+      "home_main": "tool",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L14",
+      "home_main": "gate",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L15",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L16",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L17",
+      "home_main": "judgment",
+      "home_second": null
+    }
+  ],
+  "turn2": {
+    "dry_run": false,
+    "sent": true,
+    "not_sent_reason": null,
+    "raw_reply": "L01 | Once the check for empty or truncated output is in place, the judgment that remains is deciding whether a particular empty result genuinely reflects the state of the world or merely reflects a failure of the search mechanism.\nL02 | Once the step of testing a fact before repeating it is established, the judgment that remains is deciding which facts from a note are load-bearing enough to warrant a test versus which can be safely restated as context.\nL03 | Once the recognition that the person asked for presence rather than analysis is made, the judgment that remains is reading the specific emotional and social context of the moment to calibrate exactly how much to give and when to stop.\nL04 | Once the rule to seek a different kind of reviewer is set, the judgment that remains is deciding who counts as sufficiently different in perspective to catch what the original reviewer missed and which pieces of work are important enough to justify the extra review.\nL05 | Once the practice of deliberately failing a test is adopted, the judgment that remains is deciding which tests and monitors are critical enough to require a forced-failure rehearsal and what a meaningful \"fail on purpose\" looks like for a particular system.\nL06 | Once the retrieval habit of recording where you looked is built, the judgment that remains is deciding whether an alternate source is relevant and consequential enough to change the answer you owe the person and how much effort the search deserves.\nL07 | Once the rule to verify against something outside yourself is set, the judgment that remains is deciding what counts as a sufficient external reference for a given claim and when the honest answer is simply \"not checked\" rather than a half-convincing approximation.\nL08 | Once the gate of running the deciding check before declaring done is in place, the judgment that remains is identifying what the single deciding check actually is for a particular task and whether the evidence it produces truly satisfies the condition.\nL09 | Once the harness of encoding a lesson into a permanent step is built, the judgment that remains is deciding which lessons are general enough to become a standing step versus which are situational, and exactly where in the workflow the step must sit to be effective.\nL10 | Once the check of observing a setting actually act is required, the judgment that remains is deciding what \"seeing it act\" concretely means for a given switch and how much observation is sufficient to be confident the change is live.\nL11 | Once the step of checking adjacent elements after a fix is added, the judgment that remains is deciding what counts as \"the things beside it\" for a particular change and how far to follow the ripple before declaring the neighborhood stable.\nL12 | Once the habit of reading the clock before writing a time down is established, the judgment that remains is deciding which time entries are critical enough to require exact verification versus which are approximate references where a small offset is acceptable.\nL13 | Once the tool for programmatic copying of codes is available, the judgment that remains is deciding which identifiers are long or error-prone enough to mandate the tool versus which short tokens can be transcribed by hand without meaningful risk.\nL14 | Once the gate of verifying location and reading before declaring something lost is set, the judgment that remains is deciding how deep the investigation of the alarm's premise should go before the cost of further delay outweighs the risk of a false \"dead\" call.\nL15 | Once the discipline of quoting exactly and tracing cause is adopted, the judgment that remains is deciding how to weigh competing explanations for a problem and at what point the evidence is strong enough to name a specific cause rather than describe a pattern.\nL16 | Once the check of inspecting what actually landed is required, the judgment that remains is deciding what a discrepancy between the tool's reported count and the observed state means in context and whether it indicates a partial failure or a different definition of \"saved.\"\nL17 | Once the practice of stating how much evidence backs a claim is in place, the judgment that remains is deciding how much weight three short chats or a single example should carry in a given context and whether the claim is strong enough to act on or merely a direction to investigate further.",
+    "parse_ok": true,
+    "parse_errors": [],
+    "rows": [
+      {
+        "dry_run": false,
+        "label": "L01",
+        "sentence": "Once the check for empty or truncated output is in place, the judgment that remains is deciding whether a particular empty result genuinely reflects the state of the world or merely reflects a failure of the search mechanism."
+      },
+      {
+        "dry_run": false,
+        "label": "L02",
+        "sentence": "Once the step of testing a fact before repeating it is established, the judgment that remains is deciding which facts from a note are load-bearing enough to warrant a test versus which can be safely restated as context."
+      },
+      {
+        "dry_run": false,
+        "label": "L03",
+        "sentence": "Once the recognition that the person asked for presence rather than analysis is made, the judgment that remains is reading the specific emotional and social context of the moment to calibrate exactly how much to give and when to stop."
+      },
+      {
+        "dry_run": false,
+        "label": "L04",
+        "sentence": "Once the rule to seek a different kind of reviewer is set, the judgment that remains is deciding who counts as sufficiently different in perspective to catch what the original reviewer missed and which pieces of work are important enough to justify the extra review."
+      },
+      {
+        "dry_run": false,
+        "label": "L05",
+        "sentence": "Once the practice of deliberately failing a test is adopted, the judgment that remains is deciding which tests and monitors are critical enough to require a forced-failure rehearsal and what a meaningful \"fail on purpose\" looks like for a particular system."
+      },
+      {
+        "dry_run": false,
+        "label": "L06",
+        "sentence": "Once the retrieval habit of recording where you looked is built, the judgment that remains is deciding whether an alternate source is relevant and consequential enough to change the answer you owe the person and how much effort the search deserves."
+      },
+      {
+        "dry_run": false,
+        "label": "L07",
+        "sentence": "Once the rule to verify against something outside yourself is set, the judgment that remains is deciding what counts as a sufficient external reference for a given claim and when the honest answer is simply \"not checked\" rather than a half-convincing approximation."
+      },
+      {
+        "dry_run": false,
+        "label": "L08",
+        "sentence": "Once the gate of running the deciding check before declaring done is in place, the judgment that remains is identifying what the single deciding check actually is for a particular task and whether the evidence it produces truly satisfies the condition."
+      },
+      {
+        "dry_run": false,
+        "label": "L09",
+        "sentence": "Once the harness of encoding a lesson into a permanent step is built, the judgment that remains is deciding which lessons are general enough to become a standing step versus which are situational, and exactly where in the workflow the step must sit to be effective."
+      },
+      {
+        "dry_run": false,
+        "label": "L10",
+        "sentence": "Once the check of observing a setting actually act is required, the judgment that remains is deciding what \"seeing it act\" concretely means for a given switch and how much observation is sufficient to be confident the change is live."
+      },
+      {
+        "dry_run": false,
+        "label": "L11",
+        "sentence": "Once the step of checking adjacent elements after a fix is added, the judgment that remains is deciding what counts as \"the things beside it\" for a particular change and how far to follow the ripple before declaring the neighborhood stable."
+      },
+      {
+        "dry_run": false,
+        "label": "L12",
+        "sentence": "Once the habit of reading the clock before writing a time down is established, the judgment that remains is deciding which time entries are critical enough to require exact verification versus which are approximate references where a small offset is acceptable."
+      },
+      {
+        "dry_run": false,
+        "label": "L13",
+        "sentence": "Once the tool for programmatic copying of codes is available, the judgment that remains is deciding which identifiers are long or error-prone enough to mandate the tool versus which short tokens can be transcribed by hand without meaningful risk."
+      },
+      {
+        "dry_run": false,
+        "label": "L14",
+        "sentence": "Once the gate of verifying location and reading before declaring something lost is set, the judgment that remains is deciding how deep the investigation of the alarm's premise should go before the cost of further delay outweighs the risk of a false \"dead\" call."
+      },
+      {
+        "dry_run": false,
+        "label": "L15",
+        "sentence": "Once the discipline of quoting exactly and tracing cause is adopted, the judgment that remains is deciding how to weigh competing explanations for a problem and at what point the evidence is strong enough to name a specific cause rather than describe a pattern."
+      },
+      {
+        "dry_run": false,
+        "label": "L16",
+        "sentence": "Once the check of inspecting what actually landed is required, the judgment that remains is deciding what a discrepancy between the tool's reported count and the observed state means in context and whether it indicates a partial failure or a different definition of \"saved.\""
+      },
+      {
+        "dry_run": false,
+        "label": "L17",
+        "sentence": "Once the practice of stating how much evidence backs a claim is in place, the judgment that remains is deciding how much weight three short chats or a single example should carry in a given context and whether the claim is strong enough to act on or merely a direction to investigate further."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "dry_run": false,
+      "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+      "turn": 1,
+      "provider": "ollama-local-a",
+      "model_requested": "qwen3.8:27b-draft4-text",
+      "model_reported": "qwen3.8:27b-draft4-text",
+      "model_matches": true,
+      "url": "https://local-model.example.invalid/api/chat",
+      "settings_sent_json": "{\"model\": \"qwen3.8:27b-draft4-text\", \"options\": {\"num_predict\": 19000}, \"stream\": false, \"think\": null}",
+      "message_count": 1,
+      "started_at": "2026-11-26 00:26:05 EST",
+      "finished_at": "2026-11-26 00:27:08 EST",
+      "complete": true,
+      "stop": "stop",
+      "usage_json": "{\"eval_count\": 3004, \"eval_duration\": 61163720000, \"load_duration\": 563266, \"prompt_eval_cached_count\": 42, \"prompt_eval_count\": 1066, \"prompt_eval_duration\": 1744526000, \"total_duration\": 63173508925}",
+      "response_body_json": "{}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "eval_count",
+        "reported_output_tokens": 3004,
+        "limit": 19000
+      }
+    },
+    {
+      "dry_run": false,
+      "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+      "turn": 2,
+      "provider": "ollama-local-a",
+      "model_requested": "qwen3.8:27b-draft4-text",
+      "model_reported": "qwen3.8:27b-draft4-text",
+      "model_matches": true,
+      "url": "https://local-model.example.invalid/api/chat",
+      "settings_sent_json": "{\"model\": \"qwen3.8:27b-draft4-text\", \"options\": {\"num_predict\": 19000}, \"stream\": false, \"think\": null}",
+      "message_count": 3,
+      "started_at": "2026-11-26 00:27:08 EST",
+      "finished_at": "2026-11-26 00:28:05 EST",
+      "complete": true,
+      "stop": "stop",
+      "usage_json": "{\"eval_count\": 2217, \"eval_duration\": 55780474000, \"load_duration\": 566195, \"prompt_eval_cached_count\": 1062, \"prompt_eval_count\": 1398, \"prompt_eval_duration\": 888406000, \"total_duration\": 56963142075}",
+      "response_body_json": "{}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "eval_count",
+        "reported_output_tokens": 2217,
+        "limit": 19000
+      }
+    }
+  ],
+  "persistence_state": "complete",
+  "call_budget": {
+    "mode": "main",
+    "output_token_limit": 19000,
+    "planned": {
+      "total": 48,
+      "external": 36,
+      "anthropic": 12,
+      "other_external": 24,
+      "local": 12,
+      "dry_fixture": 0
+    },
+    "attempted": {
+      "total": 40,
+      "external": 34,
+      "anthropic": 12,
+      "other_external": 22,
+      "local": 6,
+      "dry_fixture": 0
+    },
+    "per_sorter": {
+      "cloud-fable": {
+        "caller": "anthropic:claude-fable-5-2",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-opus": {
+        "caller": "anthropic:claude-opus-5-5",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-astra": {
+        "caller": "openai:gpt-6.2-astra",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-sol": {
+        "caller": "openai:gpt-6.2-sol",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-grok": {
+        "caller": "xai:grok-4.7",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-deepseek": {
+        "caller": "deepseek:deepseek-v4-pro",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 4,
+        "stop": null
+      },
+      "local-house": {
+        "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+        "category": "local",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "local-gemma": {
+        "caller": "ollama-local-b:gemma4:e4b-mlx",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      }
+    },
+    "per_adapter": {
+      "anthropic:claude-fable-5-2": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "anthropic:claude-opus-5-5": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-astra": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-sol": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "xai:grok-4.7": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "deepseek:deepseek-v4-pro": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 4
+      },
+      "ollama-local-a:qwen3.8:27b-draft4-text": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 6
+      },
+      "ollama-local-b:gemma4:e4b-mlx": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      }
+    }
+  }
+}

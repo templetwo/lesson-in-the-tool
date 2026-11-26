@@ -1,0 +1,313 @@
+{
+  "dry_run": false,
+  "sorter": "cloud-deepseek",
+  "group": "side",
+  "provider": "deepseek",
+  "repeat": 3,
+  "caller": "deepseek:deepseek-v4-pro",
+  "line_seed": 1298423718,
+  "home_seed": 2323847191,
+  "lines_commit": "441752cd2d7536ad9d6fa806e2f752752676342b",
+  "lines_sha256": "5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1",
+  "homes_sha256": "a10a13d8818caa81cf8005f6d99f7aecdbe3bbd63a38c13ec6b481ff4dee66fa",
+  "prompt_file": "prompts/cloud-deepseek__r3.json",
+  "prompt_sha256": "23d692d526c346ddf8689a44815b22b5797d5b374a13fd7d91e1a28e77340835",
+  "question_sha256": "e34ca9c61f04cdbe4e5ac0b2b3a7b5d0ec90bf72ee0165a92a1942341ed712a8",
+  "raw_reply": "L01 | main: check | second: gate\nL02 | main: check | second: none\nL03 | main: check | second: none\nL04 | main: check | second: none\nL05 | main: tool | second: none\nL06 | main: check | second: none\nL07 | main: judgment | second: none\nL08 | main: check | second: none\nL09 | main: check | second: none\nL10 | main: check | second: none\nL11 | main: check | second: none\nL12 | main: harness | second: none\nL13 | main: retrieval | second: check\nL14 | main: check | second: gate\nL15 | main: check | second: none\nL16 | main: retrieval | second: check\nL17 | main: judgment | second: none",
+  "parse_ok": true,
+  "parse_errors": [],
+  "rows": [
+    {
+      "dry_run": false,
+      "label": "L01",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L02",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L03",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L04",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L05",
+      "home_main": "tool",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L06",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L07",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L08",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L09",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L10",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L11",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L12",
+      "home_main": "harness",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L13",
+      "home_main": "retrieval",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L14",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L15",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L16",
+      "home_main": "retrieval",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L17",
+      "home_main": "judgment",
+      "home_second": null
+    }
+  ],
+  "turn2": {
+    "dry_run": false,
+    "sent": true,
+    "not_sent_reason": null,
+    "raw_reply": "L01 | Judgment remains in deciding whether an outside source is sufficiently independent and complete before calling an answer checked.\nL02 | Judgment remains in deciding how much independent testing a fact needs before it is safe to repeat from notes or a summary.\nL03 | Judgment remains in deciding how different a reviewer must be and whether the work is important enough to require that kind of review.\nL04 | Judgment remains in deciding what observable effect would prove that a saved change or setting is actually in force.\nL05 | Judgment remains in deciding when a value is too long to copy by hand and which programmatic copying method is reliable enough.\nL06 | Judgment remains in deciding which location or reading errors are plausible enough to check before declaring something lost.\nL07 | Judgment remains in assessing how much and what kind of evidence supports a claim and in stating that weight honestly.\nL08 | Judgment remains in deciding which neighboring items or paired fields are close enough to the fix to need checking.\nL09 | Judgment remains in deciding what actual downstream result counts as success when a status message claims success.\nL10 | Judgment remains in deciding when a written time must be read from a reliable clock rather than estimated from memory.\nL11 | Judgment remains in deciding when a quotation is exact enough and how far to trace causation before naming a cause.\nL12 | Judgment remains in designing a step that reliably prevents the old mistake without becoming too rigid or brittle.\nL13 | Judgment remains in deciding when another source could realistically change the answer enough to require a further search.\nL14 | Judgment remains in identifying which check is the deciding one before saying done or verified.\nL15 | Judgment remains in choosing a failure mode that is real enough to prove the test or monitor can catch actual failures.\nL16 | Judgment remains in deciding when an empty or short result is a sign of a failed search rather than a fact about the world.\nL17 | Judgment remains in discerning what the person is actually asking for and giving only that without adding unsolicited help.",
+    "parse_ok": true,
+    "parse_errors": [],
+    "rows": [
+      {
+        "dry_run": false,
+        "label": "L01",
+        "sentence": "Judgment remains in deciding whether an outside source is sufficiently independent and complete before calling an answer checked."
+      },
+      {
+        "dry_run": false,
+        "label": "L02",
+        "sentence": "Judgment remains in deciding how much independent testing a fact needs before it is safe to repeat from notes or a summary."
+      },
+      {
+        "dry_run": false,
+        "label": "L03",
+        "sentence": "Judgment remains in deciding how different a reviewer must be and whether the work is important enough to require that kind of review."
+      },
+      {
+        "dry_run": false,
+        "label": "L04",
+        "sentence": "Judgment remains in deciding what observable effect would prove that a saved change or setting is actually in force."
+      },
+      {
+        "dry_run": false,
+        "label": "L05",
+        "sentence": "Judgment remains in deciding when a value is too long to copy by hand and which programmatic copying method is reliable enough."
+      },
+      {
+        "dry_run": false,
+        "label": "L06",
+        "sentence": "Judgment remains in deciding which location or reading errors are plausible enough to check before declaring something lost."
+      },
+      {
+        "dry_run": false,
+        "label": "L07",
+        "sentence": "Judgment remains in assessing how much and what kind of evidence supports a claim and in stating that weight honestly."
+      },
+      {
+        "dry_run": false,
+        "label": "L08",
+        "sentence": "Judgment remains in deciding which neighboring items or paired fields are close enough to the fix to need checking."
+      },
+      {
+        "dry_run": false,
+        "label": "L09",
+        "sentence": "Judgment remains in deciding what actual downstream result counts as success when a status message claims success."
+      },
+      {
+        "dry_run": false,
+        "label": "L10",
+        "sentence": "Judgment remains in deciding when a written time must be read from a reliable clock rather than estimated from memory."
+      },
+      {
+        "dry_run": false,
+        "label": "L11",
+        "sentence": "Judgment remains in deciding when a quotation is exact enough and how far to trace causation before naming a cause."
+      },
+      {
+        "dry_run": false,
+        "label": "L12",
+        "sentence": "Judgment remains in designing a step that reliably prevents the old mistake without becoming too rigid or brittle."
+      },
+      {
+        "dry_run": false,
+        "label": "L13",
+        "sentence": "Judgment remains in deciding when another source could realistically change the answer enough to require a further search."
+      },
+      {
+        "dry_run": false,
+        "label": "L14",
+        "sentence": "Judgment remains in identifying which check is the deciding one before saying done or verified."
+      },
+      {
+        "dry_run": false,
+        "label": "L15",
+        "sentence": "Judgment remains in choosing a failure mode that is real enough to prove the test or monitor can catch actual failures."
+      },
+      {
+        "dry_run": false,
+        "label": "L16",
+        "sentence": "Judgment remains in deciding when an empty or short result is a sign of a failed search rather than a fact about the world."
+      },
+      {
+        "dry_run": false,
+        "label": "L17",
+        "sentence": "Judgment remains in discerning what the person is actually asking for and giving only that without adding unsolicited help."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "dry_run": false,
+      "caller": "deepseek:deepseek-v4-pro",
+      "turn": 1,
+      "provider": "deepseek",
+      "model_requested": "deepseek-v4-pro",
+      "model_reported": "deepseek-v4-pro",
+      "model_matches": true,
+      "url": "https://api.deepseek.com/chat/completions",
+      "settings_sent_json": "{\"max_tokens\": 60000, \"model\": \"deepseek-v4-pro\", \"reasoning_effort\": \"high\", \"thinking\": {\"type\": \"enabled\"}}",
+      "message_count": 1,
+      "started_at": "2026-11-26 11:33:41 EST",
+      "finished_at": "2026-11-26 11:38:04 EST",
+      "complete": true,
+      "stop": "stop",
+      "usage_json": "{\"completion_tokens\": 21515, \"completion_tokens_details\": {\"reasoning_tokens\": 21328}, \"prompt_cache_hit_tokens\": 0, \"prompt_cache_miss_tokens\": 1086, \"prompt_tokens\": 1086, \"prompt_tokens_details\": {\"cached_tokens\": 0}, \"total_tokens\": 22601}",
+      "response_body_json": "{}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "completion_tokens",
+        "reported_output_tokens": 21515,
+        "limit": 60000
+      }
+    },
+    {
+      "dry_run": false,
+      "caller": "deepseek:deepseek-v4-pro",
+      "turn": 2,
+      "provider": "deepseek",
+      "model_requested": "deepseek-v4-pro",
+      "model_reported": "deepseek-v4-pro",
+      "model_matches": true,
+      "url": "https://api.deepseek.com/chat/completions",
+      "settings_sent_json": "{\"max_tokens\": 60000, \"model\": \"deepseek-v4-pro\", \"reasoning_effort\": \"high\", \"thinking\": {\"type\": \"enabled\"}}",
+      "message_count": 3,
+      "started_at": "2026-11-26 11:38:04 EST",
+      "finished_at": "2026-11-26 11:38:48 EST",
+      "complete": true,
+      "stop": "stop",
+      "usage_json": "{\"completion_tokens\": 3818, \"completion_tokens_details\": {\"reasoning_tokens\": 3413}, \"prompt_cache_hit_tokens\": 1024, \"prompt_cache_miss_tokens\": 368, \"prompt_tokens\": 1392, \"prompt_tokens_details\": {\"cached_tokens\": 1024}, \"total_tokens\": 5210}",
+      "response_body_json": "{}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "completion_tokens",
+        "reported_output_tokens": 3818,
+        "limit": 60000
+      }
+    }
+  ],
+  "persistence_state": "complete",
+  "call_budget": {
+    "mode": "main",
+    "output_token_limit": 60000,
+    "planned": {
+      "total": 6,
+      "external": 6,
+      "anthropic": 0,
+      "other_external": 6,
+      "local": 0,
+      "dry_fixture": 0
+    },
+    "attempted": {
+      "total": 6,
+      "external": 6,
+      "anthropic": 0,
+      "other_external": 6,
+      "local": 0,
+      "dry_fixture": 0
+    },
+    "per_sorter": {
+      "cloud-deepseek": {
+        "caller": "deepseek:deepseek-v4-pro",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      }
+    },
+    "per_adapter": {
+      "deepseek:deepseek-v4-pro": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      }
+    }
+  }
+}

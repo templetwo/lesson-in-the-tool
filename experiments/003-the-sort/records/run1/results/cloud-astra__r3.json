@@ -1,0 +1,397 @@
+{
+  "dry_run": false,
+  "sorter": "cloud-astra",
+  "group": "cloud",
+  "provider": "openai",
+  "repeat": 3,
+  "caller": "openai:gpt-6.2-astra",
+  "line_seed": 1752900923,
+  "home_seed": 1482081066,
+  "lines_commit": "441752cd2d7536ad9d6fa806e2f752752676342b",
+  "lines_sha256": "5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1",
+  "homes_sha256": "a10a13d8818caa81cf8005f6d99f7aecdbe3bbd63a38c13ec6b481ff4dee66fa",
+  "prompt_file": "prompts/cloud-astra__r3.json",
+  "prompt_sha256": "7a899c2d76bd52f4c1567ba1108617113fa07f8acb2a1c3781c340b0b24217bc",
+  "question_sha256": "e34ca9c61f04cdbe4e5ac0b2b3a7b5d0ec90bf72ee0165a92a1942341ed712a8",
+  "raw_reply": "L01 | main: tool | second: harness\nL02 | main: judgment | second: none\nL03 | main: check | second: judgment\nL04 | main: check | second: none\nL05 | main: judgment | second: none\nL06 | main: judgment | second: none\nL07 | main: check | second: judgment\nL08 | main: check | second: harness\nL09 | main: check | second: tool\nL10 | main: check | second: gate\nL11 | main: gate | second: check\nL12 | main: harness | second: none\nL13 | main: check | second: gate\nL14 | main: gate | second: check\nL15 | main: check | second: gate\nL16 | main: check | second: none\nL17 | main: check | second: gate",
+  "parse_ok": true,
+  "parse_errors": [],
+  "rows": [
+    {
+      "dry_run": false,
+      "label": "L01",
+      "home_main": "tool",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L02",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L03",
+      "home_main": "check",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L04",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L05",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L06",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L07",
+      "home_main": "check",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L08",
+      "home_main": "check",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L09",
+      "home_main": "check",
+      "home_second": "tool"
+    },
+    {
+      "dry_run": false,
+      "label": "L10",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L11",
+      "home_main": "gate",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L12",
+      "home_main": "harness",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L13",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L14",
+      "home_main": "gate",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L15",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L16",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L17",
+      "home_main": "check",
+      "home_second": "gate"
+    }
+  ],
+  "turn2": {
+    "dry_run": false,
+    "sent": true,
+    "not_sent_reason": null,
+    "raw_reply": "L01 | The judgment is choosing the authoritative source and the exact identifier the record calls for.\nL02 | The judgment is deciding how strongly the evidence supports the claim and how plainly to state its limits.\nL03 | The judgment is choosing an exact quotation that fairly represents the speaker’s point and deciding whether the evidence distinguishes the proposed cause from plausible alternatives.\nL04 | The judgment is deciding what to inspect at the destination to tell whether everything that should have arrived actually did.\nL05 | The judgment is deciding which possibilities the search could have detected and which remain open.\nL06 | The judgment is choosing words or silence that offer calm attention without turning it into unsolicited advice.\nL07 | The judgment is deciding which other source could change the answer and when the sources checked support the answer as worded.\nL08 | The judgment is deciding which work warrants another reviewer and which reviewer’s perspective is most likely to expose a missed error.\nL09 | The judgment is deciding which event the timestamp should mark and what precision and time zone the reader needs.\nL10 | The judgment is choosing a test that can establish both whether the noted fact holds and whether a missing qualification changes its meaning.\nL11 | The judgment is choosing the check whose result distinguishes completed work from a mere attempt.\nL12 | The judgment is deciding where in the workflow to put the recurring step so it prevents the mistake before it happens.\nL13 | The judgment is choosing an observation that distinguishes a program using the saved setting from one behaving the same way without it.\nL14 | The judgment is deciding which external source is authoritative for the specific claim and whether it confirms every part of the answer being marked as checked.\nL15 | The judgment is choosing a safe, representative failure that the test or monitor should detect.\nL16 | The judgment is identifying which neighboring fields or behaviors could share the defect or be disturbed by the fix.\nL17 | The judgment is choosing a nondisruptive check that can distinguish actual loss from a wrong location or a faulty reading.",
+    "parse_ok": true,
+    "parse_errors": [],
+    "rows": [
+      {
+        "dry_run": false,
+        "label": "L01",
+        "sentence": "The judgment is choosing the authoritative source and the exact identifier the record calls for."
+      },
+      {
+        "dry_run": false,
+        "label": "L02",
+        "sentence": "The judgment is deciding how strongly the evidence supports the claim and how plainly to state its limits."
+      },
+      {
+        "dry_run": false,
+        "label": "L03",
+        "sentence": "The judgment is choosing an exact quotation that fairly represents the speaker’s point and deciding whether the evidence distinguishes the proposed cause from plausible alternatives."
+      },
+      {
+        "dry_run": false,
+        "label": "L04",
+        "sentence": "The judgment is deciding what to inspect at the destination to tell whether everything that should have arrived actually did."
+      },
+      {
+        "dry_run": false,
+        "label": "L05",
+        "sentence": "The judgment is deciding which possibilities the search could have detected and which remain open."
+      },
+      {
+        "dry_run": false,
+        "label": "L06",
+        "sentence": "The judgment is choosing words or silence that offer calm attention without turning it into unsolicited advice."
+      },
+      {
+        "dry_run": false,
+        "label": "L07",
+        "sentence": "The judgment is deciding which other source could change the answer and when the sources checked support the answer as worded."
+      },
+      {
+        "dry_run": false,
+        "label": "L08",
+        "sentence": "The judgment is deciding which work warrants another reviewer and which reviewer’s perspective is most likely to expose a missed error."
+      },
+      {
+        "dry_run": false,
+        "label": "L09",
+        "sentence": "The judgment is deciding which event the timestamp should mark and what precision and time zone the reader needs."
+      },
+      {
+        "dry_run": false,
+        "label": "L10",
+        "sentence": "The judgment is choosing a test that can establish both whether the noted fact holds and whether a missing qualification changes its meaning."
+      },
+      {
+        "dry_run": false,
+        "label": "L11",
+        "sentence": "The judgment is choosing the check whose result distinguishes completed work from a mere attempt."
+      },
+      {
+        "dry_run": false,
+        "label": "L12",
+        "sentence": "The judgment is deciding where in the workflow to put the recurring step so it prevents the mistake before it happens."
+      },
+      {
+        "dry_run": false,
+        "label": "L13",
+        "sentence": "The judgment is choosing an observation that distinguishes a program using the saved setting from one behaving the same way without it."
+      },
+      {
+        "dry_run": false,
+        "label": "L14",
+        "sentence": "The judgment is deciding which external source is authoritative for the specific claim and whether it confirms every part of the answer being marked as checked."
+      },
+      {
+        "dry_run": false,
+        "label": "L15",
+        "sentence": "The judgment is choosing a safe, representative failure that the test or monitor should detect."
+      },
+      {
+        "dry_run": false,
+        "label": "L16",
+        "sentence": "The judgment is identifying which neighboring fields or behaviors could share the defect or be disturbed by the fix."
+      },
+      {
+        "dry_run": false,
+        "label": "L17",
+        "sentence": "The judgment is choosing a nondisruptive check that can distinguish actual loss from a wrong location or a faulty reading."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "dry_run": false,
+      "caller": "openai:gpt-6.2-astra",
+      "turn": 1,
+      "provider": "openai",
+      "model_requested": "gpt-6.2-astra",
+      "model_reported": "gpt-6.2-astra",
+      "model_matches": true,
+      "url": "https://api.openai.com/v1/responses",
+      "settings_sent_json": "{\"max_output_tokens\": 19000, \"model\": \"gpt-6.2-astra\", \"reasoning\": {\"effort\": \"high\"}}",
+      "message_count": 1,
+      "started_at": "2026-11-25 23:59:39 EST",
+      "finished_at": "2026-11-25 23:59:51 EST",
+      "complete": true,
+      "stop": "completed",
+      "usage_json": "{\"input_tokens\": 1004, \"input_tokens_details\": {\"cache_write_tokens\": 0, \"cache_write_tokens_details\": {\"ttl_12h_tokens\": 0, \"ttl_30m_tokens\": 0}, \"cached_tokens\": 0}, \"output_tokens\": 622, \"output_tokens_details\": {\"reasoning_tokens\": 430}, \"total_tokens\": 1626}",
+      "response_body_json": "{\"status\": \"completed\"}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "output_tokens",
+        "reported_output_tokens": 622,
+        "limit": 19000
+      }
+    },
+    {
+      "dry_run": false,
+      "caller": "openai:gpt-6.2-astra",
+      "turn": 2,
+      "provider": "openai",
+      "model_requested": "gpt-6.2-astra",
+      "model_reported": "gpt-6.2-astra",
+      "model_matches": true,
+      "url": "https://api.openai.com/v1/responses",
+      "settings_sent_json": "{\"max_output_tokens\": 19000, \"model\": \"gpt-6.2-astra\", \"reasoning\": {\"effort\": \"high\"}}",
+      "message_count": 3,
+      "started_at": "2026-11-25 23:59:51 EST",
+      "finished_at": "2026-11-26 00:00:10 EST",
+      "complete": true,
+      "stop": "completed",
+      "usage_json": "{\"input_tokens\": 1312, \"input_tokens_details\": {\"cache_write_tokens\": 1309, \"cache_write_tokens_details\": {\"ttl_12h_tokens\": 0, \"ttl_30m_tokens\": 1309}, \"cached_tokens\": 0}, \"output_tokens\": 657, \"output_tokens_details\": {\"reasoning_tokens\": 244}, \"total_tokens\": 1969}",
+      "response_body_json": "{\"status\": \"completed\"}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "output_tokens",
+        "reported_output_tokens": 657,
+        "limit": 19000
+      }
+    }
+  ],
+  "persistence_state": "complete",
+  "call_budget": {
+    "mode": "main",
+    "output_token_limit": 19000,
+    "planned": {
+      "total": 48,
+      "external": 36,
+      "anthropic": 12,
+      "other_external": 24,
+      "local": 12,
+      "dry_fixture": 0
+    },
+    "attempted": {
+      "total": 18,
+      "external": 18,
+      "anthropic": 12,
+      "other_external": 6,
+      "local": 0,
+      "dry_fixture": 0
+    },
+    "per_sorter": {
+      "cloud-fable": {
+        "caller": "anthropic:claude-fable-5-2",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-opus": {
+        "caller": "anthropic:claude-opus-5-5",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-astra": {
+        "caller": "openai:gpt-6.2-astra",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-sol": {
+        "caller": "openai:gpt-6.2-sol",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "cloud-grok": {
+        "caller": "xai:grok-4.7",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "cloud-deepseek": {
+        "caller": "deepseek:deepseek-v4-pro",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "local-house": {
+        "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "local-gemma": {
+        "caller": "ollama-local-b:gemma4:e4b-mlx",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      }
+    },
+    "per_adapter": {
+      "anthropic:claude-fable-5-2": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "anthropic:claude-opus-5-5": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-astra": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-sol": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "xai:grok-4.7": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "deepseek:deepseek-v4-pro": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "ollama-local-a:qwen3.8:27b-draft4-text": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      },
+      "ollama-local-b:gemma4:e4b-mlx": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      }
+    }
+  }
+}

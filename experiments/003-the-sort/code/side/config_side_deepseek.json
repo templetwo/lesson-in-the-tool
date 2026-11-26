@@ -1,0 +1,31 @@
+{
+ "status": "SIDE RUN for deepseek-v4-pro only: an exploratory, descriptive follow-up selected after run 1, with its own prospective analysis plan (rules/SORT_SIDE_RUN_RULES.md). Not part of run 1 and never counted into it.",
+ "dry_run": false,
+ "caller": "by_sorter",
+ "require_model_match": true,
+ "repo": "../../../../",
+ "commit": "441752c",
+ "lines_path": "sheet/SHEET_SHORT_v2.md",
+ "homes_file": "homes_real.json",
+ "deny_list": "deny_list.txt",
+ "prompt_text": "prompt_text.json",
+ "sorters": [
+  {
+   "name": "cloud-deepseek",
+   "group": "side",
+   "provider": "deepseek"
+  }
+ ],
+ "real_callers": {
+  "cloud-deepseek": "deepseek:deepseek-v4-pro"
+ },
+ "groups": {
+  "side": {
+   "min_providers": 1
+  }
+ },
+ "repeats": 3,
+ "master_seed": 20261127,
+ "output_token_limit": 60000,
+ "out_dir": "real_runs/side_1"
+}

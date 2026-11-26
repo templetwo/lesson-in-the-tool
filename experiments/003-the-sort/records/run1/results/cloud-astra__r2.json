@@ -1,0 +1,397 @@
+{
+  "dry_run": false,
+  "sorter": "cloud-astra",
+  "group": "cloud",
+  "provider": "openai",
+  "repeat": 2,
+  "caller": "openai:gpt-6.2-astra",
+  "line_seed": 1265259857,
+  "home_seed": 447092137,
+  "lines_commit": "441752cd2d7536ad9d6fa806e2f752752676342b",
+  "lines_sha256": "5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1",
+  "homes_sha256": "a10a13d8818caa81cf8005f6d99f7aecdbe3bbd63a38c13ec6b481ff4dee66fa",
+  "prompt_file": "prompts/cloud-astra__r2.json",
+  "prompt_sha256": "5e9404c749d2983cfec92ef831abfcfbad330a9e23ce6df7176f7d65492d2533",
+  "question_sha256": "e34ca9c61f04cdbe4e5ac0b2b3a7b5d0ec90bf72ee0165a92a1942341ed712a8",
+  "raw_reply": "L01 | main: gate | second: check\nL02 | main: check | second: harness\nL03 | main: judgment | second: none\nL04 | main: check | second: none\nL05 | main: check | second: judgment\nL06 | main: check | second: gate\nL07 | main: judgment | second: none\nL08 | main: check | second: gate\nL09 | main: gate | second: check\nL10 | main: check | second: gate\nL11 | main: harness | second: none\nL12 | main: check | second: none\nL13 | main: check | second: gate\nL14 | main: tool | second: harness\nL15 | main: check | second: tool\nL16 | main: judgment | second: none\nL17 | main: check | second: judgment",
+  "parse_ok": true,
+  "parse_errors": [],
+  "rows": [
+    {
+      "dry_run": false,
+      "label": "L01",
+      "home_main": "gate",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L02",
+      "home_main": "check",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L03",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L04",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L05",
+      "home_main": "check",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L06",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L07",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L08",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L09",
+      "home_main": "gate",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L10",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L11",
+      "home_main": "harness",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L12",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L13",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L14",
+      "home_main": "tool",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L15",
+      "home_main": "check",
+      "home_second": "tool"
+    },
+    {
+      "dry_run": false,
+      "label": "L16",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L17",
+      "home_main": "check",
+      "home_second": "judgment"
+    }
+  ],
+  "turn2": {
+    "dry_run": false,
+    "sent": true,
+    "not_sent_reason": null,
+    "raw_reply": "L01 | Judgment lies in choosing an independent source that can verify the specific claim, not in waiving the check.\nL02 | Judgment lies in deciding which work needs another reviewer and whose perspective is most likely to expose a blind spot.\nL03 | Judgment lies in deciding how broad a claim the evidence supports, given how much evidence there is and how representative it is.\nL04 | Judgment lies in choosing what to inspect at the destination to distinguish a complete result from a partial one.\nL05 | Judgment lies in deciding whether a plausible source you have not searched could change the answer you give.\nL06 | Judgment lies in choosing a check that can distinguish actual loss from a wrong location or a faulty reading without putting the work at risk.\nL07 | Judgment lies in deciding what, if anything, the search result supports given where you looked and whether the search ran to completion.\nL08 | Judgment lies in choosing a failure that represents what the test or monitor is supposed to catch.\nL09 | Judgment lies in identifying the check whose result decides whether the work meets its completion criterion.\nL10 | Judgment lies in identifying an observable behavior that would differ if the running program had ignored the setting.\nL11 | Judgment lies in choosing a repeatable step and placing it where it can prevent the mistake.\nL12 | Judgment lies in identifying what else depends on the changed part and how far the follow-up checks should extend.\nL13 | Judgment lies in choosing a test that can show whether the recorded fact applies here and whether its original caveats still matter.\nL14 | Judgment lies in choosing the authoritative source and the correct destination for the code, not in deciding whether to copy it by hand.\nL15 | Judgment lies in choosing the time zone and precision the record needs, not in deciding whether to consult the clock.\nL16 | Judgment lies in choosing words or silence that offer the calm attention the person requested without adding advice.\nL17 | Judgment lies in selecting an exact passage that fairly represents the speaker and deciding whether the evidence distinguishes the proposed cause from plausible alternatives.",
+    "parse_ok": true,
+    "parse_errors": [],
+    "rows": [
+      {
+        "dry_run": false,
+        "label": "L01",
+        "sentence": "Judgment lies in choosing an independent source that can verify the specific claim, not in waiving the check."
+      },
+      {
+        "dry_run": false,
+        "label": "L02",
+        "sentence": "Judgment lies in deciding which work needs another reviewer and whose perspective is most likely to expose a blind spot."
+      },
+      {
+        "dry_run": false,
+        "label": "L03",
+        "sentence": "Judgment lies in deciding how broad a claim the evidence supports, given how much evidence there is and how representative it is."
+      },
+      {
+        "dry_run": false,
+        "label": "L04",
+        "sentence": "Judgment lies in choosing what to inspect at the destination to distinguish a complete result from a partial one."
+      },
+      {
+        "dry_run": false,
+        "label": "L05",
+        "sentence": "Judgment lies in deciding whether a plausible source you have not searched could change the answer you give."
+      },
+      {
+        "dry_run": false,
+        "label": "L06",
+        "sentence": "Judgment lies in choosing a check that can distinguish actual loss from a wrong location or a faulty reading without putting the work at risk."
+      },
+      {
+        "dry_run": false,
+        "label": "L07",
+        "sentence": "Judgment lies in deciding what, if anything, the search result supports given where you looked and whether the search ran to completion."
+      },
+      {
+        "dry_run": false,
+        "label": "L08",
+        "sentence": "Judgment lies in choosing a failure that represents what the test or monitor is supposed to catch."
+      },
+      {
+        "dry_run": false,
+        "label": "L09",
+        "sentence": "Judgment lies in identifying the check whose result decides whether the work meets its completion criterion."
+      },
+      {
+        "dry_run": false,
+        "label": "L10",
+        "sentence": "Judgment lies in identifying an observable behavior that would differ if the running program had ignored the setting."
+      },
+      {
+        "dry_run": false,
+        "label": "L11",
+        "sentence": "Judgment lies in choosing a repeatable step and placing it where it can prevent the mistake."
+      },
+      {
+        "dry_run": false,
+        "label": "L12",
+        "sentence": "Judgment lies in identifying what else depends on the changed part and how far the follow-up checks should extend."
+      },
+      {
+        "dry_run": false,
+        "label": "L13",
+        "sentence": "Judgment lies in choosing a test that can show whether the recorded fact applies here and whether its original caveats still matter."
+      },
+      {
+        "dry_run": false,
+        "label": "L14",
+        "sentence": "Judgment lies in choosing the authoritative source and the correct destination for the code, not in deciding whether to copy it by hand."
+      },
+      {
+        "dry_run": false,
+        "label": "L15",
+        "sentence": "Judgment lies in choosing the time zone and precision the record needs, not in deciding whether to consult the clock."
+      },
+      {
+        "dry_run": false,
+        "label": "L16",
+        "sentence": "Judgment lies in choosing words or silence that offer the calm attention the person requested without adding advice."
+      },
+      {
+        "dry_run": false,
+        "label": "L17",
+        "sentence": "Judgment lies in selecting an exact passage that fairly represents the speaker and deciding whether the evidence distinguishes the proposed cause from plausible alternatives."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "dry_run": false,
+      "caller": "openai:gpt-6.2-astra",
+      "turn": 1,
+      "provider": "openai",
+      "model_requested": "gpt-6.2-astra",
+      "model_reported": "gpt-6.2-astra",
+      "model_matches": true,
+      "url": "https://api.openai.com/v1/responses",
+      "settings_sent_json": "{\"max_output_tokens\": 19000, \"model\": \"gpt-6.2-astra\", \"reasoning\": {\"effort\": \"high\"}}",
+      "message_count": 1,
+      "started_at": "2026-11-25 23:59:07 EST",
+      "finished_at": "2026-11-25 23:59:20 EST",
+      "complete": true,
+      "stop": "completed",
+      "usage_json": "{\"input_tokens\": 1004, \"input_tokens_details\": {\"cache_write_tokens\": 0, \"cache_write_tokens_details\": {\"ttl_12h_tokens\": 0, \"ttl_30m_tokens\": 0}, \"cached_tokens\": 0}, \"output_tokens\": 674, \"output_tokens_details\": {\"reasoning_tokens\": 482}, \"total_tokens\": 1678}",
+      "response_body_json": "{\"status\": \"completed\"}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "output_tokens",
+        "reported_output_tokens": 674,
+        "limit": 19000
+      }
+    },
+    {
+      "dry_run": false,
+      "caller": "openai:gpt-6.2-astra",
+      "turn": 2,
+      "provider": "openai",
+      "model_requested": "gpt-6.2-astra",
+      "model_reported": "gpt-6.2-astra",
+      "model_matches": true,
+      "url": "https://api.openai.com/v1/responses",
+      "settings_sent_json": "{\"max_output_tokens\": 19000, \"model\": \"gpt-6.2-astra\", \"reasoning\": {\"effort\": \"high\"}}",
+      "message_count": 3,
+      "started_at": "2026-11-25 23:59:20 EST",
+      "finished_at": "2026-11-25 23:59:39 EST",
+      "complete": true,
+      "stop": "completed",
+      "usage_json": "{\"input_tokens\": 1312, \"input_tokens_details\": {\"cache_write_tokens\": 1309, \"cache_write_tokens_details\": {\"ttl_12h_tokens\": 0, \"ttl_30m_tokens\": 1309}, \"cached_tokens\": 0}, \"output_tokens\": 659, \"output_tokens_details\": {\"reasoning_tokens\": 238}, \"total_tokens\": 1971}",
+      "response_body_json": "{\"status\": \"completed\"}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "output_tokens",
+        "reported_output_tokens": 659,
+        "limit": 19000
+      }
+    }
+  ],
+  "persistence_state": "complete",
+  "call_budget": {
+    "mode": "main",
+    "output_token_limit": 19000,
+    "planned": {
+      "total": 48,
+      "external": 36,
+      "anthropic": 12,
+      "other_external": 24,
+      "local": 12,
+      "dry_fixture": 0
+    },
+    "attempted": {
+      "total": 16,
+      "external": 16,
+      "anthropic": 12,
+      "other_external": 4,
+      "local": 0,
+      "dry_fixture": 0
+    },
+    "per_sorter": {
+      "cloud-fable": {
+        "caller": "anthropic:claude-fable-5-2",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-opus": {
+        "caller": "anthropic:claude-opus-5-5",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-astra": {
+        "caller": "openai:gpt-6.2-astra",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 4,
+        "stop": null
+      },
+      "cloud-sol": {
+        "caller": "openai:gpt-6.2-sol",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "cloud-grok": {
+        "caller": "xai:grok-4.7",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "cloud-deepseek": {
+        "caller": "deepseek:deepseek-v4-pro",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "local-house": {
+        "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "local-gemma": {
+        "caller": "ollama-local-b:gemma4:e4b-mlx",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      }
+    },
+    "per_adapter": {
+      "anthropic:claude-fable-5-2": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "anthropic:claude-opus-5-5": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-astra": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 4
+      },
+      "openai:gpt-6.2-sol": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "xai:grok-4.7": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "deepseek:deepseek-v4-pro": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "ollama-local-a:qwen3.8:27b-draft4-text": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      },
+      "ollama-local-b:gemma4:e4b-mlx": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      }
+    }
+  }
+}

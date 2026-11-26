@@ -1,0 +1,26 @@
+[
+ {
+  "name": "tool",
+  "definition": "A reusable aid or instrument the team uses to perform recurring work consistently."
+ },
+ {
+  "name": "check",
+  "definition": "A verification step that confirms required conditions, quality, or completeness before proceeding."
+ },
+ {
+  "name": "gate",
+  "definition": "A mandatory decision point that allows work to continue only when specified criteria are met."
+ },
+ {
+  "name": "harness",
+  "definition": "A guiding structure that constrains or supports how work is performed to prevent drift or harm."
+ },
+ {
+  "name": "retrieval",
+  "definition": "A stored way to locate relevant prior knowledge when it is needed."
+ },
+ {
+  "name": "judgment",
+  "definition": "A home for guidance on making decisions that depend on context, interpretation, or discretion."
+ }
+]

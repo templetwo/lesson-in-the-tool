@@ -152,3 +152,47 @@ score, masked-file and tally reproduction checks. The documentation now distingu
 agreement with a published Git commit and states that verification executes the selected archive's Python.
 Experiment 001's erratum E8 records the duplicate-plan tally defect found by the seat and independently reproduced
 under HQ. That entry is appended beside the frozen code; frozen inputs, raw runs, scores and results remain unchanged.
+
+## Experiment 003 public edition, 2026-11-26
+
+A Codex seat assembled the public edition in `experiments/003-the-sort/` from repository commit
+`441752cd2d7536ad9d6fa806e2f752752676342b` and the privately reviewed Sort records. The experiment README preserves
+the passed write-up through its Cost section, apart from its publication-status header and one prospective-publication sentence, and replaces the former export plan and decision questions with a
+record of the files actually included. `PUBLIC_EDITION_NOTES.md` lists the publication scope, matters awaiting Anthony's review,
+omissions, transformations and verification limits. `SOURCE_MAP.json` records original and public hashes and sizes.
+The two historical code versions are kept separate. Their original freeze lists do not vouch for transformed copies.
+
+This public edition contains projected visible Sort replies and judgment prose, but no provider reasoning or researcher's rulings file. The earlier published
+001 and 001b evidence is retained unchanged. The existing archive checker still reconstructs those earlier
+experiments; for 003 it checks manifest integrity only. A separate 003 helper reconstructs classifications,
+judgment counts, limit-ending counts and the side comparison from projected records. Anthony directed publication
+on 2026-11-26 before his own review of the folder, asking that the work go out in the open first. Publication
+does not register the experiment with any outside registry, adopt the proposed next tests or authorize more
+model calls. The opening, exact wording and HQ's draft credit line remain for his review; any change he makes
+will be recorded as a dated erratum. The rulings file remains omitted, and its disposition remains his.
+
+The root-document changes for this addition are recorded here against repository commit `441752c`.
+In the root `README.md`, the opening now includes the descriptive Sort and its projected records alongside the
+earlier pilots. The limits bullet now explicitly concerns whether the earlier pilot effects extend to tools,
+cloud models or the larger model's everyday setup; experiment 003 uses cloud models but does not establish those
+behavioral effects. The translation-table next-step entry now records several models sorting separately in fresh
+sessions and the exploratory side run, while leaving behavioral consequences open. The review paragraph retains
+the caveat that no outside model has reviewed the reports of 001 and 001b, then points separately to the 003 reviews.
+The repository inventory adds 003 and names its records, code, freezes and reconstruction. The verification block
+adds the 003 helper command and distinguishes it from the root verifier's manifest coverage for 003. The direct
+001 selftest instruction is replaced by the archive verifier's temporary-copy execution because the frozen script
+writes beside itself and its conditions retain historical paths; this changes the instruction, not the frozen
+001 harness. A publication-direction paragraph records Anthony's request to publish before his folder review,
+the unreviewed wording and future dated errata, and the limits of that direction. The credits now link to 003's
+provisional credit without changing the earlier credit lines.
+
+This `PROVENANCE.md` section adds the 003 source commit, the passed-write-up boundary and its declared status
+edits, the original/public mapping, reconstruction limits and publication direction, together with this account
+of root-document edits. `CITATION.cff` adds the descriptive Sort public edition to its abstract and notes, records
+the publication direction and remaining wording/credit review, and names the reconstruction and permission
+limits; its existing author, identifier and release-date fields are unchanged. `docs/ROADMAP.md` changes the
+translation-table item from a planned sort to follow-up on the completed descriptive sort and side run, then
+adds the 003 public inventory, omissions and publication-direction limits. `docs/VERIFICATION.md` adds the public
+record reconstruction command and its coverage, omissions and limits, preserving the earlier verification
+claims. `MANIFEST.sha256` is regenerated for the resulting public files. No archived evidence in experiments
+001, 001b or 002 is changed by this addition.

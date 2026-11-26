@@ -1,0 +1,182 @@
+{
+  "dry_run": false,
+  "sorter": "cloud-deepseek",
+  "group": "cloud",
+  "provider": "deepseek",
+  "repeat": 1,
+  "caller": "deepseek:deepseek-v4-pro",
+  "line_seed": 1582231819,
+  "home_seed": 4254423180,
+  "lines_commit": "441752cd2d7536ad9d6fa806e2f752752676342b",
+  "lines_sha256": "5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1",
+  "homes_sha256": "a10a13d8818caa81cf8005f6d99f7aecdbe3bbd63a38c13ec6b481ff4dee66fa",
+  "prompt_file": "prompts/cloud-deepseek__r1.json",
+  "prompt_sha256": "9e10d99c4642c84f2dd301c73eb89b8b34c0c590b0ecc65dd77e9bd3d7f3970e",
+  "question_sha256": "e34ca9c61f04cdbe4e5ac0b2b3a7b5d0ec90bf72ee0165a92a1942341ed712a8",
+  "raw_reply": null,
+  "parse_ok": false,
+  "parse_errors": [
+    "reply is not text"
+  ],
+  "rows": [],
+  "turn2": {
+    "dry_run": false,
+    "sent": false,
+    "not_sent_reason": "turn 1 did not parse, so the question was not asked",
+    "raw_reply": null,
+    "parse_ok": false,
+    "parse_errors": [],
+    "rows": []
+  },
+  "calls": [
+    {
+      "dry_run": false,
+      "caller": "deepseek:deepseek-v4-pro",
+      "turn": 1,
+      "provider": "deepseek",
+      "model_requested": "deepseek-v4-pro",
+      "model_reported": "deepseek-v4-pro",
+      "model_matches": true,
+      "url": "https://api.deepseek.com/chat/completions",
+      "settings_sent_json": "{\"max_tokens\": 19000, \"model\": \"deepseek-v4-pro\", \"reasoning_effort\": \"high\", \"thinking\": {\"type\": \"enabled\"}}",
+      "message_count": 1,
+      "started_at": "2026-11-26 00:09:27 EST",
+      "finished_at": "2026-11-26 00:13:25 EST",
+      "complete": false,
+      "stop": "length",
+      "usage_json": "{\"completion_tokens\": 19000, \"completion_tokens_details\": {\"reasoning_tokens\": 19000}, \"prompt_cache_hit_tokens\": 0, \"prompt_cache_miss_tokens\": 1086, \"prompt_tokens\": 1086, \"prompt_tokens_details\": {\"cached_tokens\": 0}, \"total_tokens\": 20086}",
+      "response_body_json": "{}",
+      "partial_text": "",
+      "error": "provider did not complete the reply",
+      "require_model_match": true,
+      "failure_reason": "provider_incomplete",
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "completion_tokens",
+        "reported_output_tokens": 19000,
+        "limit": 19000
+      }
+    }
+  ],
+  "persistence_state": "complete",
+  "call_budget": {
+    "mode": "main",
+    "output_token_limit": 19000,
+    "planned": {
+      "total": 48,
+      "external": 36,
+      "anthropic": 12,
+      "other_external": 24,
+      "local": 12,
+      "dry_fixture": 0
+    },
+    "attempted": {
+      "total": 31,
+      "external": 31,
+      "anthropic": 12,
+      "other_external": 19,
+      "local": 0,
+      "dry_fixture": 0
+    },
+    "per_sorter": {
+      "cloud-fable": {
+        "caller": "anthropic:claude-fable-5-2",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-opus": {
+        "caller": "anthropic:claude-opus-5-5",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-astra": {
+        "caller": "openai:gpt-6.2-astra",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-sol": {
+        "caller": "openai:gpt-6.2-sol",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-grok": {
+        "caller": "xai:grok-4.7",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-deepseek": {
+        "caller": "deepseek:deepseek-v4-pro",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 1,
+        "stop": null
+      },
+      "local-house": {
+        "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "local-gemma": {
+        "caller": "ollama-local-b:gemma4:e4b-mlx",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      }
+    },
+    "per_adapter": {
+      "anthropic:claude-fable-5-2": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "anthropic:claude-opus-5-5": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-astra": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-sol": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "xai:grok-4.7": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "deepseek:deepseek-v4-pro": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 1
+      },
+      "ollama-local-a:qwen3.8:27b-draft4-text": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      },
+      "ollama-local-b:gemma4:e4b-mlx": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,397 @@
+{
+  "dry_run": false,
+  "sorter": "local-house",
+  "group": "local",
+  "provider": "ollama-local-a",
+  "repeat": 2,
+  "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+  "line_seed": 3119550991,
+  "home_seed": 1015396656,
+  "lines_commit": "441752cd2d7536ad9d6fa806e2f752752676342b",
+  "lines_sha256": "5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1",
+  "homes_sha256": "a10a13d8818caa81cf8005f6d99f7aecdbe3bbd63a38c13ec6b481ff4dee66fa",
+  "prompt_file": "prompts/local-house__r2.json",
+  "prompt_sha256": "8702cc30cd9a31eb8813a4f54dc8694e009e6d311e236c1e6b04afdb4ad40362",
+  "question_sha256": "e34ca9c61f04cdbe4e5ac0b2b3a7b5d0ec90bf72ee0165a92a1942341ed712a8",
+  "raw_reply": "L01 | main: judgment | second: check\nL02 | main: tool | second: none\nL03 | main: check | second: harness\nL04 | main: check | second: retrieval\nL05 | main: check | second: retrieval\nL06 | main: check | second: judgment\nL07 | main: check | second: none\nL08 | main: harness | second: check\nL09 | main: judgment | second: check\nL10 | main: check | second: none\nL11 | main: check | second: gate\nL12 | main: check | second: harness\nL13 | main: judgment | second: none\nL14 | main: check | second: judgment\nL15 | main: harness | second: retrieval\nL16 | main: retrieval | second: check\nL17 | main: gate | second: check",
+  "parse_ok": true,
+  "parse_errors": [],
+  "rows": [
+    {
+      "dry_run": false,
+      "label": "L01",
+      "home_main": "judgment",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L02",
+      "home_main": "tool",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L03",
+      "home_main": "check",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L04",
+      "home_main": "check",
+      "home_second": "retrieval"
+    },
+    {
+      "dry_run": false,
+      "label": "L05",
+      "home_main": "check",
+      "home_second": "retrieval"
+    },
+    {
+      "dry_run": false,
+      "label": "L06",
+      "home_main": "check",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L07",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L08",
+      "home_main": "harness",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L09",
+      "home_main": "judgment",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L10",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L11",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L12",
+      "home_main": "check",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L13",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L14",
+      "home_main": "check",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L15",
+      "home_main": "harness",
+      "home_second": "retrieval"
+    },
+    {
+      "dry_run": false,
+      "label": "L16",
+      "home_main": "retrieval",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L17",
+      "home_main": "gate",
+      "home_second": "check"
+    }
+  ],
+  "turn2": {
+    "dry_run": false,
+    "sent": true,
+    "not_sent_reason": null,
+    "raw_reply": "L01 | Even with a standing practice of stating evidence weight, you still must judge which claims are significant enough to warrant the disclosure and how many examples constitute adequate grounding for a given context.\nL02 | Once a program is set up to copy codes, you still must judge which artifacts in a given task are long or ambiguous enough to require the program versus which are trivially short and safe to transcribe.\nL03 | Once the habit of checking adjacent items after a fix is in place, you still must judge how far the \"beside it\" extends in a given system and when a chain of coupled fixes has truly stabilized.\nL04 | Once the rule to test before repeating a fact is established, you still must judge which facts in a note or summary are load-bearing for the current decision and what a meaningful test looks like for that particular claim.\nL05 | Once the practice of external verification before self-attestation is routine, you still must judge whether an adequate external reference actually exists for the specific claim and what degree of independence counts as \"outside yourself.\"\nL06 | Once the step of verifying a \"dead\" reading before acting is standard, you still must judge which alternative explanations are plausible enough to investigate and when the cost of further checking outweighs the risk of a false alarm.\nL07 | Once the practice of seeking a different kind of reviewer is in place, you still must judge what \"different\" means for the specific task and how much independence or a different vantage is genuinely needed.\nL08 | Once the structure of reading the clock before writing a time is built in, you still must judge which time references in a given record are critical to the person's understanding and which are approximate and acceptable without the full ritual.\nL09 | Even with a home for accurate quotation and cause-finding, you still must judge where the line falls between faithful paraphrase and distortion, and how deeply to investigate before naming a cause is warranted.\nL10 | Once the verification that a setting actually acts is a standing step, you still must judge what \"seeing it act\" concretely looks like for a particular switch and which settings are critical enough to warrant that check.\nL11 | Once the habit of inspecting actual output rather than trusting a success message is established, you still must judge what \"what actually landed\" means for a specific operation and how thorough the spot-check needs to be.\nL12 | Once the practice of deliberately failing a test first is in place, you still must judge what mutation will genuinely exercise the test's logic and when a previously validated test may have drifted out of relevance.\nL13 | Even with judgment as the home for reading a person's request, you still must judge in the moment whether the person is asking for presence or for a solution, and how long to sustain that mode before it calcifies into performance.\nL14 | Once the rule to treat empty results as facts about your search is a standing check, you still must judge which alternative queries or locations to try and how to interpret a short list relative to what the person actually needs to know.\nL15 | Once the structure of encoding lessons as repeatable steps is in place, you still must judge which lessons are durable enough to become permanent steps versus context-specific, and what concrete form the step should take.\nL16 | Even with retrieval as the home for tracking where you looked, you still must judge whether the answer you owe the person is at stake enough to warrant consulting a second source and which alternative source would actually change the answer.\nL17 | Once the gate of a deciding check before declaring done is established, you still must judge what the single deciding check is for a particular piece of work and who is positioned to recognize that it has passed.",
+    "parse_ok": true,
+    "parse_errors": [],
+    "rows": [
+      {
+        "dry_run": false,
+        "label": "L01",
+        "sentence": "Even with a standing practice of stating evidence weight, you still must judge which claims are significant enough to warrant the disclosure and how many examples constitute adequate grounding for a given context."
+      },
+      {
+        "dry_run": false,
+        "label": "L02",
+        "sentence": "Once a program is set up to copy codes, you still must judge which artifacts in a given task are long or ambiguous enough to require the program versus which are trivially short and safe to transcribe."
+      },
+      {
+        "dry_run": false,
+        "label": "L03",
+        "sentence": "Once the habit of checking adjacent items after a fix is in place, you still must judge how far the \"beside it\" extends in a given system and when a chain of coupled fixes has truly stabilized."
+      },
+      {
+        "dry_run": false,
+        "label": "L04",
+        "sentence": "Once the rule to test before repeating a fact is established, you still must judge which facts in a note or summary are load-bearing for the current decision and what a meaningful test looks like for that particular claim."
+      },
+      {
+        "dry_run": false,
+        "label": "L05",
+        "sentence": "Once the practice of external verification before self-attestation is routine, you still must judge whether an adequate external reference actually exists for the specific claim and what degree of independence counts as \"outside yourself.\""
+      },
+      {
+        "dry_run": false,
+        "label": "L06",
+        "sentence": "Once the step of verifying a \"dead\" reading before acting is standard, you still must judge which alternative explanations are plausible enough to investigate and when the cost of further checking outweighs the risk of a false alarm."
+      },
+      {
+        "dry_run": false,
+        "label": "L07",
+        "sentence": "Once the practice of seeking a different kind of reviewer is in place, you still must judge what \"different\" means for the specific task and how much independence or a different vantage is genuinely needed."
+      },
+      {
+        "dry_run": false,
+        "label": "L08",
+        "sentence": "Once the structure of reading the clock before writing a time is built in, you still must judge which time references in a given record are critical to the person's understanding and which are approximate and acceptable without the full ritual."
+      },
+      {
+        "dry_run": false,
+        "label": "L09",
+        "sentence": "Even with a home for accurate quotation and cause-finding, you still must judge where the line falls between faithful paraphrase and distortion, and how deeply to investigate before naming a cause is warranted."
+      },
+      {
+        "dry_run": false,
+        "label": "L10",
+        "sentence": "Once the verification that a setting actually acts is a standing step, you still must judge what \"seeing it act\" concretely looks like for a particular switch and which settings are critical enough to warrant that check."
+      },
+      {
+        "dry_run": false,
+        "label": "L11",
+        "sentence": "Once the habit of inspecting actual output rather than trusting a success message is established, you still must judge what \"what actually landed\" means for a specific operation and how thorough the spot-check needs to be."
+      },
+      {
+        "dry_run": false,
+        "label": "L12",
+        "sentence": "Once the practice of deliberately failing a test first is in place, you still must judge what mutation will genuinely exercise the test's logic and when a previously validated test may have drifted out of relevance."
+      },
+      {
+        "dry_run": false,
+        "label": "L13",
+        "sentence": "Even with judgment as the home for reading a person's request, you still must judge in the moment whether the person is asking for presence or for a solution, and how long to sustain that mode before it calcifies into performance."
+      },
+      {
+        "dry_run": false,
+        "label": "L14",
+        "sentence": "Once the rule to treat empty results as facts about your search is a standing check, you still must judge which alternative queries or locations to try and how to interpret a short list relative to what the person actually needs to know."
+      },
+      {
+        "dry_run": false,
+        "label": "L15",
+        "sentence": "Once the structure of encoding lessons as repeatable steps is in place, you still must judge which lessons are durable enough to become permanent steps versus context-specific, and what concrete form the step should take."
+      },
+      {
+        "dry_run": false,
+        "label": "L16",
+        "sentence": "Even with retrieval as the home for tracking where you looked, you still must judge whether the answer you owe the person is at stake enough to warrant consulting a second source and which alternative source would actually change the answer."
+      },
+      {
+        "dry_run": false,
+        "label": "L17",
+        "sentence": "Once the gate of a deciding check before declaring done is established, you still must judge what the single deciding check is for a particular piece of work and who is positioned to recognize that it has passed."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "dry_run": false,
+      "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+      "turn": 1,
+      "provider": "ollama-local-a",
+      "model_requested": "qwen3.8:27b-draft4-text",
+      "model_reported": "qwen3.8:27b-draft4-text",
+      "model_matches": true,
+      "url": "https://local-model.example.invalid/api/chat",
+      "settings_sent_json": "{\"model\": \"qwen3.8:27b-draft4-text\", \"options\": {\"num_predict\": 19000}, \"stream\": false, \"think\": null}",
+      "message_count": 1,
+      "started_at": "2026-11-26 00:23:51 EST",
+      "finished_at": "2026-11-26 00:25:13 EST",
+      "complete": true,
+      "stop": "stop",
+      "usage_json": "{\"eval_count\": 3853, \"eval_duration\": 80167242000, \"load_duration\": 502504, \"prompt_eval_cached_count\": 42, \"prompt_eval_count\": 1066, \"prompt_eval_duration\": 1739395000, \"total_duration\": 82167463949}",
+      "response_body_json": "{}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "eval_count",
+        "reported_output_tokens": 3853,
+        "limit": 19000
+      }
+    },
+    {
+      "dry_run": false,
+      "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+      "turn": 2,
+      "provider": "ollama-local-a",
+      "model_requested": "qwen3.8:27b-draft4-text",
+      "model_reported": "qwen3.8:27b-draft4-text",
+      "model_matches": true,
+      "url": "https://local-model.example.invalid/api/chat",
+      "settings_sent_json": "{\"model\": \"qwen3.8:27b-draft4-text\", \"options\": {\"num_predict\": 19000}, \"stream\": false, \"think\": null}",
+      "message_count": 3,
+      "started_at": "2026-11-26 00:25:13 EST",
+      "finished_at": "2026-11-26 00:26:05 EST",
+      "complete": true,
+      "stop": "stop",
+      "usage_json": "{\"eval_count\": 2070, \"eval_duration\": 50868228000, \"load_duration\": 538315, \"prompt_eval_cached_count\": 1062, \"prompt_eval_count\": 1398, \"prompt_eval_duration\": 888465000, \"total_duration\": 52073170251}",
+      "response_body_json": "{}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "eval_count",
+        "reported_output_tokens": 2070,
+        "limit": 19000
+      }
+    }
+  ],
+  "persistence_state": "complete",
+  "call_budget": {
+    "mode": "main",
+    "output_token_limit": 19000,
+    "planned": {
+      "total": 48,
+      "external": 36,
+      "anthropic": 12,
+      "other_external": 24,
+      "local": 12,
+      "dry_fixture": 0
+    },
+    "attempted": {
+      "total": 38,
+      "external": 34,
+      "anthropic": 12,
+      "other_external": 22,
+      "local": 4,
+      "dry_fixture": 0
+    },
+    "per_sorter": {
+      "cloud-fable": {
+        "caller": "anthropic:claude-fable-5-2",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-opus": {
+        "caller": "anthropic:claude-opus-5-5",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-astra": {
+        "caller": "openai:gpt-6.2-astra",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-sol": {
+        "caller": "openai:gpt-6.2-sol",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-grok": {
+        "caller": "xai:grok-4.7",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-deepseek": {
+        "caller": "deepseek:deepseek-v4-pro",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 4,
+        "stop": null
+      },
+      "local-house": {
+        "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+        "category": "local",
+        "planned": 6,
+        "attempted": 4,
+        "stop": null
+      },
+      "local-gemma": {
+        "caller": "ollama-local-b:gemma4:e4b-mlx",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      }
+    },
+    "per_adapter": {
+      "anthropic:claude-fable-5-2": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "anthropic:claude-opus-5-5": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-astra": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-sol": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "xai:grok-4.7": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "deepseek:deepseek-v4-pro": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 4
+      },
+      "ollama-local-a:qwen3.8:27b-draft4-text": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 4
+      },
+      "ollama-local-b:gemma4:e4b-mlx": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      }
+    }
+  }
+}

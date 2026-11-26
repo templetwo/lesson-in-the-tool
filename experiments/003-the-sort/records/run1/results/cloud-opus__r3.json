@@ -1,0 +1,397 @@
+{
+  "dry_run": false,
+  "sorter": "cloud-opus",
+  "group": "cloud",
+  "provider": "anthropic",
+  "repeat": 3,
+  "caller": "anthropic:claude-opus-5-5",
+  "line_seed": 2746117736,
+  "home_seed": 966027582,
+  "lines_commit": "441752cd2d7536ad9d6fa806e2f752752676342b",
+  "lines_sha256": "5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1",
+  "homes_sha256": "a10a13d8818caa81cf8005f6d99f7aecdbe3bbd63a38c13ec6b481ff4dee66fa",
+  "prompt_file": "prompts/cloud-opus__r3.json",
+  "prompt_sha256": "65692175a88b0d6603e2e3caebdf6806d98db700f9e63ead7d6f9dd16b045fe5",
+  "question_sha256": "e34ca9c61f04cdbe4e5ac0b2b3a7b5d0ec90bf72ee0165a92a1942341ed712a8",
+  "raw_reply": "L01 | main: check | second: none\nL02 | main: check | second: judgment\nL03 | main: gate | second: check\nL04 | main: harness | second: retrieval\nL05 | main: check | second: none\nL06 | main: judgment | second: none\nL07 | main: tool | second: harness\nL08 | main: check | second: none\nL09 | main: judgment | second: check\nL10 | main: check | second: none\nL11 | main: tool | second: harness\nL12 | main: retrieval | second: judgment\nL13 | main: check | second: retrieval\nL14 | main: judgment | second: none\nL15 | main: judgment | second: retrieval\nL16 | main: check | second: judgment\nL17 | main: gate | second: check",
+  "parse_ok": true,
+  "parse_errors": [],
+  "rows": [
+    {
+      "dry_run": false,
+      "label": "L01",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L02",
+      "home_main": "check",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L03",
+      "home_main": "gate",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L04",
+      "home_main": "harness",
+      "home_second": "retrieval"
+    },
+    {
+      "dry_run": false,
+      "label": "L05",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L06",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L07",
+      "home_main": "tool",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L08",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L09",
+      "home_main": "judgment",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L10",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L11",
+      "home_main": "tool",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L12",
+      "home_main": "retrieval",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L13",
+      "home_main": "check",
+      "home_second": "retrieval"
+    },
+    {
+      "dry_run": false,
+      "label": "L14",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L15",
+      "home_main": "judgment",
+      "home_second": "retrieval"
+    },
+    {
+      "dry_run": false,
+      "label": "L16",
+      "home_main": "check",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L17",
+      "home_main": "gate",
+      "home_second": "check"
+    }
+  ],
+  "turn2": {
+    "dry_run": false,
+    "sent": true,
+    "not_sent_reason": null,
+    "raw_reply": "L01 | Deciding which neighboring fields, files, or code paths are truly coupled to the fix, and so must be rechecked, remains judgment.\nL02 | Deciding which work is important enough for a second reviewer, and which available reviewer is different enough to catch what the first one missed, remains judgment.\nL03 | Identifying which single check actually decides whether \"done\" or \"verified\" is true for this particular claim remains judgment.\nL04 | Choosing which lessons deserve to become standing steps, and where in the workflow each step must sit to catch the mistake before it recurs, remains judgment.\nL05 | Designing a deliberate failure that exercises the real failure mode, rather than a trivial one the test would catch anyway, remains judgment.\nL06 | Recognizing that the person is asking for presence rather than information, and sensing when that request has ended, remains judgment.\nL07 | Recognizing when a value is long or exact enough that a hand copy is risky, and noticing when you are about to type it rather than paste it, remains judgment.\nL08 | Deciding what \"actually landed\" means for this task, and how deeply to sample the results before trusting the count, remains judgment.\nL09 | Judging when the evidence is strong enough to name a cause, and whether a restatement still carries the original speaker's strength and meaning, remains judgment.\nL10 | Choosing which observable behavior would prove that the setting is really being read and acted on remains judgment.\nL11 | Deciding what precision and time zone a record needs, and flagging when an entry describes a past moment the clock cannot supply, remains judgment.\nL12 | Judging whether another source could plausibly change the answer, and how far the search should reasonably extend before reporting, remains judgment.\nL13 | Deciding which remembered or summarized facts carry enough weight to need testing, and spotting caveats that were dropped along the way, remains judgment.\nL14 | Weighing whether the stated amount of evidence is enough to support the strength of the claim being made remains judgment.\nL15 | Interpreting whether the search was capable of finding the thing at all, and so what an empty or short result really means, remains judgment.\nL16 | Telling a true loss apart from a wrong location or a misread signal, and deciding when the evidence is strong enough to take an irreversible action, remains judgment.\nL17 | Deciding which outside source is adequate to confirm the specific claim, and whether what was done counts as a real check, remains judgment.",
+    "parse_ok": true,
+    "parse_errors": [],
+    "rows": [
+      {
+        "dry_run": false,
+        "label": "L01",
+        "sentence": "Deciding which neighboring fields, files, or code paths are truly coupled to the fix, and so must be rechecked, remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L02",
+        "sentence": "Deciding which work is important enough for a second reviewer, and which available reviewer is different enough to catch what the first one missed, remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L03",
+        "sentence": "Identifying which single check actually decides whether \"done\" or \"verified\" is true for this particular claim remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L04",
+        "sentence": "Choosing which lessons deserve to become standing steps, and where in the workflow each step must sit to catch the mistake before it recurs, remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L05",
+        "sentence": "Designing a deliberate failure that exercises the real failure mode, rather than a trivial one the test would catch anyway, remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L06",
+        "sentence": "Recognizing that the person is asking for presence rather than information, and sensing when that request has ended, remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L07",
+        "sentence": "Recognizing when a value is long or exact enough that a hand copy is risky, and noticing when you are about to type it rather than paste it, remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L08",
+        "sentence": "Deciding what \"actually landed\" means for this task, and how deeply to sample the results before trusting the count, remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L09",
+        "sentence": "Judging when the evidence is strong enough to name a cause, and whether a restatement still carries the original speaker's strength and meaning, remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L10",
+        "sentence": "Choosing which observable behavior would prove that the setting is really being read and acted on remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L11",
+        "sentence": "Deciding what precision and time zone a record needs, and flagging when an entry describes a past moment the clock cannot supply, remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L12",
+        "sentence": "Judging whether another source could plausibly change the answer, and how far the search should reasonably extend before reporting, remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L13",
+        "sentence": "Deciding which remembered or summarized facts carry enough weight to need testing, and spotting caveats that were dropped along the way, remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L14",
+        "sentence": "Weighing whether the stated amount of evidence is enough to support the strength of the claim being made remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L15",
+        "sentence": "Interpreting whether the search was capable of finding the thing at all, and so what an empty or short result really means, remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L16",
+        "sentence": "Telling a true loss apart from a wrong location or a misread signal, and deciding when the evidence is strong enough to take an irreversible action, remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L17",
+        "sentence": "Deciding which outside source is adequate to confirm the specific claim, and whether what was done counts as a real check, remains judgment."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "dry_run": false,
+      "caller": "anthropic:claude-opus-5-5",
+      "turn": 1,
+      "provider": "anthropic",
+      "model_requested": "claude-opus-5-5",
+      "model_reported": "claude-opus-5-5",
+      "model_matches": true,
+      "url": "https://api.anthropic.com/v1/messages",
+      "settings_sent_json": "{\"max_tokens\": 19000, \"model\": \"claude-opus-5-5\", \"output_config\": {\"effort\": \"high\"}, \"thinking\": {\"type\": \"adaptive\"}}",
+      "message_count": 1,
+      "started_at": "2026-11-25 23:58:19 EST",
+      "finished_at": "2026-11-25 23:58:21 EST",
+      "complete": true,
+      "stop": "end_turn",
+      "usage_json": "{\"cache_creation\": {\"ephemeral_1h_input_tokens\": 0, \"ephemeral_5m_input_tokens\": 0}, \"cache_creation_input_tokens\": 0, \"cache_read_input_tokens\": 0, \"input_tokens\": 1390, \"output_tokens\": 238, \"output_tokens_details\": {\"thinking_tokens\": 0}}",
+      "response_body_json": "{}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "output_tokens",
+        "reported_output_tokens": 238,
+        "limit": 19000
+      }
+    },
+    {
+      "dry_run": false,
+      "caller": "anthropic:claude-opus-5-5",
+      "turn": 2,
+      "provider": "anthropic",
+      "model_requested": "claude-opus-5-5",
+      "model_reported": "claude-opus-5-5",
+      "model_matches": true,
+      "url": "https://api.anthropic.com/v1/messages",
+      "settings_sent_json": "{\"max_tokens\": 19000, \"model\": \"claude-opus-5-5\", \"output_config\": {\"effort\": \"high\"}, \"thinking\": {\"type\": \"adaptive\"}}",
+      "message_count": 3,
+      "started_at": "2026-11-25 23:58:21 EST",
+      "finished_at": "2026-11-25 23:58:34 EST",
+      "complete": true,
+      "stop": "end_turn",
+      "usage_json": "{\"cache_creation\": {\"ephemeral_1h_input_tokens\": 0, \"ephemeral_5m_input_tokens\": 0}, \"cache_creation_input_tokens\": 0, \"cache_read_input_tokens\": 0, \"input_tokens\": 1796, \"output_tokens\": 1351, \"output_tokens_details\": {\"thinking_tokens\": 547}}",
+      "response_body_json": "{}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "output_tokens",
+        "reported_output_tokens": 1351,
+        "limit": 19000
+      }
+    }
+  ],
+  "persistence_state": "complete",
+  "call_budget": {
+    "mode": "main",
+    "output_token_limit": 19000,
+    "planned": {
+      "total": 48,
+      "external": 36,
+      "anthropic": 12,
+      "other_external": 24,
+      "local": 12,
+      "dry_fixture": 0
+    },
+    "attempted": {
+      "total": 12,
+      "external": 12,
+      "anthropic": 12,
+      "other_external": 0,
+      "local": 0,
+      "dry_fixture": 0
+    },
+    "per_sorter": {
+      "cloud-fable": {
+        "caller": "anthropic:claude-fable-5-2",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-opus": {
+        "caller": "anthropic:claude-opus-5-5",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-astra": {
+        "caller": "openai:gpt-6.2-astra",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "cloud-sol": {
+        "caller": "openai:gpt-6.2-sol",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "cloud-grok": {
+        "caller": "xai:grok-4.7",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "cloud-deepseek": {
+        "caller": "deepseek:deepseek-v4-pro",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "local-house": {
+        "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "local-gemma": {
+        "caller": "ollama-local-b:gemma4:e4b-mlx",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      }
+    },
+    "per_adapter": {
+      "anthropic:claude-fable-5-2": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "anthropic:claude-opus-5-5": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-astra": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "openai:gpt-6.2-sol": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "xai:grok-4.7": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "deepseek:deepseek-v4-pro": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "ollama-local-a:qwen3.8:27b-draft4-text": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      },
+      "ollama-local-b:gemma4:e4b-mlx": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      }
+    }
+  }
+}

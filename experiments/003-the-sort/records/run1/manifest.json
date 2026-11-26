@@ -1,0 +1,382 @@
+{
+  "dry_run": false,
+  "written_at": "2026-11-26 00:28:57 EST",
+  "caller": "by_sorter",
+  "call_budget": {
+    "mode": "main",
+    "output_token_limit": 19000,
+    "planned": {
+      "total": 48,
+      "external": 36,
+      "anthropic": 12,
+      "other_external": 24,
+      "local": 12,
+      "dry_fixture": 0
+    },
+    "attempted": {
+      "total": 44,
+      "external": 34,
+      "anthropic": 12,
+      "other_external": 22,
+      "local": 10,
+      "dry_fixture": 0
+    },
+    "per_sorter": {
+      "cloud-fable": {
+        "caller": "anthropic:claude-fable-5-2",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-opus": {
+        "caller": "anthropic:claude-opus-5-5",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-astra": {
+        "caller": "openai:gpt-6.2-astra",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-sol": {
+        "caller": "openai:gpt-6.2-sol",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-grok": {
+        "caller": "xai:grok-4.7",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-deepseek": {
+        "caller": "deepseek:deepseek-v4-pro",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 4,
+        "stop": null
+      },
+      "local-house": {
+        "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+        "category": "local",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "local-gemma": {
+        "caller": "ollama-local-b:gemma4:e4b-mlx",
+        "category": "local",
+        "planned": 6,
+        "attempted": 4,
+        "stop": null
+      }
+    },
+    "per_adapter": {
+      "anthropic:claude-fable-5-2": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "anthropic:claude-opus-5-5": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-astra": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-sol": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "xai:grok-4.7": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "deepseek:deepseek-v4-pro": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 4
+      },
+      "ollama-local-a:qwen3.8:27b-draft4-text": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 6
+      },
+      "ollama-local-b:gemma4:e4b-mlx": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 4
+      }
+    }
+  },
+  "callers": [
+    "anthropic:claude-fable-5-2",
+    "anthropic:claude-opus-5-5",
+    "deepseek:deepseek-v4-pro",
+    "ollama-local-a:qwen3.8:27b-draft4-text",
+    "ollama-local-b:gemma4:e4b-mlx",
+    "openai:gpt-6.2-astra",
+    "openai:gpt-6.2-sol",
+    "xai:grok-4.7"
+  ],
+  "files": [
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-fable__r1.json",
+      "sha256": "05fd34fc97c4596c150ec62598252aabf942c2f8074ea9a2f37437022c93434f"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-fable__r1.json",
+      "sha256": "4bd2b3f1c1b26185bf734e7a2985eb30de2ca0f24070bba0115dfa6f9e7782b5"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-fable__r2.json",
+      "sha256": "454f624dd7fa38b69bff1c5a14fccfaf74e50269f3dfa05f9595c7ddbeaffeb2"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-fable__r2.json",
+      "sha256": "1c964aaa8468db076e5e26d831d3ced11adb2197b50d131591855d6403f47e65"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-fable__r3.json",
+      "sha256": "d6c1ade008c59c2b0a8cdad3e0be4e8bf00c37a029e6d7dfded0261d2bc64335"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-fable__r3.json",
+      "sha256": "bbb2c3e18fe5a6ac39dda22d00b270fed6729f1812a80c7ddd40942210a59bd2"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-opus__r1.json",
+      "sha256": "f990fa99f2c41c32f7cfa0022b50e0ebbb98985d8e4c0966f5a4a0060aac05e9"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-opus__r1.json",
+      "sha256": "1286648a528e6cf88533acca53a31006e487fa0c3bff54bfb550bf2e407ef54c"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-opus__r2.json",
+      "sha256": "a78919ebd252ee7f6cff1b9f3df7f63b714fbe55a4465dbdcb6be889ea213707"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-opus__r2.json",
+      "sha256": "73f826ce9ffda671c2bc6bbf709550d65fb4a6fda769f619987a1b717340ecc2"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-opus__r3.json",
+      "sha256": "64fca2a2f2086d9e21f20f72b216987e09e84d05f1f8ad24cd9a28aa26fce047"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-opus__r3.json",
+      "sha256": "1d1ea4f0becddea69f95df3e9640c4c4554567cdb03e7a65391819768dd6618a"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-astra__r1.json",
+      "sha256": "8dd392a0a64d6b4ed52a50478be3a7a2bafb856dd98e8c99cb1c7a92c9446b69"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-astra__r1.json",
+      "sha256": "c2aa78caea2dc2db4b084156f82f062d96f37be359fe065cc1c68d02e7ecdf50"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-astra__r2.json",
+      "sha256": "23e955ff0f5d54f88fa2309f20c1e062bf4c654ca219daf510c5fc68770e5a7b"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-astra__r2.json",
+      "sha256": "f763c29b61826acd1e7193e192f312acbec974153826e59ccb9082b68fffc24d"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-astra__r3.json",
+      "sha256": "14bc71c6f94531c7216fe7629c395fcf773c0859f22f902255646cc656983ab6"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-astra__r3.json",
+      "sha256": "bccd0eac166557d893ef820134fb574c5a1aabf485312899cac9744f7e2c08be"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-sol__r1.json",
+      "sha256": "f4d4f923e045b7de0c1507e7a6362531b1043b4a3ea9ab3a925101157a785408"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-sol__r1.json",
+      "sha256": "d66de9932cabff58c23a78e0c1e09c147e406e37f767ad52d83e3bbca9753406"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-sol__r2.json",
+      "sha256": "d25a153c517740d6756a4194cc21a60d031fa2f65b8b4247dca658b3045a176b"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-sol__r2.json",
+      "sha256": "f25e4e440748937476aae85b483038c1b4dad9e6abfde521b06c242c12d6fe0c"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-sol__r3.json",
+      "sha256": "c901bd77fd27353052e1729e0fc9c6d4b4d5defac5df22d266c7214140b20ec4"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-sol__r3.json",
+      "sha256": "9d4370785059befb89ddf303a1f4769d7dabcd8dad46e0effdd05be928faba56"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-grok__r1.json",
+      "sha256": "77cb0d738965166abddc076dccd55c45faa5383ff4cd1813e8463c66d364a74a"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-grok__r1.json",
+      "sha256": "9133feab20379c35882d244f6388cdbeacea3ddb92a8705cc40c8a4c7e678779"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-grok__r2.json",
+      "sha256": "c52f9e58bacc3d91a05fae2a9c48ed0df909c2477b08fe8e7102d496e10d160c"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-grok__r2.json",
+      "sha256": "f3bb9b8bfecd8e5c918a22c70550f7214c450d17ffcea56b316ab1e5d1ec4905"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-grok__r3.json",
+      "sha256": "74b51afa86282938e560359b2385da8273d400e014112b915537fb0f2419aed6"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-grok__r3.json",
+      "sha256": "66d1a265ac10b646d0a9bcde1697b6a1e5685bbd6d174b77d20182084bffc8b2"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-deepseek__r1.json",
+      "sha256": "c6c39a5c6c3e3297ca6b4342a09ad1d4d4b6152fd135668f92eea005d25d4188"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-deepseek__r1.json",
+      "sha256": "2cd10e6bc147d738ae5a92a203a8d34d8ca17ce380aa5df81a9f5dcac20853f9"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-deepseek__r2.json",
+      "sha256": "4bda33e52619d2c192d3429ca469650070ccc891a3cb8ebee2171efc01774969"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-deepseek__r2.json",
+      "sha256": "2fda8224bab2385de1fcb434c1972dee173a45b94e42739159f432af7f0612ac"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/cloud-deepseek__r3.json",
+      "sha256": "d665cc27815de23df271765b64b6b19eb63112e27f7ac237dede0fd57152c2f8"
+    },
+    {
+      "dry_run": false,
+      "path": "results/cloud-deepseek__r3.json",
+      "sha256": "1949afd83bbb5ec0fd51c2d0d83129906b1a2831492ccfe6a728269ab2147a49"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/local-house__r1.json",
+      "sha256": "f95bce8396fa8a9cdfc14596457eaa88bf6f53fe12b4906343a95c4f375e90e9"
+    },
+    {
+      "dry_run": false,
+      "path": "results/local-house__r1.json",
+      "sha256": "65189e0ea1eeddd7e5556188c34a9808882c662601486285ccca599fb22cfeb4"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/local-house__r2.json",
+      "sha256": "78573445bae1ffbfa59f517adfec6a5f35691c59200a759d834944bf6286ce87"
+    },
+    {
+      "dry_run": false,
+      "path": "results/local-house__r2.json",
+      "sha256": "775e6def8c44d37d7693b616301082e0dfbb6d8380393cfaa0a7ab40d9a9b382"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/local-house__r3.json",
+      "sha256": "9dad2d376eb0eda450b2f7219930e8c2b30197dc7038a4d7516e73824173c61a"
+    },
+    {
+      "dry_run": false,
+      "path": "results/local-house__r3.json",
+      "sha256": "163fb8566f8a616183eab5124651b1f356a93836cbffafb96fb1f76d46499889"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/local-gemma__r1.json",
+      "sha256": "3d8fc860a3c76ff68a3e23211ad9e12389fe4687e8da08d0de3cd54aba6cc11e"
+    },
+    {
+      "dry_run": false,
+      "path": "results/local-gemma__r1.json",
+      "sha256": "bdd5b9f88df3284ee86564e8343242b16af52d121791ef6290ba68020970f763"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/local-gemma__r2.json",
+      "sha256": "de4d71e8c728fb88231abd9e5504714851f364501bcbf7767ddd2ff6936a5c85"
+    },
+    {
+      "dry_run": false,
+      "path": "results/local-gemma__r2.json",
+      "sha256": "539738c493468a0e91056fc75576dbbf5b5002e1517a13e26878597085758520"
+    },
+    {
+      "dry_run": false,
+      "path": "prompts/local-gemma__r3.json",
+      "sha256": "76e15606edc38d6fb577b196cf353fc130090f7255746aeb84354b927d34780c"
+    },
+    {
+      "dry_run": false,
+      "path": "results/local-gemma__r3.json",
+      "sha256": "b0e4d8b9f2f78c648a98d415e8c6540294a06a2e19e879275b8ce54c5c9e589a"
+    },
+    {
+      "dry_run": false,
+      "path": "key.json",
+      "sha256": "fc8e1a5be5cb20147d24097b5d244c52d8277a612ce9a1b0714d5d2f352a0e54"
+    }
+  ]
+}

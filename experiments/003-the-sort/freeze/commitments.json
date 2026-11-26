@@ -1,0 +1,214 @@
+{
+  "aliases": [
+    {
+      "exact_original_alias_of": "run1-main",
+      "original_sha256": "62739620d7efcf0a5fda669072540934444a09a2fc25e0fff2e0adc1b914c22d",
+      "original_size_bytes": 4750,
+      "public_path": "freeze/run1/FREEZE.public.json",
+      "public_sha256": "16287d96a7a24623978aa8250ea6a43d155c90e7c23611b3e7ce69ff9ef4e4ea",
+      "public_size_bytes": 4752,
+      "source_relative_to_private_lane": "test1_sort_side/RUN1_FREEZE_copy_not_for_this_folder.json",
+      "status": "Historical run-1 manifest copy committed inside the side freeze; not a separate freeze and not authority for side-run code."
+    },
+    {
+      "exact_original_alias_of": "run1-counting",
+      "original_sha256": "5bce8ba7f64afa607ed1944904fb08881fba811acfb12b56dcf887b0fc132c09",
+      "original_size_bytes": 401,
+      "public_path": "freeze/run1/FREEZE_tally.public.json",
+      "public_sha256": "0009733da814c74e1f394f7019ea8882092e2fc75f0f2872641175b4c8623ab0",
+      "public_size_bytes": 386,
+      "source_relative_to_private_lane": "test1_sort_side/RUN1_FREEZE_tally_copy_not_for_this_folder.json",
+      "status": "Historical run-1 manifest copy committed inside the side freeze; not a separate freeze and not authority for side-run code."
+    }
+  ],
+  "edition_status": "Prepared public edition; not an original frozen file or an execution authorization.",
+  "format": "the-sort-freeze-public-edition-v1",
+  "limits": [
+    "Original manifest hashes identify original bytes, not the sanitized public editions.",
+    "The full original per-file hash dictionaries and recorded freeze times are unchanged in the public editions; entries can describe files omitted from the public package. Consult the package-wide edition mapping.",
+    "Outside means retained outside the frozen file lists in a private local coordination table. It does not mean an external public preregistration or independent timestamp authority.",
+    "The freeze wallclock string and the later coordination-row timestamp are separate recorded values; no outside service certified either.",
+    "This export stage hashes the original manifests and checks unchanged commitment dictionaries; it does not revalidate every committed source file.",
+    "Private host/session attribution and private coordination-row bodies are not exported."
+  ],
+  "records": [
+    {
+      "file_commitments_unchanged": true,
+      "file_count": 47,
+      "frozen_at_as_recorded": "2026-11-25 23:47:39 EST",
+      "original_manifest_not_exported": true,
+      "original_sha256": "62739620d7efcf0a5fda669072540934444a09a2fc25e0fff2e0adc1b914c22d",
+      "original_size_bytes": 4750,
+      "outside_anchor_record": {
+        "content_sha256": "85bfd232894cb74e16c87314956c5ecb74c009bf70b160ce3a65b9022026f8a1",
+        "evidence_mode": "Read-only lookup of the specified row; its content contains the full original manifest hash. No private row body is exported.",
+        "record_id": 82896,
+        "row_created_at_est": "2026-11-25T23:47:57.826-05:00",
+        "row_created_at_utc": "2026-11-26T04:47:57.826+00:00",
+        "system": "private local coordination table (Helix)"
+      },
+      "public_path": "freeze/run1/FREEZE.public.json",
+      "public_sha256": "16287d96a7a24623978aa8250ea6a43d155c90e7c23611b3e7ce69ff9ef4e4ea",
+      "public_size_bytes": 4752,
+      "record_id": "run1-main",
+      "source_relative_to_private_lane": "test1_sort/FREEZE.json",
+      "status": "in_force_for_run1",
+      "substitutions": [
+        {
+          "change": "Replace private host/session attribution with the research-seat role and model name.",
+          "json_field": "frozen_by",
+          "public_value": "HQ research seat (Claude Fable 5.2); second freeze, replaces the one of 22:32:01 EST withdrawn before main experimental sorting"
+        },
+        {
+          "basis": "PUBLIC_WRITEUP_DRAFT_003_the-sort.md, lines 35-42",
+          "change": "Narrow the original before-any-call claim to before main experimental sorting; preliminary probes and definition writing had already occurred.",
+          "json_field": "frozen_by",
+          "public_value": "HQ research seat (Claude Fable 5.2); second freeze, replaces the one of 22:32:01 EST withdrawn before main experimental sorting"
+        }
+      ]
+    },
+    {
+      "file_commitments_unchanged": true,
+      "file_count": 2,
+      "frozen_at_as_recorded": "2026-11-25 23:47:39 EST",
+      "original_manifest_not_exported": true,
+      "original_sha256": "5bce8ba7f64afa607ed1944904fb08881fba811acfb12b56dcf887b0fc132c09",
+      "original_size_bytes": 401,
+      "outside_anchor_record": {
+        "content_sha256": "85bfd232894cb74e16c87314956c5ecb74c009bf70b160ce3a65b9022026f8a1",
+        "evidence_mode": "Read-only lookup of the specified row; its content contains the full original manifest hash. No private row body is exported.",
+        "record_id": 82896,
+        "row_created_at_est": "2026-11-25T23:47:57.826-05:00",
+        "row_created_at_utc": "2026-11-26T04:47:57.826+00:00",
+        "system": "private local coordination table (Helix)"
+      },
+      "public_path": "freeze/run1/FREEZE_tally.public.json",
+      "public_sha256": "0009733da814c74e1f394f7019ea8882092e2fc75f0f2872641175b4c8623ab0",
+      "public_size_bytes": 386,
+      "record_id": "run1-counting",
+      "source_relative_to_private_lane": "test1_sort/FREEZE_tally.json",
+      "status": "in_force_for_run1",
+      "substitutions": [
+        {
+          "change": "Replace private host/session attribution with the research-seat role and model name.",
+          "json_field": "frozen_by",
+          "public_value": "HQ research seat (Claude Fable 5.2); second freeze, same two files as 23:01:41 EST"
+        }
+      ]
+    },
+    {
+      "file_commitments_unchanged": true,
+      "file_count": 38,
+      "frozen_at_as_recorded": "2026-11-25 22:32:01 EST",
+      "original_manifest_not_exported": true,
+      "original_sha256": "8b266b5f7d3c2a27f3068e29332d681e7c5aadf0ec0866074ace788c5cecdd9e",
+      "original_size_bytes": 3723,
+      "outside_anchor_record": {
+        "content_sha256": "20641ad7d4c6946d35c6614f3d125852cdb61f6d212a973692e090d2a96b1362",
+        "evidence_mode": "Read-only lookup of the specified row; its content contains the full original manifest hash. No private row body is exported.",
+        "record_id": 82757,
+        "row_created_at_est": "2026-11-25T22:32:20.073-05:00",
+        "row_created_at_utc": "2026-11-26T03:32:20.073+00:00",
+        "system": "private local coordination table (Helix)"
+      },
+      "public_path": "freeze/withdrawn/FREEZE_20261125_2232.public.json",
+      "public_sha256": "db4c2f09735fc3e0c49e605cd5a19c3ba5e073163df72af21234627f7d063855",
+      "public_size_bytes": 3708,
+      "record_id": "withdrawn-main",
+      "source_relative_to_private_lane": "test1_sort/FREEZE_withdrawn_20261125_2232.json",
+      "status": "withdrawn_before_main_experimental_sorting",
+      "substitutions": [
+        {
+          "change": "Replace private host/session attribution with the research-seat role and model name.",
+          "json_field": "frozen_by",
+          "public_value": "HQ research seat (Claude Fable 5.2)"
+        }
+      ]
+    },
+    {
+      "file_commitments_unchanged": true,
+      "file_count": 2,
+      "frozen_at_as_recorded": "2026-11-25 23:01:41 EST",
+      "original_manifest_not_exported": true,
+      "original_sha256": "fb19805cb22ca795ba34154917b320422db15fd8e2e3013dbbf4c4c25cbdc20c",
+      "original_size_bytes": 354,
+      "outside_anchor_record": {
+        "content_sha256": "8d7e061b01fb69048bc6c7f333855d6332cb047c2d5b42fccf258c39276824b6",
+        "evidence_mode": "Read-only lookup of the specified row; its content contains the full original manifest hash. No private row body is exported.",
+        "record_id": 82763,
+        "row_created_at_est": "2026-11-25T23:01:53.211-05:00",
+        "row_created_at_utc": "2026-11-26T04:01:53.211+00:00",
+        "system": "private local coordination table (Helix)"
+      },
+      "public_path": "freeze/withdrawn/FREEZE_tally_20261125_2301.public.json",
+      "public_sha256": "533f7ddd1b7bba1980ca6062de67b4d73102a87823ade19349207c0eb42817b4",
+      "public_size_bytes": 339,
+      "record_id": "withdrawn-counting",
+      "source_relative_to_private_lane": "test1_sort/FREEZE_tally_withdrawn_20261125_2301.json",
+      "status": "superseded_before_main_experimental_sorting",
+      "substitutions": [
+        {
+          "change": "Replace private host/session attribution with the research-seat role and model name.",
+          "json_field": "frozen_by",
+          "public_value": "HQ research seat (Claude Fable 5.2)"
+        }
+      ]
+    },
+    {
+      "file_commitments_unchanged": true,
+      "file_count": 63,
+      "frozen_at_as_recorded": "2026-11-26 11:14:25 EST",
+      "original_manifest_not_exported": true,
+      "original_sha256": "860184e5e0349959fef2fe73b78b9f549fc73075268d931f84e4b83060dfc323",
+      "original_size_bytes": 6400,
+      "outside_anchor_record": {
+        "content_sha256": "2e7687a5884aabe08d00e3a0946e0bcab2c44954b38cfd233dae44968499eb6e",
+        "evidence_mode": "Read-only lookup of the specified row; its content contains the full original manifest hash. No private row body is exported.",
+        "record_id": 83033,
+        "row_created_at_est": "2026-11-26T11:14:44.450-05:00",
+        "row_created_at_utc": "2026-11-26T16:14:44.450+00:00",
+        "system": "private local coordination table (Helix)"
+      },
+      "public_path": "freeze/side/FREEZE_side.public.json",
+      "public_sha256": "3bbfe32b77ab4f3f3da4d8939433913754c12a3a6b5463581895ee358c12f19a",
+      "public_size_bytes": 6385,
+      "record_id": "side-main",
+      "source_relative_to_private_lane": "test1_sort_side/FREEZE_side.json",
+      "status": "in_force_for_exploratory_side_run",
+      "substitutions": [
+        {
+          "change": "Replace private host/session attribution with the research-seat role and model name.",
+          "json_field": "frozen_by",
+          "public_value": "HQ research seat (Claude Fable 5.2); exploratory follow-up selected after run 1"
+        }
+      ]
+    }
+  ],
+  "scope": "Five original freeze manifests represented by sanitized editions; three in-force anchor hashes and two withdrawn predecessors.",
+  "source_basis": [
+    {
+      "sha256": "7b5ab13f66d4227029830412a162ff741c2d7cfafc64587a4a0133986109b68f",
+      "size_bytes": 17797,
+      "source_relative_to_private_lane": "PUBLIC_WRITEUP_DRAFT_003_the-sort.md",
+      "use": "Lines 35-42 distinguish preliminary calls from main experimental sorting; lines 182-191 specify freeze export and external-registration limits."
+    },
+    {
+      "sha256": "8742dddf4a1fe3303767a7319ff931971a1183242800910f987046c1654dfcf0",
+      "size_bytes": 15662,
+      "source_relative_to_private_lane": "SORT_RESULT_run1.md",
+      "use": "Lines 18-20 identify run-1 timing and the two in-force anchors."
+    },
+    {
+      "sha256": "123d25ef56ccc9ed45405d3ab143fe83d8bdf8b268a65b15117a3994b14f8498",
+      "size_bytes": 8014,
+      "source_relative_to_private_lane": "SORT_SIDE_RESULT.md",
+      "use": "Lines 6-9 and 17-20 identify exploratory status, prospective freeze, run timing and anchor checks."
+    },
+    {
+      "sha256": "3d2c0173846691a655b5fa4a5118abc89eff1d46be4e807536a6afde4c3c598f",
+      "size_bytes": 15356,
+      "source_relative_to_private_lane": "SORT_NIGHT_LOG.md",
+      "use": "Lines 5-7, 47-57 and 92-95 record initial/replacement/side freeze chronology."
+    }
+  ]
+}

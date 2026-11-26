@@ -1,0 +1,9 @@
+{
+ "experiment": "tier35-test1-the-sort-counting",
+ "files": {
+  "house_table.json": "b527688c618579725eae7f1eb03e01f3aaf34cce1d6ae2168ee04d63e82be431",
+  "tally_real.json": "10ed670288d066c330a1306212da8228a4f351cce33a2e4c2c8f1f508b4c38bc"
+ },
+ "frozen_at": "2026-11-25 23:01:41 EST",
+ "frozen_by": "HQ research seat (Claude Fable 5.2)"
+}

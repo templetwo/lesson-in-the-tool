@@ -1,0 +1,10 @@
+{
+ "status": "DRAFT, written by a builder that had read the sheet; to be replaced or approved before any freeze",
+ "turn1_intro": "You will sort {line_count} short lessons into homes. The homes are listed below, each with a name and a one-sentence definition.\n\nFor each lesson, choose one main home from the list. You may also choose one second home from the list, different from the main home, if the lesson belongs there too; if not, write none. Use the home names exactly as written.\n\n",
+ "homes_heading": "Homes:\n",
+ "lessons_heading": "Lessons:\n",
+ "turn1_reply_format": "Reply format. Reply with exactly one line per lesson and nothing else: no heading, no numbering, no code block, no blank answer, no extra text. Each line has this form:\nLABEL | main: HOME | second: HOME or none\nLABEL is the lesson's label (for example L01). After \"main: \" write exactly one home name copied from the list. After \"second: \" write exactly one other home name copied from the list, or the word none. Separate the three parts with a space, the character |, and a space. Give every label exactly once.\n",
+ "question": "what remains judgment once this lesson has its home?",
+ "turn2_intro": "For each lesson, write one sentence that answers this question: {question}\n\n",
+ "turn2_reply_format": "Reply format. Reply with exactly one line per lesson and nothing else: no heading, no numbering, no code block, no blank answer, no extra text. Each line has this form:\nLABEL | SENTENCE\nLABEL is the lesson's label (for example L01). SENTENCE is one sentence that does not contain the character |. Separate the two parts with a space, the character |, and a space. Give every label exactly once.\n"
+}

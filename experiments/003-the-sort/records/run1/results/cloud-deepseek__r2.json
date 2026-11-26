@@ -1,0 +1,397 @@
+{
+  "dry_run": false,
+  "sorter": "cloud-deepseek",
+  "group": "cloud",
+  "provider": "deepseek",
+  "repeat": 2,
+  "caller": "deepseek:deepseek-v4-pro",
+  "line_seed": 1594829826,
+  "home_seed": 877462731,
+  "lines_commit": "441752cd2d7536ad9d6fa806e2f752752676342b",
+  "lines_sha256": "5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1",
+  "homes_sha256": "a10a13d8818caa81cf8005f6d99f7aecdbe3bbd63a38c13ec6b481ff4dee66fa",
+  "prompt_file": "prompts/cloud-deepseek__r2.json",
+  "prompt_sha256": "9e8a18356b03cddb4ccacb7f4224b4736ab4795f1bd383bd9faed46b39bc2400",
+  "question_sha256": "e34ca9c61f04cdbe4e5ac0b2b3a7b5d0ec90bf72ee0165a92a1942341ed712a8",
+  "raw_reply": "L01 | main: judgment | second: harness\nL02 | main: judgment | second: none\nL03 | main: tool | second: harness\nL04 | main: check | second: none\nL05 | main: judgment | second: retrieval\nL06 | main: check | second: none\nL07 | main: check | second: none\nL08 | main: retrieval | second: check\nL09 | main: check | second: gate\nL10 | main: gate | second: check\nL11 | main: check | second: none\nL12 | main: judgment | second: none\nL13 | main: harness | second: none\nL14 | main: check | second: retrieval\nL15 | main: check | second: none\nL16 | main: check | second: none\nL17 | main: check | second: none",
+  "parse_ok": true,
+  "parse_errors": [],
+  "rows": [
+    {
+      "dry_run": false,
+      "label": "L01",
+      "home_main": "judgment",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L02",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L03",
+      "home_main": "tool",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L04",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L05",
+      "home_main": "judgment",
+      "home_second": "retrieval"
+    },
+    {
+      "dry_run": false,
+      "label": "L06",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L07",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L08",
+      "home_main": "retrieval",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L09",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L10",
+      "home_main": "gate",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L11",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L12",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L13",
+      "home_main": "harness",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L14",
+      "home_main": "check",
+      "home_second": "retrieval"
+    },
+    {
+      "dry_run": false,
+      "label": "L15",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L16",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L17",
+      "home_main": "check",
+      "home_second": null
+    }
+  ],
+  "turn2": {
+    "dry_run": false,
+    "sent": true,
+    "not_sent_reason": null,
+    "raw_reply": "L01 | Deciding the precise original wording and which cause is real remains judgment.\nL02 | Deciding how much evidence is enough to support a claim remains judgment.\nL03 | Deciding when a code or hash is long enough to warrant programmatic copying remains judgment.\nL04 | Deciding when a time record is important enough to require reading the clock rather than guessing remains judgment.\nL05 | Deciding when an empty or short result reflects a search limit rather than a fact about the world remains judgment.\nL06 | Deciding what actual landed output proves a reported success remains judgment.\nL07 | Deciding what outside source counts as adequate checking remains judgment.\nL08 | Deciding when another source could change the answer enough to matter remains judgment.\nL09 | Deciding how much checking is needed before declaring something lost remains judgment.\nL10 | Deciding which check is the deciding one before declaring done or verified remains judgment.\nL11 | Deciding which neighboring items are close enough to the fix to require checking remains judgment.\nL12 | Deciding when a request asks for calm presence rather than a technical report remains judgment.\nL13 | Deciding which lessons are important enough to turn into permanent steps remains judgment.\nL14 | Deciding when a noted fact or rule needs independent testing before reuse remains judgment.\nL15 | Deciding what visible behavior proves a saved setting is in effect remains judgment.\nL16 | Deciding how to fail a test or monitor convincingly enough to trust it remains judgment.\nL17 | Deciding what kind of reviewer is different enough and what work is important enough remains judgment.",
+    "parse_ok": true,
+    "parse_errors": [],
+    "rows": [
+      {
+        "dry_run": false,
+        "label": "L01",
+        "sentence": "Deciding the precise original wording and which cause is real remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L02",
+        "sentence": "Deciding how much evidence is enough to support a claim remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L03",
+        "sentence": "Deciding when a code or hash is long enough to warrant programmatic copying remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L04",
+        "sentence": "Deciding when a time record is important enough to require reading the clock rather than guessing remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L05",
+        "sentence": "Deciding when an empty or short result reflects a search limit rather than a fact about the world remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L06",
+        "sentence": "Deciding what actual landed output proves a reported success remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L07",
+        "sentence": "Deciding what outside source counts as adequate checking remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L08",
+        "sentence": "Deciding when another source could change the answer enough to matter remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L09",
+        "sentence": "Deciding how much checking is needed before declaring something lost remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L10",
+        "sentence": "Deciding which check is the deciding one before declaring done or verified remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L11",
+        "sentence": "Deciding which neighboring items are close enough to the fix to require checking remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L12",
+        "sentence": "Deciding when a request asks for calm presence rather than a technical report remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L13",
+        "sentence": "Deciding which lessons are important enough to turn into permanent steps remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L14",
+        "sentence": "Deciding when a noted fact or rule needs independent testing before reuse remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L15",
+        "sentence": "Deciding what visible behavior proves a saved setting is in effect remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L16",
+        "sentence": "Deciding how to fail a test or monitor convincingly enough to trust it remains judgment."
+      },
+      {
+        "dry_run": false,
+        "label": "L17",
+        "sentence": "Deciding what kind of reviewer is different enough and what work is important enough remains judgment."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "dry_run": false,
+      "caller": "deepseek:deepseek-v4-pro",
+      "turn": 1,
+      "provider": "deepseek",
+      "model_requested": "deepseek-v4-pro",
+      "model_reported": "deepseek-v4-pro",
+      "model_matches": true,
+      "url": "https://api.deepseek.com/chat/completions",
+      "settings_sent_json": "{\"max_tokens\": 19000, \"model\": \"deepseek-v4-pro\", \"reasoning_effort\": \"high\", \"thinking\": {\"type\": \"enabled\"}}",
+      "message_count": 1,
+      "started_at": "2026-11-26 00:13:25 EST",
+      "finished_at": "2026-11-26 00:16:41 EST",
+      "complete": true,
+      "stop": "stop",
+      "usage_json": "{\"completion_tokens\": 15608, \"completion_tokens_details\": {\"reasoning_tokens\": 15421}, \"prompt_cache_hit_tokens\": 0, \"prompt_cache_miss_tokens\": 1086, \"prompt_tokens\": 1086, \"prompt_tokens_details\": {\"cached_tokens\": 0}, \"total_tokens\": 16694}",
+      "response_body_json": "{}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "completion_tokens",
+        "reported_output_tokens": 15608,
+        "limit": 19000
+      }
+    },
+    {
+      "dry_run": false,
+      "caller": "deepseek:deepseek-v4-pro",
+      "turn": 2,
+      "provider": "deepseek",
+      "model_requested": "deepseek-v4-pro",
+      "model_reported": "deepseek-v4-pro",
+      "model_matches": true,
+      "url": "https://api.deepseek.com/chat/completions",
+      "settings_sent_json": "{\"max_tokens\": 19000, \"model\": \"deepseek-v4-pro\", \"reasoning_effort\": \"high\", \"thinking\": {\"type\": \"enabled\"}}",
+      "message_count": 3,
+      "started_at": "2026-11-26 00:16:41 EST",
+      "finished_at": "2026-11-26 00:17:53 EST",
+      "complete": true,
+      "stop": "stop",
+      "usage_json": "{\"completion_tokens\": 5798, \"completion_tokens_details\": {\"reasoning_tokens\": 5472}, \"prompt_cache_hit_tokens\": 1024, \"prompt_cache_miss_tokens\": 368, \"prompt_tokens\": 1392, \"prompt_tokens_details\": {\"cached_tokens\": 1024}, \"total_tokens\": 7190}",
+      "response_body_json": "{}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "completion_tokens",
+        "reported_output_tokens": 5798,
+        "limit": 19000
+      }
+    }
+  ],
+  "persistence_state": "complete",
+  "call_budget": {
+    "mode": "main",
+    "output_token_limit": 19000,
+    "planned": {
+      "total": 48,
+      "external": 36,
+      "anthropic": 12,
+      "other_external": 24,
+      "local": 12,
+      "dry_fixture": 0
+    },
+    "attempted": {
+      "total": 33,
+      "external": 33,
+      "anthropic": 12,
+      "other_external": 21,
+      "local": 0,
+      "dry_fixture": 0
+    },
+    "per_sorter": {
+      "cloud-fable": {
+        "caller": "anthropic:claude-fable-5-2",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-opus": {
+        "caller": "anthropic:claude-opus-5-5",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-astra": {
+        "caller": "openai:gpt-6.2-astra",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-sol": {
+        "caller": "openai:gpt-6.2-sol",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-grok": {
+        "caller": "xai:grok-4.7",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-deepseek": {
+        "caller": "deepseek:deepseek-v4-pro",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 3,
+        "stop": null
+      },
+      "local-house": {
+        "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "local-gemma": {
+        "caller": "ollama-local-b:gemma4:e4b-mlx",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      }
+    },
+    "per_adapter": {
+      "anthropic:claude-fable-5-2": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "anthropic:claude-opus-5-5": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-astra": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-sol": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "xai:grok-4.7": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 6
+      },
+      "deepseek:deepseek-v4-pro": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 3
+      },
+      "ollama-local-a:qwen3.8:27b-draft4-text": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      },
+      "ollama-local-b:gemma4:e4b-mlx": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      }
+    }
+  }
+}

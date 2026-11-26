@@ -2,7 +2,13 @@
 
 **A research project at its starting line. Nothing here is an established result. Two small pilots have been run,
 and one of them has been judged again to test a doubt about its judge. Their rules were frozen before they ran, and
-their raw data is in this repository.**
+their raw data is in this repository. A public edition of a descriptive lesson-sort
+experiment is also included, with projected visible replies and declared omissions.**
+
+Experiment 003 is published on 2026-11-26 at Anthony's direction, before his own review of that folder.
+He asked that the work go out in the open first. Its opening, credit line and exact wording remain for his
+review; any change he makes will be recorded as a dated erratum. Publication does not register the experiment
+with an outside registry, adopt the proposed next tests or authorize additional model calls.
 
 By Anthony Vasquez Sr. (Temple of Two), with Claude (Claude Fable 5.2, the HQ seat) and the other AI models consulted
 through the Temple of Two's multi-model process, named and unnamed. Started 2026-11-24.
@@ -103,8 +109,9 @@ and it does not show the judge could not tell the setups apart by style. Details
 ## What has not been shown
 
 - That the house's history adds anything beyond good generic advice. Forty-two tasks cannot separate them.
-- Anything about a model with tools, about cloud models, or about the larger model in its everyday setup. The pilot
-  used bare instructions, no tools and no memory, with the larger model's reasoning switched off.
+- Whether these pilot effects extend to models with tools, cloud models, or the larger model in its everyday
+  setup. The pilot used bare instructions, no tools and no memory, with the larger model's reasoning switched off.
+  The descriptive sorting experiment 003 does not establish those behavioral effects.
 - That the judge cannot tell a checklist from its style, or how large the judge's own noise is. 001b removed the
   visible mentions and saw no lean, from one judge model and a single pair of repeats.
 - That a lesson in a tool beats a lesson in a prompt. That is the next experiment, and it has not run.
@@ -117,8 +124,8 @@ and it does not show the judge could not tell the setups apart by style. Details
    with the readback built into the tool. Because half the jobs really succeed, it also catches a model that has
    learned to distrust everything.
 2. **The translation table** (`docs/TRANSLATION_TABLE.md`). Each of the seventeen lessons, a proposed home, and a
-   test that can fail. One seat's first sort is there, unchecked. The plan is for several models to sort it
-   separately and to study where they disagree.
+   test that can fail. Experiment 003 now records several models each sorting separately in fresh sessions, and one exploratory side run.
+   Its projected records and summaries are in `experiments/003-the-sort/`; the sort does not decide which home changes behavior.
 3. **Bigger and cleaner tests** once the pilots have shown where the noise is: more tasks, task writers on another
    provider, the larger model in its real setup, a lookup tool for the small one, and the judge's noise taken from
    several repeated judgings rather than one pair (001b showed why).
@@ -151,8 +158,9 @@ corrections are written beside the original, never over it; and "no difference" 
 
 One more rule, specific to this project: the Claude seat that co-authors this work is a biased judge of it. Outside
 models were asked to review the sheet and the plan, and their reviews are in `reviews/` as they were relayed, with a
-header line added by us and one place name removed. They were written before the pilot reports existed; no outside
-model has yet reviewed the reports.
+header line added by us and one place name removed. Those review files predate the pilot reports; no outside
+model has yet reviewed the reports of experiments 001 and 001b. The later independent review of experiment 003
+is described in its own reports and public-edition notes.
 
 ## What is in this repository
 
@@ -163,6 +171,8 @@ experiments/001-sheet-pilot/   frozen rules, hashes, errata, reports, harness, t
 experiments/001b-judge-lean/   a re-judging of 001's larger-model replies with the checklist mentions deleted:
                                frozen rules, hashes, masking, packets, judge scores, report
 experiments/002-lesson-in-the-tool/   draft rules for the next test
+experiments/003-the-sort/      public edition: rules, two code editions, visible replies, summaries,
+                               freeze records and count reconstruction; provider reasoning is withheld
 docs/                          method, the translation table, the roadmap
 reviews/                       reviews by other models, as relayed by Anthony
 PROVENANCE.md                  who made what, with hashes
@@ -171,18 +181,22 @@ MANIFEST.sha256                the hash of every file in this repository
 
 ## Checking our work
 
-One command now checks the published archive and reproduces its deterministic outputs, with Python 3.9 or later,
+One command checks archive integrity and reproduces the deterministic outputs of experiments 001 and 001b, with Python 3.9 or later,
 no dependencies, model calls or network:
 
 ```sh
 python3 -B tools/verify_archive.py
 python3 -B -m unittest discover -s tests -v
+python3 -B experiments/003-the-sort/tools/reproduce.py
 ```
 
 The verifier checks manifest coverage, frozen commitments, raw/packet/score joins and published totals; preserves
 recorded errors and the documented public-edition hash exception; and rebuilds scores, masks, packets and the
 re-judging tally in temporary folders. `docs/VERIFICATION.md` specifies its coverage and limits. The tests include
-deliberately damaged evidence, so the checker must demonstrate that it can refuse it.
+deliberately damaged evidence, so the checker must demonstrate that it can refuse it. The archive verifier gives experiment 003
+manifest-integrity coverage. Its separate `tools/reproduce.py` command reconstructs the reported classification and
+judgment counts, limit-ending counts and side comparison from the projected public records. Neither authenticates
+provider output or establishes that the judgments are correct.
 
 **`VERIFIED` means internal agreement with this archive's own manifest and freeze records.** Consistently changed
 unfrozen results and a regenerated manifest can pass without changing the verifier. An independently obtained
@@ -197,7 +211,9 @@ you trust; it is not a sandbox for inspecting untrusted archives.
   anyone. The time of the freeze cannot: it is the house's own record of it.
 - In files that are not frozen, private paths and one address on the house network were generalised before
   publication. `experiments/001-sheet-pilot/ERRATA.md`, entry E6, lists what was changed and why.
-- `python3 experiments/001-sheet-pilot/harness/selftest.py` runs the scorer's self-check with no model and no network.
+- The archive verifier runs the original scorer's self-check in a temporary relocated copy, with no model or network.
+  This replaces the earlier direct selftest instruction: the frozen selftest writes beside itself, and its
+  conditions file retains historical paths. The verifier relocates that work into a temporary folder.
 - The harness runs against any Ollama endpoint. `experiments/001-sheet-pilot/harness/README.md` has the steps.
 - Experiment 001b has its own `FREEZE.json` (frozen at 21:07:07 Eastern on 2026-11-24, before any judge call). Its
   README gives the commands that check its hashes, run its self-checks, rebuild its masked file and packets from the
@@ -214,6 +230,8 @@ built the harness and wrote the task items. The three-setup blind design and the
 The tools-and-true-successes design of experiment 002 is a Codex seat's. The design of experiment 001b is House's
 (the house's own qwen3.8 27B model), with one change from the HQ seat. A Grok agent was the blind judge. Their
 contributions are named where they were used.
+
+Experiment 003 has its own [provisional credit line](experiments/003-the-sort/README.md#provisional-credit).
 
 That list is the record, not the limit of the credit. Anthony reaches his decisions through the
 [IRIS Gate](https://github.com/templetwo/iris-gate) multi-model process, part of the Temple of Two's published work,

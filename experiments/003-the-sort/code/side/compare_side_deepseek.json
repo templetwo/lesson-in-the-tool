@@ -1,0 +1,9 @@
+{
+ "reference_tally": "../test1_sort/real_runs/run_1_tally/tally.json",
+ "reference_sha256": "78879c80560cde940027808742c04c75e921372b1a953297bcfd42e317dada5f",
+ "reference_group": "cloud",
+ "side_tally": "real_runs/side_1_tally/tally.json",
+ "side_group": "side",
+ "side_sorter": "cloud-deepseek",
+ "out_dir": "real_runs/side_1_compare"
+}

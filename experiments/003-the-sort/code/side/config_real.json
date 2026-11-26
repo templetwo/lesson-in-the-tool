@@ -1,0 +1,72 @@
+{
+ "status": "CANDIDATE for the real run of the Sort. The same settings as config_real_DRAFT.json; only this status line differs. It becomes the run's config when Anthony says go; FREEZE.json holds its hash.",
+ "dry_run": false,
+ "caller": "by_sorter",
+ "require_model_match": true,
+ "repo": "../../../../",
+ "commit": "441752c",
+ "lines_path": "sheet/SHEET_SHORT_v2.md",
+ "homes_file": "homes_real.json",
+ "deny_list": "deny_list.txt",
+ "prompt_text": "prompt_text.json",
+ "sorters": [
+  {
+   "name": "cloud-fable",
+   "group": "cloud",
+   "provider": "anthropic"
+  },
+  {
+   "name": "cloud-opus",
+   "group": "cloud",
+   "provider": "anthropic"
+  },
+  {
+   "name": "cloud-astra",
+   "group": "cloud",
+   "provider": "openai"
+  },
+  {
+   "name": "cloud-sol",
+   "group": "cloud",
+   "provider": "openai"
+  },
+  {
+   "name": "cloud-grok",
+   "group": "cloud",
+   "provider": "xai"
+  },
+  {
+   "name": "cloud-deepseek",
+   "group": "cloud",
+   "provider": "deepseek"
+  },
+  {
+   "name": "local-house",
+   "group": "local",
+   "provider": "ollama-local-a"
+  },
+  {
+   "name": "local-gemma",
+   "group": "local",
+   "provider": "ollama-local-b"
+  }
+ ],
+ "real_callers": {
+  "cloud-fable": "anthropic:claude-fable-5-2",
+  "cloud-opus": "anthropic:claude-opus-5-5",
+  "cloud-astra": "openai:gpt-6.2-astra",
+  "cloud-sol": "openai:gpt-6.2-sol",
+  "cloud-grok": "xai:grok-4.7",
+  "cloud-deepseek": "deepseek:deepseek-v4-pro",
+  "local-house": "ollama-local-a:qwen3.8:27b-draft4-text",
+  "local-gemma": "ollama-local-b:gemma4:e4b-mlx"
+ },
+ "groups": {
+  "cloud": {
+   "min_providers": 3
+  }
+ },
+ "repeats": 3,
+ "master_seed": 20261126,
+ "out_dir": "real_runs/run_1"
+}

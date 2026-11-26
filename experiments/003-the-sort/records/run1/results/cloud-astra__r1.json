@@ -1,0 +1,397 @@
+{
+  "dry_run": false,
+  "sorter": "cloud-astra",
+  "group": "cloud",
+  "provider": "openai",
+  "repeat": 1,
+  "caller": "openai:gpt-6.2-astra",
+  "line_seed": 2715547425,
+  "home_seed": 2690756116,
+  "lines_commit": "441752cd2d7536ad9d6fa806e2f752752676342b",
+  "lines_sha256": "5d8dcecd133bcb9d78a81e06c2ec48589e4ccb0c1457a28cdc01e375965335a1",
+  "homes_sha256": "a10a13d8818caa81cf8005f6d99f7aecdbe3bbd63a38c13ec6b481ff4dee66fa",
+  "prompt_file": "prompts/cloud-astra__r1.json",
+  "prompt_sha256": "d25e6e057462bc4ef8e69cb2e25a3a47eeb9de299a0c21d5812b568cb93add31",
+  "question_sha256": "e34ca9c61f04cdbe4e5ac0b2b3a7b5d0ec90bf72ee0165a92a1942341ed712a8",
+  "raw_reply": "L01 | main: check | second: tool\nL02 | main: judgment | second: none\nL03 | main: judgment | second: none\nL04 | main: gate | second: check\nL05 | main: check | second: gate\nL06 | main: check | second: judgment\nL07 | main: check | second: none\nL08 | main: check | second: none\nL09 | main: check | second: harness\nL10 | main: check | second: gate\nL11 | main: check | second: gate\nL12 | main: judgment | second: none\nL13 | main: harness | second: none\nL14 | main: tool | second: harness\nL15 | main: check | second: judgment\nL16 | main: check | second: gate\nL17 | main: gate | second: check",
+  "parse_ok": true,
+  "parse_errors": [],
+  "rows": [
+    {
+      "dry_run": false,
+      "label": "L01",
+      "home_main": "check",
+      "home_second": "tool"
+    },
+    {
+      "dry_run": false,
+      "label": "L02",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L03",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L04",
+      "home_main": "gate",
+      "home_second": "check"
+    },
+    {
+      "dry_run": false,
+      "label": "L05",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L06",
+      "home_main": "check",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L07",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L08",
+      "home_main": "check",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L09",
+      "home_main": "check",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L10",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L11",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L12",
+      "home_main": "judgment",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L13",
+      "home_main": "harness",
+      "home_second": null
+    },
+    {
+      "dry_run": false,
+      "label": "L14",
+      "home_main": "tool",
+      "home_second": "harness"
+    },
+    {
+      "dry_run": false,
+      "label": "L15",
+      "home_main": "check",
+      "home_second": "judgment"
+    },
+    {
+      "dry_run": false,
+      "label": "L16",
+      "home_main": "check",
+      "home_second": "gate"
+    },
+    {
+      "dry_run": false,
+      "label": "L17",
+      "home_main": "gate",
+      "home_second": "check"
+    }
+  ],
+  "turn2": {
+    "dry_run": false,
+    "sent": true,
+    "not_sent_reason": null,
+    "raw_reply": "L01 | Choose the time zone and precision the record needs, but always read the clock before entering the time.\nL02 | Judge what calm attention looks like for this person without treating a request for presence as an invitation to give advice.\nL03 | Decide what conclusion the search supports by considering where it looked, whether it finished, and how much of the result you saw.\nL04 | Choose the check whose result would distinguish completed work from work that was merely attempted.\nL05 | Choose a failure the test or monitor is supposed to detect and decide what response would show that it detected that failure.\nL06 | Decide how much context an exact quotation needs and what evidence distinguishes the proposed cause from plausible alternatives.\nL07 | Decide what to inspect in the destination to tell whether the expected records arrived intact, rather than relying on the reported count.\nL08 | Decide how far to extend the follow-up checks by tracing which related fields or behaviors the fix could have affected.\nL09 | Match the reviewer's perspective to a likely blind spot in the work, rather than choosing someone different in a way that does not matter.\nL10 | Choose the least disruptive observation that can distinguish actual loss from a wrong location or a faulty reading.\nL11 | Choose an observable behavior that would differ depending on whether the running program actually uses the setting.\nL12 | Decide how broadly and confidently to state the claim given the amount, variety, and quality of the evidence you disclose.\nL13 | Choose a repeatable step that catches the mistake where it occurs without depending on someone remembering the lesson.\nL14 | Choose the authoritative source and the program that will copy the full identifier from it; hand transcription is not a fallback.\nL15 | Given what the first search covered, decide which other sources could change the answer and therefore need checking.\nL16 | Decide what evidence would test the recorded claim and which qualifications must accompany it if you repeat it.\nL17 | Decide whether the outside source supports each detail you intend to mark as checked, and label any detail it does not establish as “not checked.”",
+    "parse_ok": true,
+    "parse_errors": [],
+    "rows": [
+      {
+        "dry_run": false,
+        "label": "L01",
+        "sentence": "Choose the time zone and precision the record needs, but always read the clock before entering the time."
+      },
+      {
+        "dry_run": false,
+        "label": "L02",
+        "sentence": "Judge what calm attention looks like for this person without treating a request for presence as an invitation to give advice."
+      },
+      {
+        "dry_run": false,
+        "label": "L03",
+        "sentence": "Decide what conclusion the search supports by considering where it looked, whether it finished, and how much of the result you saw."
+      },
+      {
+        "dry_run": false,
+        "label": "L04",
+        "sentence": "Choose the check whose result would distinguish completed work from work that was merely attempted."
+      },
+      {
+        "dry_run": false,
+        "label": "L05",
+        "sentence": "Choose a failure the test or monitor is supposed to detect and decide what response would show that it detected that failure."
+      },
+      {
+        "dry_run": false,
+        "label": "L06",
+        "sentence": "Decide how much context an exact quotation needs and what evidence distinguishes the proposed cause from plausible alternatives."
+      },
+      {
+        "dry_run": false,
+        "label": "L07",
+        "sentence": "Decide what to inspect in the destination to tell whether the expected records arrived intact, rather than relying on the reported count."
+      },
+      {
+        "dry_run": false,
+        "label": "L08",
+        "sentence": "Decide how far to extend the follow-up checks by tracing which related fields or behaviors the fix could have affected."
+      },
+      {
+        "dry_run": false,
+        "label": "L09",
+        "sentence": "Match the reviewer's perspective to a likely blind spot in the work, rather than choosing someone different in a way that does not matter."
+      },
+      {
+        "dry_run": false,
+        "label": "L10",
+        "sentence": "Choose the least disruptive observation that can distinguish actual loss from a wrong location or a faulty reading."
+      },
+      {
+        "dry_run": false,
+        "label": "L11",
+        "sentence": "Choose an observable behavior that would differ depending on whether the running program actually uses the setting."
+      },
+      {
+        "dry_run": false,
+        "label": "L12",
+        "sentence": "Decide how broadly and confidently to state the claim given the amount, variety, and quality of the evidence you disclose."
+      },
+      {
+        "dry_run": false,
+        "label": "L13",
+        "sentence": "Choose a repeatable step that catches the mistake where it occurs without depending on someone remembering the lesson."
+      },
+      {
+        "dry_run": false,
+        "label": "L14",
+        "sentence": "Choose the authoritative source and the program that will copy the full identifier from it; hand transcription is not a fallback."
+      },
+      {
+        "dry_run": false,
+        "label": "L15",
+        "sentence": "Given what the first search covered, decide which other sources could change the answer and therefore need checking."
+      },
+      {
+        "dry_run": false,
+        "label": "L16",
+        "sentence": "Decide what evidence would test the recorded claim and which qualifications must accompany it if you repeat it."
+      },
+      {
+        "dry_run": false,
+        "label": "L17",
+        "sentence": "Decide whether the outside source supports each detail you intend to mark as checked, and label any detail it does not establish as “not checked.”"
+      }
+    ]
+  },
+  "calls": [
+    {
+      "dry_run": false,
+      "caller": "openai:gpt-6.2-astra",
+      "turn": 1,
+      "provider": "openai",
+      "model_requested": "gpt-6.2-astra",
+      "model_reported": "gpt-6.2-astra",
+      "model_matches": true,
+      "url": "https://api.openai.com/v1/responses",
+      "settings_sent_json": "{\"max_output_tokens\": 19000, \"model\": \"gpt-6.2-astra\", \"reasoning\": {\"effort\": \"high\"}}",
+      "message_count": 1,
+      "started_at": "2026-11-25 23:58:34 EST",
+      "finished_at": "2026-11-25 23:58:46 EST",
+      "complete": true,
+      "stop": "completed",
+      "usage_json": "{\"input_tokens\": 1004, \"input_tokens_details\": {\"cache_write_tokens\": 0, \"cache_write_tokens_details\": {\"ttl_12h_tokens\": 0, \"ttl_30m_tokens\": 0}, \"cached_tokens\": 0}, \"output_tokens\": 493, \"output_tokens_details\": {\"reasoning_tokens\": 301}, \"total_tokens\": 1497}",
+      "response_body_json": "{\"status\": \"completed\"}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "output_tokens",
+        "reported_output_tokens": 493,
+        "limit": 19000
+      }
+    },
+    {
+      "dry_run": false,
+      "caller": "openai:gpt-6.2-astra",
+      "turn": 2,
+      "provider": "openai",
+      "model_requested": "gpt-6.2-astra",
+      "model_reported": "gpt-6.2-astra",
+      "model_matches": true,
+      "url": "https://api.openai.com/v1/responses",
+      "settings_sent_json": "{\"max_output_tokens\": 19000, \"model\": \"gpt-6.2-astra\", \"reasoning\": {\"effort\": \"high\"}}",
+      "message_count": 3,
+      "started_at": "2026-11-25 23:58:46 EST",
+      "finished_at": "2026-11-25 23:59:07 EST",
+      "complete": true,
+      "stop": "completed",
+      "usage_json": "{\"input_tokens\": 1312, \"input_tokens_details\": {\"cache_write_tokens\": 1309, \"cache_write_tokens_details\": {\"ttl_12h_tokens\": 0, \"ttl_30m_tokens\": 1309}, \"cached_tokens\": 0}, \"output_tokens\": 649, \"output_tokens_details\": {\"reasoning_tokens\": 224}, \"total_tokens\": 1961}",
+      "response_body_json": "{\"status\": \"completed\"}",
+      "partial_text": null,
+      "error": null,
+      "require_model_match": true,
+      "failure_reason": null,
+      "usage_limit_check": {
+        "status": "within_limit",
+        "field": "output_tokens",
+        "reported_output_tokens": 649,
+        "limit": 19000
+      }
+    }
+  ],
+  "persistence_state": "complete",
+  "call_budget": {
+    "mode": "main",
+    "output_token_limit": 19000,
+    "planned": {
+      "total": 48,
+      "external": 36,
+      "anthropic": 12,
+      "other_external": 24,
+      "local": 12,
+      "dry_fixture": 0
+    },
+    "attempted": {
+      "total": 14,
+      "external": 14,
+      "anthropic": 12,
+      "other_external": 2,
+      "local": 0,
+      "dry_fixture": 0
+    },
+    "per_sorter": {
+      "cloud-fable": {
+        "caller": "anthropic:claude-fable-5-2",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-opus": {
+        "caller": "anthropic:claude-opus-5-5",
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6,
+        "stop": null
+      },
+      "cloud-astra": {
+        "caller": "openai:gpt-6.2-astra",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 2,
+        "stop": null
+      },
+      "cloud-sol": {
+        "caller": "openai:gpt-6.2-sol",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "cloud-grok": {
+        "caller": "xai:grok-4.7",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "cloud-deepseek": {
+        "caller": "deepseek:deepseek-v4-pro",
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "local-house": {
+        "caller": "ollama-local-a:qwen3.8:27b-draft4-text",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      },
+      "local-gemma": {
+        "caller": "ollama-local-b:gemma4:e4b-mlx",
+        "category": "local",
+        "planned": 6,
+        "attempted": 0,
+        "stop": null
+      }
+    },
+    "per_adapter": {
+      "anthropic:claude-fable-5-2": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "anthropic:claude-opus-5-5": {
+        "category": "anthropic",
+        "planned": 6,
+        "attempted": 6
+      },
+      "openai:gpt-6.2-astra": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 2
+      },
+      "openai:gpt-6.2-sol": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "xai:grok-4.7": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "deepseek:deepseek-v4-pro": {
+        "category": "other_external",
+        "planned": 6,
+        "attempted": 0
+      },
+      "ollama-local-a:qwen3.8:27b-draft4-text": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      },
+      "ollama-local-b:gemma4:e4b-mlx": {
+        "category": "local",
+        "planned": 6,
+        "attempted": 0
+      }
+    }
+  }
+}
